@@ -145,13 +145,13 @@ export default {
           imageUrl: require('../assets/image/boss/80/80_Princess_Rirumu.png'),
           level: 80,
         },
-        {
-          id: '80_kanosCaver_Cryptic_the_Last',
-          title: 'Cryptic the Last',
-          subtitle: 'Subtitle 6',
-          imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_the_Last '),
-          level: 80,
-        },
+        // {
+        //   id: '80_kanosCaver_Cryptic_the_Last',
+        //   title: 'Cryptic the Last',
+        //   subtitle: 'Subtitle 6',
+        //   imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_the_Last.png '),
+        //   level: 80,
+        // },
         {
           id: '80_kanosCaver_Cryptic_Bulldozer',
           title: 'Cryptic Bulldozer',
@@ -301,13 +301,13 @@ export default {
           imageUrl: require('../assets/image/boss/80/80_map1Caver_Cloron_Dragon.png'),
           level: 80,
         },
-        {
-          id: '80_map1Caver_Fantasma_Dragon',
-          title: 'Fantasma Dragon',
-          subtitle: 'Subtitle 6',
-          imageUrl: require('../assets/image/boss/80/80_map1Caver_Fantasma_Dragon.png'),
-          level: 80,
-        },
+        // {
+        //   id: '80_map1Caver_Fantasma_Dragon',
+        //   title: 'Fantasma Dragon',
+        //   subtitle: 'Subtitle 6',
+        //   imageUrl: require('../assets/image/boss/80/80_map1Caver_Fantasma_Dragon'),
+        //   level: 80,
+        // },
       ],
       search: '', // Valor do campo de pesquisa
     };
