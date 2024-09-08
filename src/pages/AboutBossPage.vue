@@ -26,20 +26,25 @@
     <!-- Área dos Cards -->
     <div class="card-grid">
       <div
-        v-for="(group, level) in filteredGroupedItems"
-        :key="level"
+        v-for="(respawnMaps, pvpZone) in filteredGroupedItems"
+        :key="pvpZone"
         class="q-pa-md grouped-cards"
       >
-        <h3 class="group-title">Level {{ level }}</h3>
-        <q-item v-for="item in group" :key="item.id" class="q-mb-md">
-          <CardItem
-            :title="item.title"
-            :subtitle="item.subtitle"
-            :imageUrl="item.imageUrl"
-            :level="item.level"
-            @click="viewDetails(item)"
-          />
-        </q-item>
+        <div v-for="(group, respawnMap) in respawnMaps" :key="respawnMap">
+          <h5 class="group-title">{{ respawnMap }}</h5>
+          <q-item v-for="item in group" :key="item.id" class="q-mb-md">
+            <CardItem
+              :title="item.title"
+              :description="item.description"
+              :imageUrl="item.imageUrl"
+              :level="item.level"
+              :respawnMap="item.respawnMap"
+              :respawnTime="item.respawnTime"
+              :pvpzone="item.pvpZone"
+              @click="viewDetails(item)"
+            />
+          </q-item>
+        </div>
       </div>
     </div>
   </q-page>
@@ -56,289 +61,392 @@ export default {
     return {
       items: [
         {
-          id: '15_Assaultron_9000',
+          id: 1,
           title: 'Assaultron 9000',
-          subtitle: 'Subtitle 1',
+          description: 'description 1',
           imageUrl: require('../assets/image/boss/15/15_Assaultron_9000.png'),
-          level: 15,
+          level: 17,
+          respawnMap: 'Proelium Frontier (lV1~15)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 15,
         },
         {
-          id: '15_Mobile_Siege_Mech',
+          id: 2,
           title: 'Mobile Siege Mech',
-          subtitle: 'Subtitle 2',
+          description: 'description 2',
           imageUrl: require('../assets/image/boss/15/15_Mobile_SIege_Mech.png'),
-          level: 15,
+          level: 17,
+          respawnMap: 'Proelium Frontier (lV1~15)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 15,
         },
         {
-          id: '15_Strategist_AI',
+          id: 3,
           title: 'Strategist AI',
-          subtitle: 'Subtitle 3',
+          description: 'description 3',
           imageUrl: require('../assets/image/boss/15/15_Strategist_AI.png'),
-          level: 15,
+          level: 17,
+          respawnMap: 'Proelium Frontier (lV1~15)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 15,
         },
         {
-          id: '15_Guardian_AI',
+          id: 4,
           title: 'Guardian AI',
-          subtitle: 'Subtitle 4',
+          description: 'description 4',
           imageUrl: require('../assets/image/boss/15/15_Guardian_AI.png'),
-          level: 15,
+          level: 17,
+          respawnMap: 'Proelium Frontier (lV1~15)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 15,
         },
         {
-          id: '15_Not_A_Bot',
+          id: 5,
           title: 'Not a Bot',
-          subtitle: 'Subtitle 5',
+          description: 'description 5',
           imageUrl: require('../assets/image/boss/15/15_Not_A_Bot.png'),
-          level: 15,
+          level: 17,
+          respawnMap: 'Proelium Frontier (lV1~15)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 15,
         },
         {
-          id: '30_Kalayavan_The_Undying',
+          id: 6,
           title: 'Kalayavan The Undying',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/30/30_Kalayavan_The_Undying.png'),
-          level: 30,
+          level: 17,
+          respawnMap: 'Cantabilian (lV20~30)',
+          respawnTime: '9:00 ~ 9:20 Hs(s)',
+          pvpZone: 30,
         },
         {
-          id: '80_raigo_Raptor_Slayer',
+          id: 7,
           title: 'Raptor Slayer',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_raigo_Raptor_Slayer.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'D-Water Borderland (lV31~80)',
+          respawnTime: '12:00 ~ 12:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_raigo_Luminous_Brigand',
+          id: 8,
           title: 'Luminous Brigand',
-          subtitle: 'Subtitle 6',
-          imageUrl: requiere(
-            '../assets/image/boss/80/80_raigo_Luminous_Brigand.png'
-          ),
-          level: 80,
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_raigo_Luminous_Brigand.png'),
+          level: 82,
+          respawnMap: 'D-Water Borderland (lV31~80)',
+          respawnTime: '12:00 ~ 12:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_raigoCaver_Greendieta_Seraphim',
+          id: 9,
           title: 'Greendieta Seraphim',
-          subtitle: 'Subtitle 6',
-          imageUrl: requiere(
-            '../assets/image/boss/80/80_raigoCaver_Greendieta_Seraphim.png'
-          ),
-          level: 80,
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_raigoCaver_Greendieta_Seraphim.png'),
+          level: 84,
+          respawnMap: 'Caelum Greendieta (lV31~80)',
+          respawnTime: '10:00 ~ 10:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_raigoCaver_Dios_Exiel',
+          id: 10,
           title: 'Dios Exiel',
-          subtitle: 'Subtitle 6',
-          imageUrl: requiere(
-            '../assets/image/boss/80/80_raigoCaver_Dios_Exiel.png'
-          ),
-          level: 80,
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_raigoCaver_Dios_Exiel.png'),
+          level: 84,
+          respawnMap: 'Caelum Sacra (lV31~80)',
+          respawnTime: '15:00 ~ 15:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_event_Gaia',
+          id: 11,
           title: 'Gaia ',
-          subtitle: 'Subtitle 6',
-          imageUrl: requiere('../assets/image/boss/80/80_event_Gaia.png'),
-          level: 80,
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_event_Gaia.png'),
+          level: 84,
+          respawnMap: 'Event ??',
+          respawnTime: 'Event ??',
+          pvpZone: 80,
         },
         {
-          id: '80_Princess_Rirumu',
+          id: 12,
           title: 'Princess Rirumu',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_Princess_Rirumu.png'),
-          level: 80,
+          level: 83,
+          respawnMap: 'Volcano Island (lV80)',
+          respawnTime: '9:00 ~ 12:00 Hs(s)',
+          pvpZone: 80,
         },
-        // {
-        //   id: '80_kanosCaver_Cryptic_the_Last',
-        //   title: 'Cryptic the Last',
-        //   subtitle: 'Subtitle 6',
-        //   imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_the_Last.png '),
-        //   level: 80,
-        // },
         {
-          id: '80_kanosCaver_Cryptic_Bulldozer',
+          id: 13,
+          title: 'Cryptic the Last',
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_the_Last.png'),
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
+        },
+        {
+          id: 14,
           title: 'Cryptic Bulldozer',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_Bulldozer.png'),
-          level: 80,
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanosCaver_Cannibal_Hydra',
+          id: 15,
           title: 'Cannibal Hydra',
-          subtitle: 'Subtitle 6',
-          imageUrl: requiere(
-            '../assets/image/boss/80/80_kanosCaver_Cannibal_Hydra.png'
-          ),
-          level: 80,
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cannibal_Hydra.png'),
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanosCaver_Cryptic_Back',
+          id: 16,
           title: 'Cryptic Back',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_Back.png'),
-          level: 80,
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanosCaver_Cryptic_the_Immortal',
+          id: 17,
           title: 'Fierce_Nantarios',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_the_Immortal.png'),
-          level: 80,
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanosCaver_Fury_Kirihiross',
+          id: 18,
           title: 'Fury Kirihiross',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Fury_Kirihiross.png'),
-          level: 80,
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanosCaver_Dlizabeth_Eathory',
+          id: 19,
           title: 'Dlizabeth_Eathory',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Dlizabeth_Eathory.png'),
-          level: 80,
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanosCaver_Fierce_Nantarios',
+          id: 20,
           title: 'Fierce_Nantarios',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Fierce_Nantarios.png'),
-          level: 80,
+          level: 75,
+          respawnMap: '??',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_kanos_Lumen',
+          id: 21,
           title: 'Lumen',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanos_Lumen.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Kanos Illium (lV70-80)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_kanos_Ales',
+          id: 22,
           title: 'Ales',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanos_Ales.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Kanos Illium (lV70-80)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_kanos_Dentatus',
+          id: 23,
           title: 'Dentatus',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanos_Dentatus.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Kanos Illium (lV70-80)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_kanos_Secreta',
+          id: 24,
           title: 'Secreta',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanos_Secreta.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Kanos Illium (lV70-80)',
+          respawnTime: '17:00 ~ 17:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_jungle_Commander_Opal_Hammer',
+          id: 25,
           title: 'Commander Opal Hammer',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_jungle_Commander_Opal_Hammer.png'),
-          level: 80,
+          level: 84,
+          respawnMap: 'Stable Erde (lV55-80)',
+          respawnTime: '10:00 ~ 10:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_locus_Graveyard_Terror',
-          title: 'Graveyard Terror',
-          subtitle: 'Subtitle 6',
+          id: 26,
+          title: 'Graveyard Teroro',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_locus_Graveyard_Terror.png'),
-          level: 80,
+          level: 85,
+          respawnMap: 'Locus Graveyard (lV80)',
+          respawnTime: '9:00 ~ 9:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_locus_Dark_Lord',
+          id: 27,
           title: 'Dark Lord',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_locus_Dark_Lord.png'),
-          level: 80,
+          level: 85,
+          level: 85,
+          respawnMap: 'Locus Graveyard (lV80)',
+          respawnTime: '8:00 ~ 8:20 Hs(s)',
+          pvpZone: 80,
         },
         {
-          id: '80_dragon_Abyssal_Eclipser_Umbraxis',
+          id: 28,
           title: 'Abyssal Eclipser Umbraxis',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_dragon_Abyssal_Eclipser_Umbraxis.png'),
-          level: 80,
+          level: 83,
+          respawnMap: 'Dragonspine Enclave (lV80)',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_dragon_Tempest_Guardian_Terravane',
+          id: 29,
           title: 'Tempest Guardian Terravane',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_dragon_Tempest_Guardian_Terravane.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Dragonspine Enclave (lV80)',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_dragon_Pestilent_Tyrant_Nidhogg',
+          id: 30,
           title: 'Pestilent Tyrant Nidhogg',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_dragon_Pestilent_Tyrant_Nidhogg.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Dragonspine Enclave (lV80)',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_dragon_Firestorm_Warden_Pyralis',
+          id: 31,
           title: 'Firestorm Warden Pyralis',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_dragon_Firestorm_Warden_Pyralis.png'),
-          level: 80,
+          level: 82,
+          respawnMap: 'Dragonspine Enclave (lV80)',
+          respawnTime: '??',
+          pvpZone: 80,
         },
         {
-          id: '80_dragon_Eternitys_Vanquisher_Stygion',
+          id: 32,
           title: 'Eternitys Vanquisher Stygion',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_dragon_Eternitys_Vanquisher_Stygion.png'),
-          level: 80,
+          level: 84,
+          respawnMap: 'Dragonspine Enclave (lV80)',
+          respawnTime: '??',
+          pvpZone: 80,
         },
+
         {
-          id: '80_dragon_Eternitys_Vanquisher_Stygion',
-          title: 'Eternitys Vanquisher Stygion',
-          subtitle: 'Subtitle 6',
-          imageUrl: require('../assets/image/boss/80/80_dragon_Eternitys_Vanquisher_Stygion.png'),
-          level: 80,
-        },
-        {
-          id: '80_map1Caver_Cloron_Dragon',
+          id: 33,
           title: 'Cloron Dragon',
-          subtitle: 'Subtitle 6',
+          description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_map1Caver_Cloron_Dragon.png'),
-          level: 80,
+          level: 64,
+          respawnMap: 'Cloron´s Lair (~map1)',
+          respawnTime: '??',
+          pvpZone: 1,
         },
-        // {
-        //   id: '80_map1Caver_Fantasma_Dragon',
-        //   title: 'Fantasma Dragon',
-        //   subtitle: 'Subtitle 6',
-        //   imageUrl: require('../assets/image/boss/80/80_map1Caver_Fantasma_Dragon'),
-        //   level: 80,
-        // },
-      ],
+        {
+          id: 34,
+          title: 'Fantasma Dragon',
+          description: 'description 6',
+          imageUrl: require('../assets/image/boss/80/80_map1Caver_Fantasma_Dragon.png'),
+          level: 64,
+          respawnMap: 'Fantasma´s Lair (~map1)',
+          respawnTime: '??',
+          pvpZone: 1,
+        },
+      ].sort((a, b) => a.title.localeCompare(b.title)),
       search: '', // Valor do campo de pesquisa
     };
   },
   computed: {
     groupedItems() {
       return this.items.reduce((groups, item) => {
-        if (!groups[item.level]) {
-          groups[item.level] = [];
+        if (!groups[item.pvpZone]) {
+          groups[item.pvpZone] = {};
         }
-        groups[item.level].push(item);
+        if (!groups[item.pvpZone][item.respawnMap]) {
+          groups[item.pvpZone][item.respawnMap] = [];
+        }
+        groups[item.pvpZone][item.respawnMap].push(item);
         return groups;
       }, {});
     },
     filteredGroupedItems() {
       const lowerCaseSearch = this.search.toLowerCase();
-      return Object.keys(this.groupedItems).reduce((filteredGroups, level) => {
-        const filteredItems = this.groupedItems[level].filter((item) =>
-          item.title.toLowerCase().includes(lowerCaseSearch)
-        );
-        if (filteredItems.length) {
-          filteredGroups[level] = filteredItems;
-        }
-        return filteredGroups;
-      }, {});
+      return Object.keys(this.groupedItems).reduce(
+        (filteredLevels, pvpZone) => {
+          const filteredRespawnMaps = Object.keys(
+            this.groupedItems[pvpZone]
+          ).reduce((filteredRespawn, respawnMap) => {
+            const filteredItems = this.groupedItems[pvpZone][respawnMap].filter(
+              (item) => item.title.toLowerCase().includes(lowerCaseSearch)
+            );
+            if (filteredItems.length) {
+              filteredRespawn[respawnMap] = filteredItems;
+            }
+            return filteredRespawn;
+          }, {});
+          if (Object.keys(filteredRespawnMaps).length) {
+            filteredLevels[pvpZone] = filteredRespawnMaps;
+          }
+          return filteredLevels;
+        },
+        {}
+      );
     },
   },
   methods: {
     viewDetails(item) {
       console.log('View details for:', item);
-      // Implement navigation or details view logic here
+      // Implementar lógica de navegação ou exibição de detalhes aqui
     },
   },
 };

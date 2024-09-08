@@ -13,9 +13,14 @@
 
         <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="description">
-            <div class="text-h6">{{ title }}</div>
-            <div class="text-subtitle2">{{ subtitle }}</div>
-            <div class="text-subtitle2">{{ level }}</div>
+            <div class="text-h5">{{ title }}</div>
+            <div class="text-3">Level: {{ level }}</div>
+
+            <div class="text-3">PvP Zone: {{ pvpzone }}</div>
+
+            <div class="text-subtitle3">Description: {{ description }}</div>
+            <div class="text-subtitle3">Respawn Map: {{ respawnMap }}</div>
+            <div class="text-subtitle3">Respawn Time: {{ respawnTime }}</div>
           </q-tab-panel>
 
           <q-tab-panel name="drops">
@@ -36,9 +41,12 @@ export default {
   name: 'CardItem',
   props: {
     title: String,
-    subtitle: String,
     imageUrl: String,
+    description: String,
     level: Number,
+    respawnMap: String,
+    respawnTime: String,
+    pvpzone: Number,
   },
   data() {
     return {
