@@ -1,14 +1,21 @@
 {
   "extends": "@quasar/app-webpack/tsconfig-preset",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "target": "es2019",
+    "lib": ["es2019", "dom"],
+    "paths": {
+      "src/*": ["src/*"],
+      "@/*": ["src/*"],
+      "app/*": ["*"],
+      "components/*": ["src/components/*"],
+      "layouts/*": ["src/layouts/*"],
+      "pages/*": ["src/pages/*"],
+      "assets/*": ["src/assets/*"],
+      "boot/*": ["src/boot/*"],
+      "stores/*": ["src/stores/*"],
+      "utils/*": ["src/utils/*"]
+    }
   },
-  "exclude": [
-    "./dist",
-    "./.quasar",
-    "./node_modules",
-    "./src-capacitor",
-    "./src-cordova",
-    "./quasar.config.*.temporary.compiled*"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

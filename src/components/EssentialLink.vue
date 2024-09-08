@@ -1,39 +1,29 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
+  <q-item clickable tag="a" target="_blank" :href="link">
+    <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
 
     <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-item-label>{{ props.title }}</q-item-label>
+      <q-item-label caption>{{ props.caption }}</q-item-label>
+      <!-- <a :href="props.link">Link</a> -->
     </q-item-section>
   </q-item>
 </template>
 
 <script setup lang="ts">
 defineOptions({
-  name: 'EssentialLink'
+  name: 'EssentialLink',
 });
 
-export interface EssentialLinkProps {
-  title: string;
-  caption?: string;
-  link?: string;
-  icon?: string;
-};
+import { defineProps } from 'vue';
+import { EssentialLinkProps } from '../components/models';
 
-withDefaults(defineProps<EssentialLinkProps>(), {
-  caption: '',
-  link: '#',
-  icon: '',
-});
+const props = defineProps({
+  title: String,
+  caption: { type: String, default: '' },
+  link: { type: String, default: '#' },
+  icon: { type: String, default: '' },
+}) as EssentialLinkProps;
 </script>
