@@ -1,5 +1,39 @@
 <template>
   <q-page class="q-pa-md flex flex-center column">
+    <q-drawer
+      side="right"
+      show-if-above
+      v-model="rightDrawerOpen"
+      width="300px"
+      class="bg-gray-1 text-black"
+    >
+      <q-list>
+        <q-item-label header>Respawn Maps</q-item-label>
+        <q-expansion-item
+          v-for="(respawnMaps, pvpZone) in groupedItems"
+          :key="pvpZone"
+          :label="'PVP Zone: ' + pvpZone"
+        >
+          <q-item-label
+            v-for="(group, respawnMap) in respawnMaps"
+            :key="respawnMap"
+          >
+            {{ respawnMap }}
+            <q-list>
+              <q-item
+                v-for="boss in group"
+                :key="boss.id"
+                clickable
+                @click="viewDetails(boss)"
+              >
+                <q-item-section>{{ boss.title }} </q-item-section>
+              </q-item>
+            </q-list>
+          </q-item-label>
+        </q-expansion-item>
+      </q-list>
+    </q-drawer>
+
     <div class="search-container q-mb-md">
       <q-input
         v-model="search"
@@ -30,7 +64,11 @@
         :key="pvpZone"
         class="q-pa-md grouped-cards"
       >
-        <div v-for="(group, respawnMap) in respawnMaps" :key="respawnMap">
+        <div
+          v-for="(group, respawnMap) in respawnMaps"
+          :key="respawnMap"
+          :ref="`respawnMap-${respawnMap}`"
+        >
           <h5 class="group-title">{{ respawnMap }}</h5>
           <q-item v-for="item in group" :key="item.id" class="q-mb-md">
             <CardItem
@@ -59,6 +97,8 @@ export default {
   },
   data() {
     return {
+      rightDrawerOpen: true,
+      search: '',
       items: [
         {
           id: 1,
@@ -403,7 +443,6 @@ export default {
           pvpZone: 1,
         },
       ].sort((a, b) => a.title.localeCompare(b.title)),
-      search: '', // Valor do campo de pesquisa
     };
   },
   computed: {
@@ -445,8 +484,17 @@ export default {
   },
   methods: {
     viewDetails(item) {
-      console.log('View details for:', item);
-      // Implementar lógica de navegação ou exibição de detalhes aqui
+      this.$nextTick(() => {
+        const refName = `respawnMap-${item.respawnMap}`;
+        const element = this.$refs[refName];
+        if (element && element.length > 0) {
+          element[0].scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest',
+          });
+        }
+      });
     },
   },
 };
@@ -465,7 +513,7 @@ export default {
   width: 100%;
   max-width: 600px;
   display: flex;
-  align-items: center; /* Alinha verticalmente o ícone e a barra de pesquisa */
+  align-items: center;
   justify-content: center;
 }
 
@@ -474,7 +522,7 @@ export default {
 }
 
 .search-icon {
-  cursor: pointer; /* Opcional: mudar o cursor para indicar que o ícone é clicável */
+  cursor: pointer;
 }
 
 .card-grid {
@@ -493,8 +541,9 @@ export default {
   margin-bottom: 16px;
   text-align: center;
 }
+
 .resized-img {
-  width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 200px;
+  height: auto;
 }
 </style>
