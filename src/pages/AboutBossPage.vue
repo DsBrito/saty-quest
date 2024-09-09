@@ -1,22 +1,26 @@
 <template>
   <q-page class="q-pa-md flex flex-center column">
+    <!-- Área dos Drawer -->
     <q-drawer
       side="right"
       show-if-above
       v-model="rightDrawerOpen"
       width="300px"
-      class="bg-gray-1 text-black"
+      bordered
     >
       <q-list>
-        <q-item-label header>Respawn Maps</q-item-label>
+        <q-item-label header>Respawn Maps </q-item-label>
         <q-expansion-item
           v-for="(respawnMaps, pvpZone) in groupedItems"
           :key="pvpZone"
+          :expand-separator="true"
           :label="'PVP Zone: ' + pvpZone"
         >
           <q-item-label
             v-for="(group, respawnMap) in respawnMaps"
             :key="respawnMap"
+            style="margin-left: 20px; font-weight: bold"
+            class="blue-grey"
           >
             {{ respawnMap }}
             <q-list>
@@ -24,9 +28,15 @@
                 v-for="boss in group"
                 :key="boss.id"
                 clickable
-                @click="viewDetails(boss)"
+                @click="scrollToBoss(boss.id)"
+                class="no-padding"
               >
-                <q-item-section>{{ boss.title }} </q-item-section>
+                <q-item-section
+                  style="display: flex; margin-left: 10px"
+                  class="text-caption"
+                >
+                  {{ boss.title }}</q-item-section
+                >
               </q-item>
             </q-list>
           </q-item-label>
@@ -56,32 +66,32 @@
         :ratio="1"
       />
     </div>
-
     <!-- Área dos Cards -->
-    <div class="card-grid">
+    <div class="card-grid" v-scroll="onScroll">
       <div
         v-for="(respawnMaps, pvpZone) in filteredGroupedItems"
         :key="pvpZone"
         class="q-pa-md grouped-cards"
       >
-        <div
-          v-for="(group, respawnMap) in respawnMaps"
-          :key="respawnMap"
-          :ref="`respawnMap-${respawnMap}`"
-        >
-          <h5 class="group-title">{{ respawnMap }}</h5>
-          <q-item v-for="item in group" :key="item.id" class="q-mb-md">
-            <CardItem
-              :title="item.title"
-              :description="item.description"
-              :imageUrl="item.imageUrl"
-              :level="item.level"
-              :respawnMap="item.respawnMap"
-              :respawnTime="item.respawnTime"
-              :pvpzone="item.pvpZone"
-              @click="viewDetails(item)"
-            />
-          </q-item>
+        <div v-for="(group, respawnMap) in respawnMaps" :key="respawnMap">
+          <div v-for="item in group" :key="item.id">
+            <!-- Adicionar o ref com base no ID do boss -->
+            <h5 :ref="`bossTitle-${item.id}`" class="group-title">
+              {{ item.title }}
+            </h5>
+            <q-item :key="item.id" class="q-mb-md">
+              <CardItem
+                :title="item.title"
+                :description="item.description"
+                :imageUrl="item.imageUrl"
+                :level="item.level"
+                :respawnMap="item.respawnMap"
+                :respawnTime="item.respawnTime"
+                :pvpzone="item.pvpZone"
+                @click="viewDetails(item)"
+              />
+            </q-item>
+          </div>
         </div>
       </div>
     </div>
@@ -430,7 +440,7 @@ export default {
           level: 64,
           respawnMap: 'Cloron´s Lair (~map1)',
           respawnTime: '??',
-          pvpZone: 1,
+          pvpZone: '??',
         },
         {
           id: 34,
@@ -440,7 +450,7 @@ export default {
           level: 64,
           respawnMap: 'Fantasma´s Lair (~map1)',
           respawnTime: '??',
-          pvpZone: 1,
+          pvpZone: '??',
         },
       ].sort((a, b) => a.title.localeCompare(b.title)),
     };
@@ -483,12 +493,11 @@ export default {
     },
   },
   methods: {
-    viewDetails(item) {
+    scrollToBoss(bossId) {
       this.$nextTick(() => {
-        const refName = `respawnMap-${item.respawnMap}`;
-        const element = this.$refs[refName];
-        if (element && element.length > 0) {
-          element[0].scrollIntoView({
+        const bossTitle = this.$refs[`bossTitle-${bossId}`];
+        if (bossTitle && bossTitle[0]) {
+          bossTitle[0].scrollIntoView({
             behavior: 'smooth',
             block: 'center',
             inline: 'nearest',
@@ -545,5 +554,12 @@ export default {
 .resized-img {
   width: 200px;
   height: auto;
+}
+.resized-img2 {
+  width: 100%; /* Faz a imagem se adaptar ao contêiner do card */
+  max-width: 200px; /* Define um limite máximo de largura */
+  height: auto; /* Mantém a proporção da altura */
+  object-fit: cover; /* Garante que a imagem cubra o espaço disponível sem distorção */
+  border-radius: 8px; /* Dá bordas arredondadas se desejar */
 }
 </style>
