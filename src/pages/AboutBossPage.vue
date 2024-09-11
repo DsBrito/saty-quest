@@ -3,10 +3,9 @@
     <!-- Área dos Drawer -->
     <q-drawer
       side="right"
-      show-if-above
       v-model="rightDrawerOpen"
       width="300px"
-      bordered
+      behavior="desktop"
     >
       <q-list>
         <q-item-label header>Respawn Maps </q-item-label>
@@ -61,7 +60,7 @@
         </template>
       </q-input>
       <q-img
-        src="../assets/image/boss/download.png"
+        src="../assets/image/boss/icons/rightArrow.png"
         class="resized-img"
         :ratio="1"
       />
@@ -272,7 +271,7 @@ export default {
         },
         {
           id: 17,
-          title: 'Fierce_Nantarios',
+          title: 'Cryptic the Immortal',
           description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Cryptic_the_Immortal.png'),
           level: 75,
@@ -292,7 +291,7 @@ export default {
         },
         {
           id: 19,
-          title: 'Dlizabeth_Eathory',
+          title: 'Dlizabeth Eathory',
           description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Dlizabeth_Eathory.png'),
           level: 75,
@@ -302,7 +301,7 @@ export default {
         },
         {
           id: 20,
-          title: 'Fierce_Nantarios',
+          title: 'Fierce Nantarios',
           description: 'description 6',
           imageUrl: require('../assets/image/boss/80/80_kanosCaver_Fierce_Nantarios.png'),
           level: 75,
@@ -435,7 +434,8 @@ export default {
         {
           id: 33,
           title: 'Cloron Dragon',
-          description: 'description 6',
+          description:
+            'The Phantom Dragon is an ethereal creature, composed of ghostly bones that float and move with supernatural energy. It haunts the cave that bears its name “Phantom’s Lair”, unable to be touched by conventional weapons. Its attacks are of spectral origin, causing both physical and spiritual damage.',
           imageUrl: require('../assets/image/boss/80/80_map1Caver_Cloron_Dragon.png'),
           level: 64,
           respawnMap: 'Cloron´s Lair (~map1)',
@@ -445,7 +445,8 @@ export default {
         {
           id: 34,
           title: 'Fantasma Dragon',
-          description: 'description 6',
+          description:
+            'The Cloron Dragon is an ancient dragon king who dwells within the ruins of Cloron’s Lair. He is colossal and imposing, with a presence that intimidates even the bravest warriors. His tough, ancient scales have withstood countless battles, and his power is legendary, devastating any enemy who attempts to invade his domain.',
           imageUrl: require('../assets/image/boss/80/80_map1Caver_Fantasma_Dragon.png'),
           level: 64,
           respawnMap: 'Fantasma´s Lair (~map1)',
