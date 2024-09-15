@@ -46,6 +46,10 @@
       bordered
       overlay
       behavior="desktop"
+      :width="200"
+      :mini="miniState"
+      @mouseenter="miniState = false"
+      @mouseleave="miniState = true"
       class="bg-black text-white"
     >
       <q-list>
@@ -158,7 +162,6 @@ export default {
         link: 'https://github.com/quasarframework',
       },
     ];
-
     const leftDrawerOpen = ref(false);
 
     function toggleLeftDrawer() {
@@ -176,6 +179,7 @@ export default {
       goToClassPage: () => router.push({ name: ROTAS.class.name }),
       leftDrawerOpen,
       toggleLeftDrawer,
+      miniState: ref(true),
     };
   },
 };
