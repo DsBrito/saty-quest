@@ -162,6 +162,7 @@ export default {
         link: 'https://github.com/quasarframework',
       },
     ];
+
     const leftDrawerOpen = ref(false);
 
     function toggleLeftDrawer() {

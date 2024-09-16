@@ -67,8 +67,8 @@ export default {
 }
 
 .card-img {
-  max-width: 20%;
-  max-height: 20%;
+  max-width: 30%;
+  max-height: 30%;
 }
 
 .card-content {
