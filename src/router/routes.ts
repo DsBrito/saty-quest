@@ -18,15 +18,15 @@ export const ROTAS = {
       public: true,
     },
   } as RouteRecordRaw,
-  eg: {
-    path: '/about-eg',
-    name: 'about-eg',
-    component: () => import('src/pages/AboutEgPage.vue'),
-    meta: {
-      layout: 'MainLayout',
-      public: true,
-    },
-  } as RouteRecordRaw,
+  // eg: {
+  //   path: '/about-eg',
+  //   name: 'about-eg',
+  //   component: () => import('src/pages/AboutEgPage.vue'),
+  //   meta: {
+  //     layout: 'MainLayout',
+  //     public: true,
+  //   },
+  // } as RouteRecordRaw,
   events: {
     path: '/about-events',
     name: 'about-events',
