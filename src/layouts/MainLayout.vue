@@ -173,7 +173,7 @@ export default {
       aboutMeList,
       goToHome: () => router.push({ name: ROTAS.main.name }),
       goToAboutMePage: () => router.push({ name: ROTAS.me.name }),
-      goToEgPage: () => router.push({ name: ROTAS.eg.name }),
+      // goToEgPage: () => router.push({ name: ROTAS.eg.name }),
       goToEventsPage: () => router.push({ name: ROTAS.events.name }),
       goToBossPage: () => router.push({ name: ROTAS.boss.name }),
       goToClassPage: () => router.push({ name: ROTAS.class.name }),
@@ -184,3 +184,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.logo-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+</style>
