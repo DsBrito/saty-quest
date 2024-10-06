@@ -1,14 +1,25 @@
 <template>
   <q-page class="q-pa-md flex flex-center column">
-    <!-- Área dos Drawer -->
+    <div class="header-container">
+      <!-- Header fora do Drawer -->
+      <div v-if="!rightDrawerOpen" class="drawer-header-closed no-padding">
+        <q-item-label header>Respawn Maps</q-item-label>
+        <q-btn flat round dense icon="menu" @click="rightDrawerOpen = true" />
+      </div>
+    </div>
     <q-drawer
       side="right"
       v-model="rightDrawerOpen"
       width="300px"
       behavior="desktop"
     >
+      <!-- Header dentro do Drawer -->
+      <div class="drawer-header">
+        <q-item-label header>Respawn Maps</q-item-label>
+        <q-btn flat round dense icon="close" @click="rightDrawerOpen = false" />
+      </div>
+
       <q-list>
-        <q-item-label header>Respawn Maps </q-item-label>
         <q-expansion-item
           v-for="(respawnMaps, pvpZone) in groupedItems"
           :key="pvpZone"
@@ -34,8 +45,8 @@
                   style="display: flex; margin-left: 10px"
                   class="text-caption"
                 >
-                  {{ boss.title }}</q-item-section
-                >
+                  {{ boss.title }}
+                </q-item-section>
               </q-item>
             </q-list>
           </q-item-label>
@@ -43,17 +54,20 @@
       </q-list>
     </q-drawer>
 
-    <div class="search-container q-mb-md">
+    <!-- Contêiner para a barra de pesquisa e o cabeçalho do drawer -->
+    <!-- Barra de pesquisa -->
+    <div class="search-container q-mb-md full-width">
       <q-input
         v-model="search"
-        placeholder="Search by card title"
+        placeholder="Use this field to search boss by name
+"
         debounce="300"
         outlined
-        class="search-input"
+        class="full-width"
         dense
       >
         <template v-slot:prepend>
-          <q-icon name="keyboard_arrow_left" class="search-icon" />
+          <q-icon name="keyboard_arrow_left" />
         </template>
         <template v-slot:append>
           <q-icon name="search" />
@@ -65,21 +79,22 @@
         :ratio="1"
       />
     </div>
-    <!-- Área dos Cards -->
+
+    <!-- Cards com Bosses -->
     <div class="card-grid no-padding" v-scroll="onScroll">
       <div
         v-for="(respawnMaps, pvpZone) in filteredGroupedItems"
         :key="pvpZone"
-        class="q-pa-md grouped-cards"
+        class="q-pa-md no-padding"
       >
         <div v-for="(group, respawnMap) in respawnMaps" :key="respawnMap">
           <div v-for="item in group" :key="item.id">
-            <!-- Adicionar o ref com base no ID do boss -->
-            <h5 :ref="`bossTitle-${item.id}`" class="group-title">
-              {{ item.title }}
+            <!-- Referência para scroll ao Boss -->
+            <h5 :ref="`bossTitle-${item.id}`" class="text-center no-margin">
+              <!-- {{ item.title }} -->
             </h5>
-            <q-item :key="item.id" class="q-mb-md">
-              <CardItem
+            <q-item :key="item.id" class="q-mb-md no-padding">
+              <CardBossItem
                 :title="item.title"
                 :description="item.description"
                 :imageUrl="item.imageUrl"
@@ -100,15 +115,16 @@
 </template>
 
 <script>
-import CardItem from 'components/boss/CardItem.vue';
-import { BOSS } from '../model/boss';
+import CardBossItem from 'components/boss/CardBossItem.vue';
+import { BOSS } from '../model/monsters/boss';
+
 export default {
   components: {
-    CardItem,
+    CardBossItem,
   },
   data() {
     return {
-      rightDrawerOpen: true,
+      rightDrawerOpen: false, // Controla se o drawer está aberto ou fechado
       search: '',
       items: BOSS.sort((a, b) => a.title.localeCompare(b.title)),
     };
@@ -168,56 +184,34 @@ export default {
 </script>
 
 <style scoped>
-.q-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .search-container {
-  width: 100%;
   max-width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.search-input {
-  width: 100%;
-}
-
-.search-icon {
-  cursor: pointer;
-}
-
-.card-grid {
-  display: grid;
-  gap: 16px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.grouped-cards {
-  border-radius: 8px;
-  padding: 16px;
-}
-
-.group-title {
-  margin-bottom: 16px;
-  text-align: center;
-}
-
 .resized-img {
   width: 200px;
   height: auto;
 }
-.resized-img2 {
-  width: 100%; /* Faz a imagem se adaptar ao contêiner do card */
-  max-width: 200px; /* Define um limite máximo de largura */
-  height: auto; /* Mantém a proporção da altura */
-  object-fit: cover; /* Garante que a imagem cubra o espaço disponível sem distorção */
-  border-radius: 8px; /* Dá bordas arredondadas se desejar */
+.card-grid {
+  max-width: 50%;
+}
+.drawer-header {
+  display: flex;
+  align-items: center;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.drawer-header-closed {
+  display: flex;
+  margin-left: auto;
+  display: flex;
 }
 </style>
