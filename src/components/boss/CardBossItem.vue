@@ -49,10 +49,10 @@
         <q-separator />
 
         <!-- Tabs para História e Respawn -->
-        <q-tabs v-model="dialogTab" class="text-teal" dense>
+        <q-scroll v-model="dialogTab" class="text-teal" dense>
           <q-tab label="História" name="history" />
           <q-tab label="Respawn" name="respawn" />
-        </q-tabs>
+        </q-scroll>
         <q-separator />
 
         <q-tab-panels
