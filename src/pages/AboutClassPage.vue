@@ -69,13 +69,14 @@
 
   <div class="class-info" v-if="classInfo">
     <!-- SKILLS | STATUS -->
-    <CardClassItem v-if="currentCharacter" :character="currentCharacter" />
+    <CardClassItem :character="currentCharacter" />
+    <SkillCarousel :skills="currentCharacter.skills"></SkillCarousel>
 
     <!-- LINKS -->
     <LinksTable :links="currentCharacter.links" />
 
     <!-- SKILL COMBBO-->
-    <SkillCard></SkillCard>
+    <!-- <ComboCard></ComboCard> -->
   </div>
 </template>
 
@@ -84,13 +85,15 @@ import { ref, computed } from 'vue';
 import { CHARACTER } from '../model/class/character';
 import CardClassItem from 'components/class/CardClassItem.vue';
 import LinksTable from 'components/class/LinksTable.vue';
-import SkillCard from 'components/class/SkillCard.vue';
+// import ComboCard from 'src/components/class/ComboCard.vue';
+import SkillCarousel from 'components/class/SkillCarousel.vue';
 
 export default {
   components: {
     CardClassItem,
     LinksTable,
-    SkillCard,
+    // ComboCard,
+    SkillCarousel,
   },
   setup() {
     const slide = ref(1);
@@ -135,9 +138,9 @@ export default {
       },
       {
         src: require('../assets/image/class/background/bgclass.png'),
-        title: 'Guardian',
+        title: 'Monkey',
         description:
-          'The Guardian is a robust protector, skilled in defensive tactics.',
+          'The Monkey is an agile fighter, known for its speed and acrobatics.',
       },
       {
         src: require('../assets/image/class/background/bgclass.png'),
@@ -145,6 +148,13 @@ export default {
         description:
           'The Warrior is a frontline fighter, known for brute strength.',
       },
+      {
+        src: require('../assets/image/class/background/bgclass.png'),
+        title: 'Guardian',
+        description:
+          'The Guardian is a robust protector, skilled in defensive tactics.',
+      },
+
       {
         src: require('../assets/image/class/background/bgclass.png'),
         title: 'Oracle',
@@ -167,12 +177,7 @@ export default {
         title: 'Pagan',
         description: 'The Pagan harnesses the power of nature in combat.',
       },
-      {
-        src: require('../assets/image/class/background/bgclass.png'),
-        title: 'Monkey',
-        description:
-          'The Monkey is an agile fighter, known for its speed and acrobatics.',
-      },
+
       {
         src: require('../assets/image/class/background/bgclass.png'),
         title: 'Druid',
@@ -188,13 +193,13 @@ export default {
       'Ranger',
       'Archer',
       'Mage',
-      'Guardian',
+      'Monkey',
       'Warrior',
+      'Guardian',
       'Oracle',
       'Assassin',
       'Hunter',
       'Pagan',
-      'Monkey',
       'Druid',
     ];
 
