@@ -1,12 +1,9 @@
 <template>
-  <!-- <img :src="props.class" class="" /> -->
-
   <h6 class="text-center"><strong>SKILLS | LINKS | ATTIBUTES </strong></h6>
 
   <div class="class-skill-wrapper">
     <AttributesTable></AttributesTable>
 
-    <!-- <img :src="props.class" class="class-image" /> -->
     <q-carousel
       animated
       v-model="slide"
@@ -22,7 +19,7 @@
         <q-card class="skill-card">
           <q-card-section class="no-padding">
             <img
-              :src="props.skillBasic"
+              :src="props.skills.skillBasic"
               alt="Skill Basic"
               class="skill-image"
             />
@@ -35,7 +32,7 @@
         <q-card class="skill-card">
           <q-card-section class="no-padding">
             <img
-              :src="props.skillSingle"
+              :src="props.skills.skillSingle"
               alt="Skill Single"
               class="skill-image"
             />
@@ -47,7 +44,11 @@
       <q-carousel-slide :name="3" class="no-padding">
         <q-card class="skill-card">
           <q-card-section class="no-padding">
-            <img :src="props.skillBuff" alt="Skill Buff" class="skill-image" />
+            <img
+              :src="props.skills.skillBuff"
+              alt="Skill Buff"
+              class="skill-image"
+            />
           </q-card-section>
         </q-card>
       </q-carousel-slide>
@@ -57,7 +58,7 @@
         <q-card class="skill-card">
           <q-card-section class="no-padding">
             <img
-              :src="props.skillRanger"
+              :src="props.skills.skillRanger"
               alt="Skill Ranger"
               class="skill-image"
             />
@@ -72,6 +73,7 @@
     />
   </div>
 </template>
+
 <script setup lang="ts">
 import { ref } from 'vue';
 import AttributesTable from 'components/class/AttributesTable.vue';
@@ -79,11 +81,12 @@ import AttributesTable from 'components/class/AttributesTable.vue';
 const slide = ref(1);
 
 const props = defineProps<{
-  class: string;
-  skillBasic: string;
-  skillSingle: string;
-  skillBuff: string;
-  skillRanger: string;
+  skills: {
+    skillBasic: string;
+    skillSingle: string;
+    skillBuff: string;
+    skillRanger: string;
+  };
 }>();
 </script>
 
@@ -97,7 +100,6 @@ const props = defineProps<{
 .class-image {
   max-width: 200px; /* Ajuste o tamanho da imagem da classe */
   height: auto;
-  /* margin-right: 20px; Espaçamento entre a imagem e o carrossel */
 }
 
 .carousel-custom {
@@ -114,7 +116,6 @@ const props = defineProps<{
 .skill-image {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
   border-radius: 8px;
 }
 

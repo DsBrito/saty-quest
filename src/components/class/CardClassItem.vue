@@ -1,29 +1,40 @@
 <template>
   <q-page class="test">
     <!-- <q-page class="q-pa-md test"> -->
-    <img src="../../assets/image/icons/page_breakg.png" />
+    <div class="row justify-center">
+      <img class="character-icon" :src="character.icon" alt="Character Icon" />
+      <h3>{{ character.class }}</h3>
+    </div>
+
+    <!-- <img src="../../assets/image/icons/page_breakg.png" /> -->
 
     <h5><strong> HISTORY</strong></h5>
-
+    <!-- {{ character }} -->
     {{ character.history }}
-    <img src="../../assets/image/icons/page_breakg.png" />
+    <!-- <img src="../../assets/image/icons/page_breakg.png" /> -->
+    <h5><strong> DESCRIPTION</strong></h5>
+    <!-- {{ character.description }} -->
+    {{
+      Object.entries(character.description).find(
+        ([key]) => key === 'description'
+      )[1]
+    }}
 
-    <q-card v-if="character">
-      <!-- class="q-mb-md"> -->
+    <!-- {{
+      Object.fromEntries(
+        Object.entries(character.description).find(
+          ([key]) => key === 'description'
+        )
+      )
+    }} -->
+    <!-- <q-card v-if="character"> -->
+    <!-- class="q-mb-md"> -->
 
-      <!--CLASSE-->
-      <!-- <img src="character.classUrl" /> -->
-      <!-- SKILLS-->
+    <!--CLASSE-->
+    <!-- <img src="character.classUrl" /> -->
+    <!-- SKILLS-->
 
-      <Skills
-        :class="character.classUrl"
-        :skillBasic="character.skillBasic"
-        :skillSingle="character.skillSingle"
-        :skillBuff="character.skillBuff"
-        :skillRanger="character.skillRanger"
-      ></Skills>
-
-      <!-- <q-card-section>
+    <!-- <q-card-section>
         <div class="row items-center">
           <div class="col">
             <h4>{{ character.class }}</h4>
@@ -35,7 +46,7 @@
         </div>
       </q-card-section> -->
 
-      <!-- <q-card-section>
+    <!-- <q-card-section>
         <q-list>
           <q-item>
             <q-item-section>
@@ -52,19 +63,15 @@
           </q-item>
         </q-list>
       </q-card-section> -->
-    </q-card>
+    <!-- </q-card> -->
   </q-page>
   <!--CLASSE-->
   <img src="../../assets/image/icons/page_breakg.png" />
 </template>
 
 <script>
-import Skills from 'components/class/SkillCarousel.vue';
-
 export default {
-  components: {
-    Skills,
-  },
+  components: {},
   name: 'CardClassItem',
   props: {
     character: {
@@ -98,5 +105,10 @@ export default {
 .resized-img {
   width: 200px;
   height: auto;
+}
+.character-icon {
+  width: 100px; /* Defina a largura desejada */
+  height: auto; /* Manterá a proporção correta */
+  object-fit: contain; /* Garante que a imagem se ajuste sem distorção */
 }
 </style>
