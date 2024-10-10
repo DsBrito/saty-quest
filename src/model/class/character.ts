@@ -1,5 +1,8 @@
 import { HISTORY } from './characterHistory';
 import { LINKS } from './characterLinks';
+import { COMBO } from './characterCombo';
+import { SKILLS } from './characterSkills';
+import { DESCRIPTION } from './characterDescription';
 
 export const getHistoryById = (id: number) => {
   const historyItem = HISTORY.find((item) => item?.id == id);
@@ -7,209 +10,287 @@ export const getHistoryById = (id: number) => {
 };
 
 export const getLinkById = (id: number) => {
-  const linkItem = LINKS.find((item) => item?.id == id); // Ignora o primeiro elemento
+  const linkItem = LINKS.find((item) => item?.id == id);
   return linkItem ? linkItem : 'Link not found';
+};
+
+export const getComboById = (id: number) => {
+  const comboItem = COMBO.find((item) => item?.id == id);
+  return comboItem ? comboItem : 'Combo not found';
+};
+
+export const getSkillById = (id: number) => {
+  const skillItem = SKILLS.find((item) => item?.id == id);
+  return skillItem ? skillItem : 'Skill not found';
+};
+
+export const getDescriptionById = (id: number) => {
+  const descriptionItem = DESCRIPTION.find((item) => item?.id == id);
+  return descriptionItem ? descriptionItem : 'DescriptionItem not found';
 };
 
 export const CHARACTER = [
   {
+    //1
     id: 1,
-    type: 'human',
-    class: 'fight',
-    history: getHistoryById(1),
-    description:
-      'Fighters specialize in physical combat, focusing on dealing large amounts of direct damage to enemies. They wield a variety of melee weapons, including swords, axes, and spears. This class is ideal for players who enjoy being on the front lines of combat, delivering powerful blows and controlling the battlefield.',
+    type: 'Human',
+    class: 'Fighter',
     role: 'DPS (Damage Per Second), melee combat.',
-    classUrl: require('../../assets/image/class/human/defender/defenderslide.png'),
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/human/fight/icon/fighter_icon.png'),
+    // classUrl: require('../../assets/image/class/human/defender/defenderslide.png'),
+
+    history: getHistoryById(111),
+    description: getDescriptionById(1),
+    skills: getSkillById(1),
     links: [
       {
-        linkTitle1: 'Normal Build',
+        linkTitle1: 'DPS Build',
         linkLapis1: getLinkById(1),
       },
     ],
   },
   {
+    //2
     id: 2,
-    type: 'human',
-    class: 'defender',
-    history: getHistoryById(1),
-    description:
-      'Defenders are the living shields of the Alliance of Light, specializing in absorbing large amounts of damage and protecting their allies. They have high durability and defensive abilities, making them difficult to take down. They wear heavy armor and shields, and have abilities that make them experts at holding the front line and attracting enemy aggro.',
+    type: 'Human',
+    class: 'Defender',
     role: 'Tank, defense.',
-    classUrl: require('../../assets/image/class/human/defender/defenderslide.png'),
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/human/defender/icon/defender_icon.png'),
+
+    history: getHistoryById(111),
+    description: getDescriptionById(2),
+    skills: getSkillById(2),
     links: [
       {
-        linkTitle1: 'Battle Tank',
+        linkTitle1: 'Battle Tank Build',
         linkLapis1: getLinkById(2),
-        linkTitle2: 'True Tank',
-        linkLapis2: getLinkById(3),
+        linkTitle2: 'True Tank Build',
+        linkLapis2: getLinkById(22),
+      },
+    ],
+    // combos: [
+    //   {
+    //     combo_1: getComboById(21),
+    //     combo_2: getComboById(22),
+    //     combo_3: getComboById(23),
+    //   },
+    // ],
+  },
+  {
+    id: 3,
+    type: 'Human',
+    class: 'Priest',
+    role: 'Support, healing',
+    history: getHistoryById(111),
+    description: getDescriptionById(3),
+    // classUrl: require('../../assets/image/class/priest.png'),
+    skills: getSkillById(3),
+    icon: require('../../assets/image/class/human/priest/icon/priest_icon.png'),
+
+    links: [
+      {
+        linkTitle1: 'Tank Build',
+        linkLapis1: getLinkById(3),
+        linkTitle2: 'Healer Build',
+        linkLapis2: getLinkById(33),
       },
     ],
   },
   {
-    id: 3,
-    type: 'human',
-    class: 'priest',
-    history: getHistoryById(1),
-    description:
-      'Priests are the human support class, focused on healing and protecting their allies. They have abilities to restore health to party members, remove debuffs, and resurrect fallen comrades. Additionally, they can grant powerful buffs that increase the effectiveness of their allies in combat. Priests are essential for keeping the party alive in tough battles.',
-    role: 'Support, healing',
-    // classUrl: require('../../assets/image/class/priest.png'),
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-  },
-  {
     id: 4,
-    type: 'elf',
-    class: 'ranger',
-    history: getHistoryById(2),
-    description:
-      'Rangers are experts in 1v1 combat and stealth. They can blend in with their surroundings, moving undetected by enemies and attacking by surprise. They primarily use daggers and claws, and are highly agile and accurate. This class is ideal for players who like to strike quickly and escape without being caught.',
+    type: 'Elf',
+    class: 'Ranger',
     role: 'DPS (Damage per Second), stealth.',
-    // classUrl: require('../../assets/image/class/ranger.png'),
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/elf/ranger/icon/rager_icon.png'),
+
+    history: getHistoryById(222),
+    description: getDescriptionById(4),
+    skills: getSkillById(4),
+    links: [
+      {
+        linkTitle1: 'Dex Build',
+        linkLapis1: getLinkById(4),
+        linkTitle2: 'Health and Dex Build',
+        linkLapis2: getLinkById(44),
+      },
+    ],
   },
   {
     id: 5,
-    type: 'elf',
-    class: 'archer',
-    history: getHistoryById(2),
-    description:
-      'Archers are an elite race, capable of striking their enemies from long range with deadly accuracy. They have the ability to deal massive amounts of damage before enemies can get close. They use bows and arrows or crossbows, with abilities that increase critical damage and crowd control. They are perfect for players who prefer to attack from a distance and stay out of direct enemy range.',
+    type: 'Elf',
+    class: 'Archer',
     role: 'Ranged DPS, Precision.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/elf/archer/icon/archer_icon.png'),
+
+    history: getHistoryById(222),
+    description: getDescriptionById(5),
+    skills: getSkillById(5),
+    links: [
+      {
+        linkTitle1: 'Dex and Luc Build',
+        linkLapis1: getLinkById(5),
+        linkTitle2: 'Str and Luc Build',
+        linkLapis2: getLinkById(55),
+      },
+    ],
   },
   {
     id: 6,
-    type: 'elf',
-    class: 'mage',
-    history: getHistoryById(2),
-    description:
-      'Mages have a deep connection with the natural elements, using powerful magic to devastate their enemies. They can cast fire, earth, water, and wind spells, dealing massive area damage or focusing on specific targets. Mages also have crowd control abilities such as slow and paralysis. Despite their low physical defense, they make up for it with some of the highest damage output in the game.',
+    type: 'Elf',
+    class: 'Mage',
     role: 'Ranged DPS, Crowd control.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/elf/mage/icon/mage_icon.png'),
+    history: getHistoryById(222),
+    description: getDescriptionById(6),
+    skills: getSkillById(6),
+    links: [
+      {
+        linkTitle1: 'DPS Build',
+        linkLapis1: getLinkById(6),
+        linkTitle2: 'HP and DPS Build',
+        linkLapis2: getLinkById(66),
+      },
+    ],
   },
   {
     id: 7,
-    type: 'nordein',
-    class: 'guardian',
-    history: getHistoryById(3),
-    description:
-      'Guardians specialize in absorbing large amounts of damage and protecting their allies. With heavy armor and defensive abilities, they act as the front line in battle, drawing enemy attention and ensuring the party remains safe. Their resilience and ability to absorb damage are crucial in prolonged engagements.',
-    role: 'Tank, Defense.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    type: 'Spirit Bear',
+    class: 'Monkey',
+    role: 'Ranged DPS, Crowd control.',
+    icon: require('../../assets/image/class/spirity/monkey/icon/monkey_icon.png'),
+    history: getHistoryById(5),
+    description: getDescriptionById(7),
+    skills: getSkillById(7),
+    links: [
+      {
+        linkTitle1: 'DPS Build',
+        linkLapis1: getLinkById(1),
+      },
+    ],
   },
   {
     id: 8,
-    type: 'nordein',
-    class: 'warrior',
-    history: getHistoryById(3),
-    description:
-      'Warriors are experts in close combat, using a variety of weapons to deal large amounts of physical damage. They are effective in head-on battles, delivering powerful blows and controlling the battlefield with their strength and skill. Ideal for players who prefer to be on the front lines, dealing with the enemy up close.',
+    type: 'Nordein',
+    class: 'Warrior',
     role: 'DPS (Damage Per Second), melee combat.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/nordein/warrior/icon/warrior_icon.png'),
+    history: getHistoryById(333),
+    description: getDescriptionById(8),
+    skills: getSkillById(8),
+    links: [
+      {
+        linkTitle1: 'DPS Build',
+        linkLapis1: getLinkById(1),
+      },
+    ],
   },
   {
     id: 9,
-    type: 'nordein',
-    class: 'oracle',
-    history: getHistoryById(3),
-    description:
-      'Oracles are masters of magic and support, focusing on skills that can heal, remove debuffs, and provide buffs to the party. They use magical abilities to influence the battlefield, restore the health of allies, and help the team overcome challenges. They are essential for keeping the party in fighting condition and improving overall effectiveness in battle.',
-    role: 'Support, healing',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    type: 'Nordein',
+    class: 'Guardian',
+    role: 'Tank, Defense.',
+    icon: require('../../assets/image/class/nordein/guardian/icon/guardian_icon.png'),
+    history: getHistoryById(333),
+    description: getDescriptionById(9),
+    skills: getSkillById(9),
+    links: [
+      {
+        linkTitle1: 'Battle Tank Build',
+        linkLapis1: getLinkById(2),
+        linkTitle2: 'True Tank Build',
+        linkLapis2: getLinkById(22),
+      },
+    ],
   },
+
   {
     id: 10,
-    type: 'vail',
-    class: 'assassin',
-    history: getHistoryById(4),
-    description:
-      'Assassins specialize in stealthy, precise attacks in 1v1 combat, focusing on eliminating enemies quickly and efficiently. They use stealth techniques and surprise attack abilities to deal with opponents. They are ideal for players who enjoy a combat style that combines stealth and rapid damage.',
-    role: 'DPS (Damage per Second), stealth.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    type: 'Nordein',
+    class: 'Oracle',
+    role: 'Support, healing',
+    icon: require('../../assets/image/class/nordein/oracle/icon/oracle_icon.png'),
+    history: getHistoryById(333),
+    description: getDescriptionById(10),
+    skills: getSkillById(10),
+    links: [
+      {
+        linkTitle1: 'Tank Build',
+        linkLapis1: getLinkById(3),
+        linkTitle2: 'Healer Build',
+        linkLapis2: getLinkById(33),
+      },
+    ],
   },
   {
     id: 11,
-    type: 'vail',
-    class: 'hunter',
-    history: getHistoryById(4),
-    description:
-      'Hunters specialize in ranged combat, utilizing long-range bows and harpoons to attack their enemies. They are effective at dealing damage from afar and are able to keep their enemies at bay while delivering precise strikes. This class is ideal for players who prefer a combat style that involves ranged attack and strategy.',
-    role: 'Ranged DPS, Precision.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    type: 'Vail',
+    class: 'Assassin',
+    role: 'DPS (Damage per Second), stealth.',
+    icon: require('../../assets/image/class/vail/assassin/icon/assassin_icon.png'),
+    history: getHistoryById(444),
+    description: getDescriptionById(11),
+    skills: getSkillById(11),
+    links: [
+      {
+        linkTitle1: 'Dex Build',
+        linkLapis1: getLinkById(4),
+        linkTitle2: 'Health and Dex Build',
+        linkLapis2: getLinkById(44),
+      },
+    ],
   },
   {
     id: 12,
-    type: 'vail',
-    class: 'pagan',
-    history: getHistoryById(4),
-    description:
-      'Pagan have a deep connection with the natural elements, using powerful magic to devastate their enemies. They can cast fire, earth, water, and wind spells, dealing massive area damage or focusing on specific targets. Mages also have crowd control abilities such as slow and paralysis. Despite their low physical defense, they make up for it with some of the highest damage output in the game.',
-    role: 'Ranged DPS, Crowd control.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    type: 'Vail',
+    class: 'Hunter',
+    role: 'Ranged DPS, Precision.',
+    history: getHistoryById(444),
+    description: getDescriptionById(12),
+    skills: getSkillById(12),
+    icon: require('../../assets/image/class/vail/hunter/icon/hunter_icon.png'),
+    links: [
+      {
+        linkTitle1: 'Dex and Luc Build',
+        linkLapis1: getLinkById(5),
+        linkTitle2: 'Str and Luc Build',
+        linkLapis2: getLinkById(55),
+      },
+    ],
   },
   {
     id: 13,
-    type: 'spirit bear',
-    class: 'monkey',
-    history: getHistoryById(5),
-    description:
-      "The Monkeys of the Bear Spirit Clan are disciplined warriors, skilled in hand-to-hand combat. Masters of the martial arts, they fight with staves and gloves, representing brute strength and agility. With a powerful body and a focused mind, the Monkeys are formidable tanks, capable of withstanding massive amounts of damage and striking back with devastating blows. Their combat philosophy is based on the harmony between body and spirit, making them pillars of physical strength and determination in Shaiya's wars.",
+    type: 'Vail',
+    class: 'Pagan',
     role: 'Ranged DPS, Crowd control.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/vail/pagan/icon/pagan_icon.png'),
+    history: getHistoryById(444),
+    description: getDescriptionById(13),
+    skills: getSkillById(13),
+    links: [
+      {
+        linkTitle1: 'DPS Build',
+        linkLapis1: getLinkById(6),
+        linkTitle2: 'HP and DPS Build',
+        linkLapis2: getLinkById(66),
+      },
+    ],
   },
+
   {
     id: 14,
-    type: 'spirit bear',
-    class: 'druid',
-    history: getHistoryById(6),
-    description:
-      'Druids of the Bear Spirit Clan are spiritual guardians deeply connected to nature and the flow of life. They master the manipulation of the elements and possess powerful healing abilities, using the power of earth, wind, and plants to protect their allies. Patient and wise, Druids balance life and death, providing essential support in battle by revitalizing companions and weakening enemies with their natural magics. They are essential to maintaining harmony on the battlefield and in the lands of Shaiya.',
+    type: 'Spirit Bear',
+    class: 'Druid',
     role: 'Ranged DPS, Crowd control.',
-    skillBasic: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
-    skillSingle: require('../../assets/image/class/human/fight/skills/Fighter_Single.png'),
-    skillBuff: require('../../assets/image/class/human/fight/skills/Fighter_Buff.png'),
-    skillRanger: require('../../assets/image/class/human/fight/skills/Fighter_Basic.png'),
+    icon: require('../../assets/image/class/spirity/druid/icon/druid_icon.png'),
+
+    history: getHistoryById(6),
+    description: getDescriptionById(14),
+    skills: getSkillById(14),
+    links: [
+      {
+        linkTitle1: 'DPS Build',
+        linkLapis1: getLinkById(1),
+      },
+    ],
   },
 ];

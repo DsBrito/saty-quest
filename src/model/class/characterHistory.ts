@@ -1,21 +1,21 @@
 export const HISTORY = [
   {
-    id: 1,
+    id: 111,
     history:
       'Humans emerged in Shaiya during the event known as the Second Supernatural Eclipse, which marked the birth of new life in the world of Teos Epeiros. Following the rebirth of the split souls of the goddess Etain and the emergence of two new goddesses—the Goddess of Light and the Goddess of Darkness—the world continued to evolve. During this second eclipse, humans emerged from the oceans, seeking more lands to expand their race. They quickly settled in Teos Epeiros and formed a prosperous kingdom. The humans encountered the Elves and together, under the guidance of the Goddess of Light, they formed an alliance: the Alliance of Light. The arrival of the humans was not only a milestone in territorial growth, but also a time when their culture and power grew alongside their Elven allies, playing a central role in the ongoing struggle against the Union of Rage, comprised of the Vails and Nordeins. Thus, humans became one of the main forces in Shaiya, representing the faction of light and fighting the darkness in an epic battle for control and survival in the world of Teos.',
   },
   {
-    id: 2,
+    id: 222,
     history:
       "After Etain's tragic death, the Dumianas were almost completely destroyed. Only two Dumianas survived: Proton and Eustatin. These last two members of the original race went their separate ways. Proton, embittered by the Dumianas' mistakes and regretting the goddess' death, decided to live in solitude. In his solitude, Proton carved a statue in a tree, in the image of the goddess Etain, to honor her and try to redeem himself for the sins of his race. He poured all his devotion and repentance into this sculpture, trying to imitate Etain's perfection. One day, supernaturally, the wooden sculpture came to life, absorbing the blood of the earth that still carried traces of the goddess Etain's divinity. The statue transformed into a living woman, a beautiful and powerful being who soon united with Proton. From this union, the Elves were born. These new beings inherited the beauty, wisdom and connection with nature, reflecting the harmony that Proton tried to restore.",
   },
   {
-    id: 3,
+    id: 333,
     history:
       "The Nordein were the first race created by the goddess Etain to populate Teos Epeiros, but, because they were considered imperfect and brutal, they were banished underground by the goddess herself. During millennia underground, they evolved and became even stronger and more resilient. After Etain's death, the Nordein emerged from the darkness as the Death Eaters, driven by resentment and a desire for revenge against the surface races.",
   },
   {
-    id: 4,
+    id: 444,
     history:
       'The Vail were born when Eustatin, a dumian rejected by Proton, gave birth to her son in the darkness of southern Teos, creating a new race shaped by loneliness and rage. They developed into a society of their own, far from the conflicts of the other races. Thus, the Vail were born of division and betrayal, defined by a deep resentment and desire for revenge, seeking power and retribution against those who betrayed them.',
   },
