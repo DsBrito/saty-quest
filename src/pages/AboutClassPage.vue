@@ -76,7 +76,7 @@
     <LinksTable :links="currentCharacter.links" />
 
     <!-- SKILL COMBBO-->
-    <!-- <ComboCard></ComboCard> -->
+    <ComboCard :combos="currentCharacter.combos"></ComboCard>
   </div>
 </template>
 
@@ -85,14 +85,14 @@ import { ref, computed } from 'vue';
 import { CHARACTER } from '../model/class/character';
 import CardClassItem from 'components/class/CardClassItem.vue';
 import LinksTable from 'components/class/LinksTable.vue';
-// import ComboCard from 'src/components/class/ComboCard.vue';
+import ComboCard from 'src/components/class/ComboCard.vue';
 import SkillCarousel from 'components/class/SkillCarousel.vue';
 
 export default {
   components: {
     CardClassItem,
     LinksTable,
-    // ComboCard,
+    ComboCard,
     SkillCarousel,
   },
   setup() {

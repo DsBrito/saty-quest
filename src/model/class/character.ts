@@ -42,6 +42,11 @@ export const CHARACTER = [
     history: getHistoryById(111),
     description: getDescriptionById(1),
     skills: getSkillById(1),
+    combos: {
+      combo_1: getComboById(1),
+      combo_2: getComboById(11),
+      combo_3: getComboById(111),
+    },
     links: [
       {
         linkTitle1: 'DPS Build',
@@ -60,6 +65,11 @@ export const CHARACTER = [
     history: getHistoryById(111),
     description: getDescriptionById(2),
     skills: getSkillById(2),
+    combos: {
+      combo_1: getComboById(2),
+      combo_2: getComboById(22),
+      combo_3: getComboById(222),
+    },
     links: [
       {
         linkTitle1: 'Battle Tank Build',
@@ -68,13 +78,6 @@ export const CHARACTER = [
         linkLapis2: getLinkById(22),
       },
     ],
-    // combos: [
-    //   {
-    //     combo_1: getComboById(21),
-    //     combo_2: getComboById(22),
-    //     combo_3: getComboById(23),
-    //   },
-    // ],
   },
   {
     id: 3,
@@ -86,7 +89,10 @@ export const CHARACTER = [
     // classUrl: require('../../assets/image/class/priest.png'),
     skills: getSkillById(3),
     icon: require('../../assets/image/class/human/priest/icon/priest_icon.png'),
-
+    combos: {
+      combo_1: '',
+      combo_2: '',
+    },
     links: [
       {
         linkTitle1: 'Tank Build',
@@ -106,6 +112,10 @@ export const CHARACTER = [
     history: getHistoryById(222),
     description: getDescriptionById(4),
     skills: getSkillById(4),
+    combos: {
+      combo_1: getComboById(4),
+      combo_2: getComboById(44),
+    },
     links: [
       {
         linkTitle1: 'Dex Build',
@@ -125,6 +135,10 @@ export const CHARACTER = [
     history: getHistoryById(222),
     description: getDescriptionById(5),
     skills: getSkillById(5),
+    combos: {
+      combo_1: getComboById(5),
+      combo_2: getComboById(55),
+    },
     links: [
       {
         linkTitle1: 'Dex and Luc Build',
@@ -161,6 +175,10 @@ export const CHARACTER = [
     history: getHistoryById(5),
     description: getDescriptionById(7),
     skills: getSkillById(7),
+    combos: {
+      combo_1: '',
+      combo_2: '',
+    },
     links: [
       {
         linkTitle1: 'DPS Build',
@@ -177,6 +195,11 @@ export const CHARACTER = [
     history: getHistoryById(333),
     description: getDescriptionById(8),
     skills: getSkillById(8),
+    combos: {
+      combo_1: getComboById(1),
+      combo_2: getComboById(11),
+      combo_3: getComboById(111),
+    },
     links: [
       {
         linkTitle1: 'DPS Build',
@@ -193,6 +216,11 @@ export const CHARACTER = [
     history: getHistoryById(333),
     description: getDescriptionById(9),
     skills: getSkillById(9),
+    combos: {
+      combo_1: getComboById(2),
+      combo_2: getComboById(22),
+      combo_3: getComboById(222),
+    },
     links: [
       {
         linkTitle1: 'Battle Tank Build',
@@ -230,6 +258,10 @@ export const CHARACTER = [
     history: getHistoryById(444),
     description: getDescriptionById(11),
     skills: getSkillById(11),
+    combos: {
+      combo_1: getComboById(4),
+      combo_2: getComboById(44),
+    },
     links: [
       {
         linkTitle1: 'Dex Build',
@@ -248,6 +280,10 @@ export const CHARACTER = [
     description: getDescriptionById(12),
     skills: getSkillById(12),
     icon: require('../../assets/image/class/vail/hunter/icon/hunter_icon.png'),
+    combos: {
+      combo_1: getComboById(4),
+      combo_2: getComboById(44),
+    },
     links: [
       {
         linkTitle1: 'Dex and Luc Build',
@@ -266,6 +302,10 @@ export const CHARACTER = [
     history: getHistoryById(444),
     description: getDescriptionById(13),
     skills: getSkillById(13),
+    combos: {
+      combo_1: getComboById(4),
+      combo_2: getComboById(44),
+    },
     links: [
       {
         linkTitle1: 'DPS Build',
@@ -286,6 +326,10 @@ export const CHARACTER = [
     history: getHistoryById(6),
     description: getDescriptionById(14),
     skills: getSkillById(14),
+    combos: {
+      combo_1: '',
+      combo_2: '',
+    },
     links: [
       {
         linkTitle1: 'DPS Build',
