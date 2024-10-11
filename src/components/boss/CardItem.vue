@@ -14,11 +14,18 @@
         <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="description">
             <div class="text-h5">{{ title }}</div>
-            <div class="text-3">Level: {{ level }}</div>
-            <div class="text-3">PvP Zone: {{ pvpzone }}</div>
-            <div class=" ">Description: {{ description }}</div>
-            <div class=" ">Respawn Map: {{ respawnMap }}</div>
-            <div class=" ">Respawn Time: {{ respawnTime }}</div>
+            <div class="text-3"><strong>Level:</strong> {{ level }}</div>
+            <div class="text-3"><strong>PvP Zone:</strong> {{ pvpzone }}</div>
+
+            <!-- Caixa com barra de rolagem para descrição -->
+            <div class="scrollable-content text-justify">
+              <div class="text-3">
+                <strong>Description: </strong>{{ description }}
+              </div>
+            </div>
+
+            <div class=""><strong>Respawn Map: </strong>{{ respawnMap }}</div>
+            <div class=""><strong>Respawn Time: </strong>{{ respawnTime }}</div>
           </q-tab-panel>
 
           <q-tab-panel name="drops">
@@ -28,7 +35,7 @@
       </q-card-section>
     </q-card-section>
 
-    <q-card-actions align="center" class="view-more">
+    <q-card-actions align="center">
       <q-btn flat @click="onClick">View Details</q-btn>
     </q-card-actions>
 
@@ -46,7 +53,6 @@
           <q-tab label="História" name="history" />
           <q-tab label="Respawn" name="respawn" />
         </q-tabs>
-
         <q-separator />
 
         <q-tab-panels
@@ -71,7 +77,6 @@
           <!-- Conteúdo da aba Respawn -->
           <q-tab-panel name="respawn">
             <q-card-section>
-
               <q-img :src="mapUrl" />
             </q-card-section>
           </q-tab-panel>
@@ -98,19 +103,19 @@ export default {
     level: Number,
     respawnMap: String,
     respawnTime: String,
-    pvpzone: Number,
+    pvpzone: String,
     history: String,
   },
   data() {
     return {
-      tab: 'description', // Aba principal do card
-      dialogVisible: false, // Visibilidade do diálogo
-      dialogTab: 'history', // Aba inicial do diálogo
+      tab: 'description',
+      dialogVisible: false,
+      dialogTab: 'history',
     };
   },
   methods: {
     onClick() {
-      this.dialogVisible = true; // Mostrar o diálogo ao clicar no botão
+      this.dialogVisible = true;
     },
   },
 };
@@ -130,7 +135,8 @@ export default {
   flex: 1;
 }
 
-.view-more {
-  margin-top: 16px;
+.scrollable-content {
+  max-height: 150px;
+  overflow-y: auto;
 }
 </style>
