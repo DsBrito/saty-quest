@@ -1,0 +1,115 @@
+<template>
+  <div class="q-pa-md row items-start q-gutter-md">
+    <!-- Card com a história -->
+    <q-card class="my-card" flat bordered>
+      <q-card-section horizontal>
+        <!-- Seção de Texto -->
+        <q-card-section class="q-pa-md col-6">
+          <div class="text-h6">História</div>
+          <div class="text-body1">
+            {{ currentHistory }}
+          </div>
+        </q-card-section>
+
+        <!-- Seção de Imagem -->
+        <q-img
+          class="col-6"
+          src="https://cdn.quasar.dev/img/parallax2.jpg"
+          :alt="imageAlt"
+        />
+      </q-card-section>
+
+      <q-card-actions align="center">
+        <q-btn flat @click="onClick">View Details</q-btn>
+      </q-card-actions>
+    </q-card>
+
+    <!-- Dialog para visualizar detalhes adicionais -->
+    <q-dialog v-model="dialogVisible">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6 text-center">{{ title }}</div>
+        </q-card-section>
+
+        <q-separator />
+
+        <!-- Tabs para História e Respawn -->
+        <q-tabs v-model="dialogTab" class="text-teal" dense>
+          <q-tab label="História" name="history" />
+          <q-tab label="Respawn" name="respawn" />
+        </q-tabs>
+
+        <q-separator />
+
+        <q-tab-panels v-model="dialogTab" animated>
+          <!-- Conteúdo da aba História -->
+          <q-tab-panel name="history">
+            <q-card-section>
+              <div class="text-body1">{{ currentHistory }}</div>
+            </q-card-section>
+          </q-tab-panel>
+
+          <!-- Conteúdo da aba Respawn -->
+          <q-tab-panel name="respawn">
+            <q-card-section>
+              <q-img :src="mapUrl" />
+            </q-card-section>
+          </q-tab-panel>
+        </q-tab-panels>
+
+        <q-separator />
+
+        <q-card-actions align="right">
+          <q-btn flat label="Close" color="primary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue';
+import { HISTORY } from '../../model/eg/shaiyaHistory'; // Ajuste o caminho conforme necessário
+
+export default {
+  name: 'HistoryCard',
+  setup() {
+    const currentHistory = ref(HISTORY[0].history); // Seleciona a primeira história
+    const dialogVisible = ref(false);
+    const dialogTab = ref('history');
+    const title = 'História do Mundo';
+    const mapUrl = 'https://cdn.quasar.dev/img/mountains.jpg'; // Adapte conforme necessário
+    const imageAlt = 'Descrição da Imagem';
+
+    const onClick = () => {
+      dialogVisible.value = true;
+    };
+
+    return {
+      currentHistory,
+      dialogVisible,
+      dialogTab,
+      title,
+      mapUrl,
+      imageAlt,
+      onClick,
+    };
+  },
+};
+</script>
+
+<style scoped>
+.my-card {
+  width: 100%;
+  max-width: 800px; /* Ajuste a largura conforme necessário */
+}
+
+.card-img {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.q-card-section {
+  padding: 16px; /* Ajuste o padding conforme necessário */
+}
+</style>
