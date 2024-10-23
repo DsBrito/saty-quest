@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="table-title">Links Table</h2>
+    <!-- <h2 class="table-title">Links Table</h2> -->
     <div v-for="(link, index) in props.links" :key="index">
       <div class="tables-container">
         <div class="table-wrapper" v-if="link.linkTitle1">
