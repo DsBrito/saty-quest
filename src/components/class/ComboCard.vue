@@ -1,4 +1,6 @@
 <template>
+  <h5 class="test" v-if="props.combos.combo_1"><strong> COMBOS</strong></h5>
+
   <div class="q-pa-md row items-start q-gutter-md justify-center">
     <!-- Exibir combo 1 -->
     <q-card v-if="props.combos.combo_1" class="my-card">
@@ -19,7 +21,7 @@
       <q-slide-transition>
         <div v-show="expanded[0]">
           <q-separator />
-          <q-card-section class="text-subtitle2 text-justify">
+          <q-card-section class="text-justify">
             {{ props.combos.combo_1.description }}
           </q-card-section>
         </div>
@@ -45,7 +47,7 @@
       <q-slide-transition>
         <div v-show="expanded[1]">
           <q-separator />
-          <q-card-section class="text-subtitle2 text-justify">
+          <q-card-section class="text-justify">
             {{ props.combos.combo_2.description }}
           </q-card-section>
         </div>
@@ -71,7 +73,7 @@
       <q-slide-transition>
         <div v-show="expanded[2]">
           <q-separator />
-          <q-card-section class="text-subtitle2 text-justify">
+          <q-card-section class="text-justify">
             {{ props.combos.combo_3.description }}
           </q-card-section>
         </div>
@@ -104,7 +106,7 @@ const props = defineProps<{
   };
 }>();
 
-const expanded = ref([true, false, false]);
+const expanded = ref([true, true, true]);
 
 // Função para alternar o estado expandido de cada combo
 const toggleExpand = (index: number) => {
@@ -112,8 +114,18 @@ const toggleExpand = (index: number) => {
 };
 </script>
 
-<style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 250px
+<style scoped>
+.test {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  width: 70%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.my-card {
+  width: 100%;
+  max-width: 250px;
+}
 </style>
