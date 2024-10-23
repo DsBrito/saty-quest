@@ -66,7 +66,7 @@
     <!-- </q-card> -->
   </q-page>
   <!--CLASSE-->
-  <img src="../../assets/image/icons/page_breakg.png" />
+  <!-- <img src="../../assets/image/icons/page_breakg.png" /> -->
 </template>
 
 <script>
