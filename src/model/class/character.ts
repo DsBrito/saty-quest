@@ -3,6 +3,7 @@ import { LINKS } from './characterLinks';
 import { COMBO } from './characterCombo';
 import { SKILLS } from './characterSkills';
 import { DESCRIPTION } from './characterDescription';
+import { VIDEO } from './characterVideo';
 
 export const getHistoryById = (id: number) => {
   const historyItem = HISTORY.find((item) => item?.id == id);
@@ -29,6 +30,11 @@ export const getDescriptionById = (id: number) => {
   return descriptionItem ? descriptionItem : 'DescriptionItem not found';
 };
 
+export const getVideoById = (id: number) => {
+  const videoItem = VIDEO.find((item) => item?.id == id);
+  return videoItem ? videoItem : 'videoItem not found';
+};
+
 export const CHARACTER = [
   {
     //1
@@ -42,6 +48,8 @@ export const CHARACTER = [
     history: getHistoryById(111),
     description: getDescriptionById(1),
     skills: getSkillById(1),
+    videos: getVideoById(1),
+
     combos: {
       combo_1: getComboById(1),
       combo_2: getComboById(11),
@@ -61,6 +69,7 @@ export const CHARACTER = [
     class: 'Defender',
     role: 'Tank, defense.',
     icon: require('../../assets/image/class/human/defender/icon/defender_icon.png'),
+    videos: getVideoById(4),
 
     history: getHistoryById(111),
     description: getDescriptionById(2),
@@ -85,6 +94,8 @@ export const CHARACTER = [
     class: 'Priest',
     role: 'Support, healing',
     history: getHistoryById(111),
+    videos: getVideoById(4),
+
     description: getDescriptionById(3),
     // classUrl: require('../../assets/image/class/priest.png'),
     skills: getSkillById(3),
@@ -112,6 +123,7 @@ export const CHARACTER = [
     history: getHistoryById(222),
     description: getDescriptionById(4),
     skills: getSkillById(4),
+    videos: getVideoById(4),
     combos: {
       combo_1: getComboById(4),
       combo_2: getComboById(44),
@@ -133,6 +145,8 @@ export const CHARACTER = [
     icon: require('../../assets/image/class/elf/archer/icon/archer_icon.png'),
 
     history: getHistoryById(222),
+    videos: getVideoById(4),
+
     description: getDescriptionById(5),
     skills: getSkillById(5),
     combos: {
@@ -151,12 +165,18 @@ export const CHARACTER = [
   {
     id: 6,
     type: 'Elf',
+    videos: getVideoById(4),
+
     class: 'Mage',
     role: 'Ranged DPS, Crowd control.',
     icon: require('../../assets/image/class/elf/mage/icon/mage_icon.png'),
     history: getHistoryById(222),
     description: getDescriptionById(6),
     skills: getSkillById(6),
+    combos: {
+      combo_1: getComboById(6),
+      combo_2: getComboById(66),
+    },
     links: [
       {
         linkTitle1: 'DPS Build',
@@ -174,6 +194,8 @@ export const CHARACTER = [
     icon: require('../../assets/image/class/spirity/monkey/icon/monkey_icon.png'),
     history: getHistoryById(5),
     description: getDescriptionById(7),
+    videos: getVideoById(4),
+
     skills: getSkillById(7),
     combos: {
       combo_1: '',
@@ -194,6 +216,8 @@ export const CHARACTER = [
     icon: require('../../assets/image/class/nordein/warrior/icon/warrior_icon.png'),
     history: getHistoryById(333),
     description: getDescriptionById(8),
+    videos: getVideoById(1),
+
     skills: getSkillById(8),
     combos: {
       combo_1: getComboById(1),
@@ -212,6 +236,8 @@ export const CHARACTER = [
     type: 'Nordein',
     class: 'Guardian',
     role: 'Tank, Defense.',
+    videos: getVideoById(4),
+
     icon: require('../../assets/image/class/nordein/guardian/icon/guardian_icon.png'),
     history: getHistoryById(333),
     description: getDescriptionById(9),
@@ -236,6 +262,8 @@ export const CHARACTER = [
     type: 'Nordein',
     class: 'Oracle',
     role: 'Support, healing',
+    videos: getVideoById(4),
+
     icon: require('../../assets/image/class/nordein/oracle/icon/oracle_icon.png'),
     history: getHistoryById(333),
     description: getDescriptionById(10),
@@ -252,6 +280,8 @@ export const CHARACTER = [
   {
     id: 11,
     type: 'Vail',
+    videos: getVideoById(4),
+
     class: 'Assassin',
     role: 'DPS (Damage per Second), stealth.',
     icon: require('../../assets/image/class/vail/assassin/icon/assassin_icon.png'),
@@ -278,11 +308,13 @@ export const CHARACTER = [
     role: 'Ranged DPS, Precision.',
     history: getHistoryById(444),
     description: getDescriptionById(12),
+    videos: getVideoById(4),
+
     skills: getSkillById(12),
     icon: require('../../assets/image/class/vail/hunter/icon/hunter_icon.png'),
     combos: {
-      combo_1: getComboById(4),
-      combo_2: getComboById(44),
+      combo_1: getComboById(5),
+      combo_2: getComboById(55),
     },
     links: [
       {
@@ -297,14 +329,16 @@ export const CHARACTER = [
     id: 13,
     type: 'Vail',
     class: 'Pagan',
+    videos: getVideoById(4),
+
     role: 'Ranged DPS, Crowd control.',
     icon: require('../../assets/image/class/vail/pagan/icon/pagan_icon.png'),
     history: getHistoryById(444),
     description: getDescriptionById(13),
     skills: getSkillById(13),
     combos: {
-      combo_1: getComboById(4),
-      combo_2: getComboById(44),
+      combo_1: getComboById(6),
+      combo_2: getComboById(66),
     },
     links: [
       {
@@ -325,6 +359,8 @@ export const CHARACTER = [
 
     history: getHistoryById(6),
     description: getDescriptionById(14),
+    videos: getVideoById(4),
+
     skills: getSkillById(14),
     combos: {
       combo_1: '',
