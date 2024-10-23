@@ -36,12 +36,12 @@
           :name="index + 1"
           :img-src="img.src"
         >
-          <template v-slot:caption>
+          <!-- <template v-slot:caption>
             <div class="carousel-description">
               <h6>{{ img.title }}</h6>
               <p>{{ img.description }}</p>
             </div>
-          </template>
+          </template> -->
           <div class="overlay">
             <h6>{{ img.title }}</h6>
             <p>{{ img.description }}</p>
@@ -70,13 +70,13 @@
   <div class="class-info" v-if="classInfo">
     <!-- SKILLS | STATUS -->
     <CardClassItem :character="currentCharacter" />
+    <!-- SKILL COMBBO-->
+    <ComboCard :combos="currentCharacter.combos"></ComboCard>
     <SkillCarousel :skills="currentCharacter.skills"></SkillCarousel>
 
     <!-- LINKS -->
     <LinksTable :links="currentCharacter.links" />
-
-    <!-- SKILL COMBBO-->
-    <ComboCard :combos="currentCharacter.combos"></ComboCard>
+    <ClassVideo :videos="currentCharacter.videos"></ClassVideo>
   </div>
 </template>
 
@@ -87,6 +87,7 @@ import CardClassItem from 'components/class/CardClassItem.vue';
 import LinksTable from 'components/class/LinksTable.vue';
 import ComboCard from 'src/components/class/ComboCard.vue';
 import SkillCarousel from 'components/class/SkillCarousel.vue';
+import ClassVideo from 'components/class/ClassVideo.vue';
 
 export default {
   components: {
@@ -94,6 +95,7 @@ export default {
     LinksTable,
     ComboCard,
     SkillCarousel,
+    ClassVideo,
   },
   setup() {
     const slide = ref(1);
@@ -101,85 +103,85 @@ export default {
     const selectedClass = ref('');
     const images = [
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/human/fight/fight_carousell.png'),
         title: 'Fighter',
         description:
           'The Fighter is a powerful melee class excelling in close combat.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/human/defender/defender_carousell.png'),
         title: 'Defender',
         description:
           'The Defender specializes in protecting allies and holding the front line.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/human/priest/priest_carousell.png'),
         title: 'Priest',
         description:
           'The Priest is a support class that heals and buffs allies.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/elf/ranger/ranger_carousell.png'),
         title: 'Ranger',
         description:
           'The Ranger is a skilled archer who excels in long-range combat.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/elf/archer/archer_carousell.png'),
         title: 'Archer',
         description:
           'The Archer is a versatile ranged class with powerful bow skills.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/elf/mage/mage_carousell.png'),
         title: 'Mage',
         description:
           'The Mage is a master of elemental magic, dealing powerful spells.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/spirity/monkey/monkey_carousell.png'),
         title: 'Monkey',
         description:
           'The Monkey is an agile fighter, known for its speed and acrobatics.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/nordein/warrior/warrior_carousell.png'),
         title: 'Warrior',
         description:
           'The Warrior is a frontline fighter, known for brute strength.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/nordein/guardian/guardian_carousell.png'),
         title: 'Guardian',
         description:
           'The Guardian is a robust protector, skilled in defensive tactics.',
       },
 
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class//nordein/oracle/oracle_carousell.png'),
         title: 'Oracle',
         description: 'The Oracle uses ancient wisdom to aid allies in battle.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/vail/assassin/assassin_carousell.png'),
         title: 'Assassin',
         description:
           'The Assassin is a stealthy killer, striking from the shadows.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/vail/hunter/hunter_carousell.png'),
         title: 'Hunter',
         description:
           'The Hunter is a skilled tracker, adept at capturing prey.',
       },
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/vail/pagan/pagan_carousell.png'),
         title: 'Pagan',
         description: 'The Pagan harnesses the power of nature in combat.',
       },
 
       {
-        src: require('../assets/image/class/background/bgclass.png'),
+        src: require('../assets/image/class/spirity/druid/druid_carousell.png'),
         title: 'Druid',
         description:
           'The Druid is a shapeshifter, able to adapt to various situations.',
@@ -257,12 +259,17 @@ export default {
 }
 
 .custom-carousel {
-  width: 80%;
+  width: 55%;
 }
 
 .centered-btn {
-  margin-top: 16px;
-  margin-left: 16px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .resized-img {
@@ -298,21 +305,14 @@ export default {
   text-align: center;
   margin-top: 10px;
 }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-  color: white; /* Cor do texto */
-  padding: 16px; /* Espaçamento interno */
+.q-carousel-slide img {
+  border-radius: 15px; /* Ajuste o valor */
 }
+
+/* .custom-carousel img {
+  border-radius: 15px;
+} */
+
 .background {
   background-image: url('../assets/image/class/background/bgclass.png'); /* Altere para o caminho da sua imagem */
   background-size: cover; /* Faz com que a imagem cubra todo o contêiner */
