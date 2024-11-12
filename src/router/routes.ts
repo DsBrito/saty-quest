@@ -4,7 +4,7 @@ export const ROTAS = {
   main: {
     path: '/',
     name: 'main',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('src/pages/HomePage.vue'),
     meta: {
       layout: 'MainLayout',
     },
@@ -18,15 +18,15 @@ export const ROTAS = {
       public: true,
     },
   } as RouteRecordRaw,
-  // eg: {
-  //   path: '/about-eg',
-  //   name: 'about-eg',
-  //   component: () => import('src/pages/AboutEgPage.vue'),
-  //   meta: {
-  //     layout: 'MainLayout',
-  //     public: true,
-  //   },
-  // } as RouteRecordRaw,
+  eg: {
+    path: '/about-eg',
+    name: 'about-eg',
+    component: () => import('src/pages/AboutEgPage.vue'),
+    meta: {
+      layout: 'MainLayout',
+      public: true,
+    },
+  } as RouteRecordRaw,
   events: {
     path: '/about-events',
     name: 'about-events',
@@ -49,6 +49,15 @@ export const ROTAS = {
     path: '/about-class',
     name: 'about-class',
     component: () => import('src/pages/AboutClassPage.vue'),
+    meta: {
+      layout: 'MainLayout',
+      public: true,
+    },
+  } as RouteRecordRaw,
+  wings: {
+    path: '/about-wings',
+    name: 'about-wings',
+    component: () => import('src/pages/AboutWingsPage.vue'),
     meta: {
       layout: 'MainLayout',
       public: true,
