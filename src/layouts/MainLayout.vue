@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf ">
     <q-header reveal class="bg-black text-white" height-hint="98">
       <q-toolbar>
         <q-btn
@@ -12,29 +12,34 @@
         />
         <h>Saty Quest</h>
 
-        <div class="row justify-center q-pa-xs q-mx-auto">
+        <div class="row justify-center q-mx-auto">
           <q-list class="row">
             <q-item clickable v-ripple @click="goToHome">
-              <q-item-section>Home</q-item-section>
+              <q-item-section>HOME</q-item-section>
             </q-item>
+            <q-item-section>|</q-item-section>
             <q-item clickable v-ripple @click="goToAboutMePage">
-              <q-item-section>About Me</q-item-section>
+              <q-item-section>ABOUT ME</q-item-section>
             </q-item>
-
+            <q-item-section>|</q-item-section>
+            <q-item clickable v-ripple @click="goToWingsPage">
+              <q-item-section>WINGS</q-item-section>
+            </q-item>
+            <q-item-section>|</q-item-section>
             <q-item clickable v-ripple @click="goToEgPage">
-              <q-item-section>EG</q-item-section>
+              <q-item-section>EG GUIDE</q-item-section>
             </q-item>
-
-            <q-item clickable v-ripple @click="goToEventsPage">
-              <q-item-section>Events</q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple @click="goToBossPage">
-              <q-item-section>Boss</q-item-section>
-            </q-item>
-
+            <q-item-section>|</q-item-section>
             <q-item clickable v-ripple @click="goToClassPage">
-              <q-item-section>Class Guild</q-item-section>
+              <q-item-section>CLASS GUIDE</q-item-section>
+            </q-item>
+            <q-item-section>|</q-item-section>
+            <q-item clickable v-ripple @click="goToBossPage">
+              <q-item-section>BOSS GUIDE</q-item-section>
+            </q-item>
+            <q-item-section>|</q-item-section>
+            <q-item clickable v-ripple @click="goToEventsPage">
+              <q-item-section>EVENT GUIDE</q-item-section>
             </q-item>
           </q-list>
         </div>
@@ -54,28 +59,18 @@
     >
       <q-list>
         <q-item-label header> About Me </q-item-label>
+        <EssentialLink
+          v-for="link in aboutMeList"
+          :key="link.title"
+          v-bind="link"
+        />
 
-        <div v-if="$route.name == 'about-me'">
-          <EssentialLink
-            v-for="link in aboutMeList"
-            :key="link.title"
-            v-bind="link"
-          />
-        </div>
-        <div v-if="$route.name == 'about-boss'">
-          <EssentialLink
-            v-for="link in aboutMeList"
-            :key="link.title"
-            v-bind="link"
-          />
-        </div>
-        <div v-else>
-          <EssentialLink
-            v-for="link in linksList"
-            :key="link.title"
-            v-bind="link"
-          />
-        </div>
+        <q-item-label header> Navigation Page </q-item-label>
+        <EssentialLink
+          v-for="link in NavigationPages"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
@@ -89,108 +84,107 @@
   </q-layout>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { ROTAS } from 'src/router/routes';
 import EssentialLink from 'components/EssentialLink.vue';
 import { EssentialLinkProps } from 'components/models';
 
-export default {
-  name: 'MainLayout',
-  components: {
-    EssentialLink,
+const router = useRouter();
+
+const aboutMeList: EssentialLinkProps[] = [
+  {
+    title: 'Youtuber',
+    caption: 'www.youtube.com/@saty9136',
+    icon: 'smart_display',
+    link: 'https://www.youtube.com/@saty9136',
   },
-  setup() {
-    const router = useRouter();
-
-    const linksList: EssentialLinkProps[] = [
-      {
-        title: 'Docs',
-        caption: 'quasar.dev',
-        icon: 'school',
-        link: 'https://quasar.dev',
-      },
-      {
-        title: 'Github',
-        caption: 'github.com/quasarframework',
-        icon: 'code',
-        link: 'https://github.com/quasarframework',
-      },
-      {
-        title: 'Discord Chat Channel',
-        caption: 'chat.quasar.dev',
-        icon: 'chat',
-        link: 'https://chat.quasar.dev',
-      },
-      {
-        title: 'Forum',
-        caption: 'forum.quasar.dev',
-        icon: 'record_voice_over',
-        link: 'https://forum.quasar.dev',
-      },
-      {
-        title: 'Twitter',
-        caption: '@quasarframework',
-        icon: 'rss_feed',
-        link: 'https://twitter.quasar.dev',
-      },
-      {
-        title: 'Facebook',
-        caption: '@QuasarFramework',
-        icon: 'public',
-        link: 'https://facebook.quasar.dev',
-      },
-      {
-        title: 'Quasar Awesome',
-        caption: 'Community Quasar projects',
-        icon: 'favorite',
-        link: 'https://awesome.quasar.dev',
-      },
-    ];
-    const aboutMeList: EssentialLinkProps[] = [
-      {
-        title: 'Docs',
-        caption: 'quasar.dev',
-        icon: 'school',
-        link: 'https://quasar.dev',
-      },
-      {
-        title: 'Github',
-        caption: 'github.com/quasarframework',
-        icon: 'code',
-        link: 'https://github.com/quasarframework',
-      },
-    ];
-    const leftDrawerOpen = ref(false);
-
-    function toggleLeftDrawer() {
-      leftDrawerOpen.value = !leftDrawerOpen.value;
-    }
-
-    return {
-      linksList,
-      aboutMeList,
-      goToHome: () => router.push({ name: ROTAS.main.name }),
-      goToAboutMePage: () => router.push({ name: ROTAS.me.name }),
-      // goToEgPage: () => router.push({ name: ROTAS.eg.name }),
-      goToEventsPage: () => router.push({ name: ROTAS.events.name }),
-      goToBossPage: () => router.push({ name: ROTAS.boss.name }),
-      goToClassPage: () => router.push({ name: ROTAS.class.name }),
-      leftDrawerOpen,
-      toggleLeftDrawer,
-      miniState: ref(true),
-    };
+  {
+    title: 'Github',
+    caption: 'github.com/DsBrito',
+    icon: 'code',
+    link: 'https://github.com/DsBrito',
   },
-};
+  {
+    title: 'Instagram',
+    caption: 'github.com/DsBrito',
+    icon: 'center_focus_strong',
+    link: 'https://github.com/DsBrito',
+  },
+  {
+    title: 'Gmail',
+    caption: 'github.com/DsBrito',
+    icon: 'attach_email',
+    link: 'https://github.com/DsBrito',
+  },
+  {
+    title: 'Report',
+    caption: 'github.com/DsBrito',
+    icon: 'bug_report',
+    link: 'https://github.com/DsBrito',
+  },
+];
+
+const leftDrawerOpen = ref(false);
+const miniState = ref(true);
+
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+
+const goToHome = () => router.push({ name: ROTAS.main.name });
+const goToAboutMePage = () => router.push({ name: ROTAS.me.name });
+const goToEgPage = () => router.push({ name: ROTAS.eg.name });
+const goToEventsPage = () => router.push({ name: ROTAS.events.name });
+const goToBossPage = () => router.push({ name: ROTAS.boss.name });
+const goToClassPage = () => router.push({ name: ROTAS.class.name });
+const goToWingsPage = () => router.push({ name: ROTAS.wings.name });
+
+const NavigationPages: EssentialLinkProps[] = [
+  {
+    title: 'Home',
+    caption: 'Home Page',
+    icon: 'home',
+    link: goToHome,
+  },
+  {
+    title: 'About me',
+    caption: 'About Me Page',
+    icon: 'person',
+    link: goToAboutMePage,
+  },
+  {
+    title: 'Wings',
+    caption: 'Wings Page',
+    icon: 'flutter_dash',
+    link: goToWingsPage,
+  },
+  {
+    title: 'EG guide',
+    caption: 'EG Guide Page',
+    icon: 'sports_esports',
+    link: goToEgPage,
+  },
+  {
+    title: 'Class guide',
+    caption: 'Class Guide Page',
+    icon: 'diversity_3',
+    link: goToClassPage,
+  },
+  {
+    title: 'Boss guide',
+    caption: 'Boss Guide Page',
+    icon: 'pets',
+    link: goToBossPage,
+  },
+  {
+    title: 'Event guide',
+    caption: 'Event Guide Page',
+    icon: 'celebration',
+    link: goToEventsPage,
+  },
+];
 </script>
 
-<style>
-.logo-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
-}
-</style>
+<style></style>
