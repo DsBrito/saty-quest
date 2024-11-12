@@ -1,9 +1,16 @@
 <template>
-  <q-page class="q-pa-md flex flex-center column">
+  <div class="container3">
+    <!-- <q-img class="logo-img" src="../assets/image/boss/icons/shaiyalogo.png" /> -->
+  </div>
+
+  <q-page class="q-pa-md flex flex-center column container">
     <div class="header-container">
       <!-- Header fora do Drawer -->
-      <div v-if="!rightDrawerOpen" class="drawer-header-closed no-padding">
-        <q-item-label header>Respawn Maps</q-item-label>
+      <div
+        v-if="!rightDrawerOpen"
+        class="drawer-header-closed no-padding text-black"
+      >
+        <q-item-label class="text-black" header>Respawn Maps</q-item-label>
         <q-btn flat round dense icon="menu" @click="rightDrawerOpen = true" />
       </div>
     </div>
@@ -65,6 +72,7 @@
         outlined
         class="full-width"
         dense
+        bg-color="white"
       >
         <template v-slot:prepend>
           <q-icon name="keyboard_arrow_left" />
@@ -105,6 +113,7 @@
                 :history="item.history"
                 :mapUrl="item.mapUrl"
                 @click="viewDetails(item)"
+                :drop="item.drop"
               />
             </q-item>
           </div>
@@ -115,8 +124,8 @@
 </template>
 
 <script>
-import CardBossItem from 'components/boss/CardBossItem.vue';
-import { BOSS } from '../model/monsters/boss';
+import CardBossItem from "components/boss/CardBossItem.vue";
+import { BOSS } from "../model/monsters/boss";
 
 export default {
   components: {
@@ -125,7 +134,7 @@ export default {
   data() {
     return {
       rightDrawerOpen: false, // Controla se o drawer está aberto ou fechado
-      search: '',
+      search: "",
       items: BOSS.sort((a, b) => a.title.localeCompare(b.title)),
     };
   },
@@ -172,9 +181,9 @@ export default {
         const bossTitle = this.$refs[`bossTitle-${bossId}`];
         if (bossTitle && bossTitle[0]) {
           bossTitle[0].scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-            inline: 'nearest',
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
           });
         }
       });
@@ -213,5 +222,28 @@ export default {
   display: flex;
   margin-left: auto;
   display: flex;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza os botões verticalmente */
+  align-items: center; /* Centraliza os botões horizontalmente */
+  height: 100%;
+}
+.container {
+  /* Adiciona a imagem de background */
+  /* background-image: url('../assets/image/class/background/baixo.jpg'); */
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  min-height: 100vh;
+
+  /* Define a altura mínima da div */
+}
+.logo-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 </style>
