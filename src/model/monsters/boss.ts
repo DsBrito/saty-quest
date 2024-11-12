@@ -1,4 +1,10 @@
 import { HISTORY } from './bossHistory';
+import { DROP } from './bossDrops';
+
+export const getDropById = (id: number) => {
+  const dropItem = DROP.find((item) => item.id === id);
+  return dropItem ? dropItem.drop : ' Drop not found';
+};
 
 export const getHistoryById = (id: number) => {
   const historyItem = HISTORY.find((item) => item.id === id);
@@ -23,6 +29,7 @@ export const BOSS = [
     pvpZone: '15',
     history: getHistoryById(1),
     mapUrl: require('../../assets/image/map/15/assaultronmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 2,
@@ -35,6 +42,7 @@ export const BOSS = [
     pvpZone: '15',
     history: getHistoryById(2),
     mapUrl: require('../../assets/image/map/15/15bossmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 3,
@@ -47,6 +55,7 @@ export const BOSS = [
     respawnTime: '17:00 ~ 17:20 Hs(s)',
     pvpZone: '15',
     history: getHistoryById(3),
+    drop: getDropById(7),
   },
   {
     id: 4,
@@ -59,6 +68,7 @@ export const BOSS = [
     pvpZone: '15',
     history: getHistoryById(4),
     mapUrl: require('../../assets/image/map/15/15bossmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 5,
@@ -71,6 +81,7 @@ export const BOSS = [
     respawnTime: '17:00 ~ 17:20 Hs(s)',
     pvpZone: '15',
     history: getHistoryById(5),
+    drop: getDropById(7),
   },
   {
     id: 6,
@@ -83,6 +94,7 @@ export const BOSS = [
     pvpZone: '30',
     history: getHistoryById(6),
     mapUrl: require('../../assets/image/map/30/kalamap.png'),
+    drop: getDropById(7),
   },
   {
     id: 7,
@@ -95,6 +107,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(7),
     mapUrl: require('../../assets/image/map/80/raptormap.png'),
+    drop: getDropById(7),
   },
   {
     id: 8,
@@ -107,6 +120,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(8),
     mapUrl: require('../../assets/image/map/80/luminousmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 9,
@@ -119,6 +133,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(9),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 10,
@@ -131,6 +146,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(10),
     mapUrl: require('../../assets/image/map/80/diosmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 11,
@@ -143,6 +159,7 @@ export const BOSS = [
     pvpZone: 'Event',
     history: getHistoryById(11),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 12,
@@ -155,6 +172,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(12),
     mapUrl: require('../../assets/image/map/80/rirumumap.png'),
+    drop: getDropById(7),
   },
   {
     id: 13,
@@ -167,6 +185,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(13),
     mapUrl: require('../../assets/image/map/80/criptbackandlastmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 14,
@@ -179,6 +198,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(14),
     mapUrl: require('../../assets/image/map/80/cryptbulldozer.png'),
+    drop: getDropById(7),
   },
   {
     id: 15,
@@ -191,6 +211,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(15),
     mapUrl: require('../../assets/image/map/80/cannibalmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 16,
@@ -203,6 +224,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(16),
     mapUrl: require('../../assets/image/map/80/cannibalmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 17,
@@ -215,6 +237,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(17),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 18,
@@ -227,6 +250,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(18),
     mapUrl: require('../../assets/image/map/80/crypt_dungeon.png'),
+    drop: getDropById(7),
   },
   {
     id: 19,
@@ -239,6 +263,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(19),
     mapUrl: require('../../assets/image/map/80/crypt_dungeon.png'),
+    drop: getDropById(7),
   },
   {
     id: 20,
@@ -251,6 +276,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(20),
     mapUrl: require('../../assets/image/map/80/crypt_dungeon.png'),
+    drop: getDropById(7),
   },
   {
     id: 21,
@@ -263,6 +289,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(21),
     mapUrl: require('../../assets/image/map/80/lumemmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 22,
@@ -275,6 +302,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(22),
     mapUrl: require('../../assets/image/map/80/alesmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 23,
@@ -287,6 +315,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(23),
     mapUrl: require('../../assets/image/map/80/dentatusmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 24,
@@ -299,6 +328,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(24),
     mapUrl: require('../../assets/image/map/80/secretamap.png'),
+    drop: getDropById(7),
   },
   {
     id: 25,
@@ -311,6 +341,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(25),
     mapUrl: require('../../assets/image/map/80/opalhammermap.png'),
+    drop: getDropById(7),
   },
   {
     id: 26,
@@ -323,6 +354,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(26),
     mapUrl: require('../../assets/image/map/80/teroromap.png'),
+    drop: getDropById(7),
   },
   {
     id: 27,
@@ -335,6 +367,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(27),
     mapUrl: require('../../assets/image/map/80/darklordmap.png'),
+    drop: getDropById(7),
   },
   {
     id: 28,
@@ -347,6 +380,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(28),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 29,
@@ -359,6 +393,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(29),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 30,
@@ -371,6 +406,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(30),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 31,
@@ -383,10 +419,11 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(31),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 32,
-    title: 'Eternitys Vanquisher Stygion',
+    title: "Eternity's Vanquisher Stygion",
     description: getDesciptionById(32),
     imageUrl: require('../../assets/image/boss/80/80_dragon_Eternitys_Vanquisher_Stygion.png'),
     level: 84,
@@ -395,6 +432,7 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(32),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 33,
@@ -407,6 +445,7 @@ export const BOSS = [
     pvpZone: '??',
     history: getHistoryById(33),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 34,
@@ -419,6 +458,7 @@ export const BOSS = [
     pvpZone: '??',
     history: getHistoryById(34),
     mapUrl: require('../../assets/image/map/nomap.png'),
+    drop: getDropById(7),
   },
   {
     id: 35,
@@ -431,5 +471,6 @@ export const BOSS = [
     pvpZone: '80',
     history: getHistoryById(35),
     mapUrl: require('../../assets/image/map/80/opalus.png'),
+    drop: getDropById(7),
   },
 ];
