@@ -1,0 +1,25 @@
+<template>
+  <div class="q-pa-md">
+    <q-page>
+      <h1 class="q-mb-md">Histórias do Mundo</h1>
+      <history-card />
+    </q-page>
+  </div>
+</template>
+
+<script>
+import { HISTORY } from '../model/eg/shaiyaHistory';
+
+export default {
+  name: 'HistoryPage',
+  components: {
+    HISTORY,
+  },
+};
+</script>
+
+<style scoped>
+.q-page {
+  background-color: #f5f5f5; /* Ajuste a cor de fundo conforme necessário */
+}
+</style>
