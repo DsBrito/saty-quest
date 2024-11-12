@@ -306,7 +306,7 @@ export default {
   margin-top: 10px;
 }
 .q-carousel-slide img {
-  border-radius: 15px; /* Ajuste o valor */
+  border-radius: 15px;
 }
 
 /* .custom-carousel img {
@@ -314,14 +314,14 @@ export default {
 } */
 
 .background {
-  background-image: url('../assets/image/class/background/bgclass.png'); /* Altere para o caminho da sua imagem */
-  background-size: cover; /* Faz com que a imagem cubra todo o contêiner */
-  background-position: center; /* Centraliza a imagem */
+  /* background-image: url('../assets/image/class/bgclass.jpg');  */
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
-  position: absolute; /* Posiciona o fundo atrás do conteúdo */
-  top: 0; /* Preenche o espaço a partir do topo */
-  left: 0; /* Preenche o espaço a partir da esquerda */
-  z-index: -1; /* Coloca o fundo atrás do conteúdo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 </style>
