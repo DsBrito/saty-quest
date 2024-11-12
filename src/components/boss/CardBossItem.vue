@@ -27,9 +27,23 @@
             <div class=""><strong>Respawn Map: </strong>{{ respawnMap }}</div>
             <div class=""><strong>Respawn Time: </strong>{{ respawnTime }}</div>
           </q-tab-panel>
-
           <q-tab-panel name="drops">
-            <div>Conteúdo adicional para Tab drops</div>
+            <!-- Container flex para o ícone e o texto -->
+            <div class="drop-item">
+              <div
+                class="drop-img"
+                :style="{
+                  backgroundImage: 'url(' + drop.img + ')',
+                  backgroundPosition: drop.position,
+                }"
+              ></div>
+
+              <!-- Texto do nome e descrição -->
+              <div class="drop-text">
+                <div>{{ drop.name }}</div>
+                <div>{{ drop.description }}</div>
+              </div>
+            </div>
           </q-tab-panel>
         </q-tab-panels>
       </q-card-section>
@@ -105,6 +119,7 @@ export default {
     respawnTime: String,
     pvpzone: String,
     history: String,
+    drop: Object,
   },
   data() {
     return {
@@ -135,6 +150,31 @@ export default {
   flex: 1;
 }
 
+.drop-img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.drop-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Para dar um espaço entre os itens */
+}
+
+.drop-img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.drop-text {
+  display: flex;
+  flex-direction: column; /* Para manter o nome e a descrição em colunas */
+}
+
+.drop-text div {
+  margin: 2px 0; /* Adiciona um pequeno espaço entre o nome e a descrição */
+}
 .scrollable-content {
   max-height: 150px;
   overflow-y: auto;

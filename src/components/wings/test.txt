@@ -1,0 +1,61 @@
+<template>
+  <q-card class="my-card" flat bordered>
+    <q-card-section class="row no-wrap items-start justify-between">
+      <q-img :src="imageUrl" class="card-img" />
+      {{ props }}
+      <q-card-section class="card-content">
+        <q-tabs class="text-teal" dense>
+          <q-tab label="Description" name="description" />
+          <q-tab label="Find" name="Find" />
+        </q-tabs>
+
+        <q-separator />
+
+        <q-tab-panels animated>
+          <q-tab-panel name="description">
+            <div class="text-h5">{{ name }}</div>
+
+            <!-- Caixa com barra de rolagem para descrição -->
+            <div class="scrollable-content text-justify">
+              <div class="text-3">
+                <strong>Description: </strong>{{ description }}
+              </div>
+            </div>
+          </q-tab-panel>
+
+
+        </q-tab-panels>
+      </q-card-section>
+    </q-card-section>
+  </q-card>
+</template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  name: string;
+  imageUrl: string;
+  description: string;
+  find: string;
+}>();
+</script>
+
+<style>
+.my-card {
+  width: 100%;
+}
+
+.card-img {
+  max-width: 30%;
+  max-height: 30%;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.scrollable-content {
+  max-height: 150px;
+  overflow-y: auto;
+}
+</style>
+
