@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf background">
     <q-header reveal class="bg-black text-white" height-hint="98">
       <q-toolbar>
         <q-btn
@@ -185,3 +185,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.background {
+  background-image: url('../assets/image/class/background/bgclass.png'); /* Altere para o caminho da sua imagem */
+  background-size: cover; /* Faz com que a imagem cubra todo o contêiner */
+  background-position: center; /* Centraliza a imagem */
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Posiciona o fundo atrás do conteúdo */
+  top: 0; /* Preenche o espaço a partir do topo */
+  left: 0; /* Preenche o espaço a partir da esquerda */
+  z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+</style>
