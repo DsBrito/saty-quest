@@ -124,8 +124,8 @@
 </template>
 
 <script>
-import CardBossItem from "components/boss/CardBossItem.vue";
-import { BOSS } from "../model/monsters/boss";
+import CardBossItem from 'components/boss/CardBossItem.vue';
+import { BOSS } from '../model/monsters/boss';
 
 export default {
   components: {
@@ -134,7 +134,7 @@ export default {
   data() {
     return {
       rightDrawerOpen: false, // Controla se o drawer está aberto ou fechado
-      search: "",
+      search: '',
       items: BOSS.sort((a, b) => a.title.localeCompare(b.title)),
     };
   },
@@ -181,9 +181,9 @@ export default {
         const bossTitle = this.$refs[`bossTitle-${bossId}`];
         if (bossTitle && bossTitle[0]) {
           bossTitle[0].scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest',
           });
         }
       });
