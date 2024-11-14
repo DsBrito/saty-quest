@@ -3,7 +3,7 @@ import { DROP } from './bossDrops';
 
 export const getDropById = (id: number) => {
   const dropItem = DROP.find((item) => item.id === id);
-  return dropItem ? dropItem.drop : ' Drop not found';
+  return dropItem ? dropItem.drops : ' Drop not found';
 };
 
 export const getHistoryById = (id: number) => {
@@ -29,7 +29,13 @@ export const BOSS = [
     pvpZone: '15',
     history: getHistoryById(1),
     mapUrl: require('../../assets/image/map/15/assaultronmap.png'),
-    drop: [getDropById(1), getDropById(6)],
+    drop: [
+      getDropById(1),
+      getDropById(6),
+      getDropById(46),
+      getDropById(48),
+      getDropById(61),
+    ],
   },
   {
     id: 2,

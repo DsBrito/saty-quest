@@ -1,7 +1,7 @@
 export const DROP = [
   {
     id: 1,
-    drop: {
+    drops: {
       name: '64k Microchip',
       img: require('../../assets/image/boss/drop-icons/64k.png'),
       description:
@@ -45,7 +45,7 @@ export const DROP = [
   },
   {
     id: 6,
-    drop: {
+    drops: {
       name: 'Boss Chest (Assaultron 9000)',
       img: require('../../assets/image/boss/drop-icons/boss_chest.png'),
       description: 'Reward for killing a boss',
@@ -193,7 +193,7 @@ export const DROP = [
   {
     id: '23',
     drops: {
-      drop: {
+      drops: {
         name: 'Event Bag #6',
         img: require('../../assets/image/boss/drop-icons/event_bag.png'),
         description: 'Special event reward. Right click to open',
@@ -515,6 +515,15 @@ export const DROP = [
       name: 'Zagzagel Mantle',
       img: require('../../assets/image/boss/drop-icons/mantle_light.png'),
       description: 'Cape for Mage/Priest',
+    },
+  },
+  {
+    id: 61,
+    drops: {
+      name: 'Mini Assaultron (30d)',
+      img: require('../../assets/image/boss/drop-icons/mini_assaultron.png'),
+      description:
+        'Title granted to those who killed Assaultron.<br><Robot Conqueror>',
     },
   },
 ];

@@ -102,6 +102,7 @@
               <!-- {{ item.title }} -->
             </h5>
             <q-item :key="item.id" class="q-mb-md no-padding">
+              <!-- {{ item.drop }} -->
               <CardBossItem
                 :title="item.title"
                 :description="item.description"
@@ -112,7 +113,7 @@
                 :pvpzone="item.pvpZone"
                 :history="item.history"
                 :mapUrl="item.mapUrl"
-                @click="viewDetails(item)"
+                @click="item"
                 :drop="item.drop"
               />
             </q-item>

@@ -27,23 +27,30 @@
             <div class=""><strong>Respawn Map: </strong>{{ respawnMap }}</div>
             <div class=""><strong>Respawn Time: </strong>{{ respawnTime }}</div>
           </q-tab-panel>
-          <q-tab-panel name="drops">
-            <!-- Container flex para o ícone e o texto -->
-            <div class="drop-item">
-              <div
-                class="drop-img"
-                :style="{
-                  backgroundImage: 'url(' + drop.img + ')',
-                  backgroundPosition: drop.position,
-                }"
-              ></div>
 
-              <!-- Texto do nome e descrição -->
-              <div class="drop-text">
-                <div>{{ drop.name }}</div>
-                <div>{{ drop.description }}</div>
+          <q-tab-panel name="drops">
+            <!-- Verifica se o array de drops existe e tem elementos -->
+            <div v-if="drop && drop.length" class="scrollable-drops">
+              <div
+                class="drop-item drop-container"
+                v-for="(item, index) in drop"
+                :key="index"
+              >
+                <div>
+                  <q-img class="drop-img" :src="item.img" />
+                </div>
+                <div class="drop-text">
+                  <div>
+                    <strong>{{ item.name }}</strong>
+                  </div>
+                  <div class="drop-description text-caption">
+                    {{ item.description }}
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- Mensagem caso não haja drops -->
+            <div v-else>No drops available.</div>
           </q-tab-panel>
         </q-tab-panels>
       </q-card-section>
@@ -63,10 +70,10 @@
         <q-separator />
 
         <!-- Tabs para História e Respawn -->
-        <q-scroll v-model="dialogTab" class="text-teal" dense>
+        <q-tabs v-model="dialogTab" class="text-teal" dense>
           <q-tab label="História" name="history" />
           <q-tab label="Respawn" name="respawn" />
-        </q-scroll>
+        </q-tabs>
         <q-separator />
 
         <q-tab-panels
@@ -119,7 +126,7 @@ export default {
     respawnTime: String,
     pvpzone: String,
     history: String,
-    drop: Object,
+    drop: Array, // Adicionada a prop drop
   },
   data() {
     return {
@@ -145,16 +152,25 @@ export default {
   max-width: 30%;
   max-height: 30%;
 }
-
+.drop-container {
+  border: 1px solid #ccc; /* Cor e espessura da borda */
+  padding: 10px; /* Espaço interno */
+  border-radius: 5px; /* Bordas arredondadas, opcional */
+}
 .card-content {
   flex: 1;
 }
-
-.drop-img {
-  display: block;
-  width: 32px;
-  height: 32px;
+.scrollable-drops {
+  max-height: 300px; /* Ajuste a altura conforme necessário */
+  overflow-y: auto;
+  padding-right: 10px; /* Para evitar a sobreposição com a barra de rolagem */
 }
+
+.scrollable-content {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
 .drop-item {
   display: flex;
   align-items: center;
@@ -174,9 +190,5 @@ export default {
 
 .drop-text div {
   margin: 2px 0; /* Adiciona um pequeno espaço entre o nome e a descrição */
-}
-.scrollable-content {
-  max-height: 150px;
-  overflow-y: auto;
 }
 </style>
