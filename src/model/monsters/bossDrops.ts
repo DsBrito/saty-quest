@@ -176,13 +176,13 @@ export const DROP = [
     id: 21,
     drops: {
       name: 'Elemental Stone of Water',
-      img: require('../../assets/image/boss/drop-icons/icon_somo1.jpg'),
+      img: require('../../assets/image/boss/drop-icons/element_water.png'),
       description:
         "An elemental stone filled with a watery light. It will change your armor's properties. If it mixes with other elements, it will lose its properties.<br>Can break the equipment if the link or extraction fails",
     },
   },
   {
-    id: '22',
+    id: 22,
     drops: {
       name: 'Elemental Stone of Wind',
       img: require('../../assets/image/boss/drop-icons/element_wind.png'),
@@ -191,13 +191,11 @@ export const DROP = [
     },
   },
   {
-    id: '23',
+    id: 23,
     drops: {
-      drops: {
-        name: 'Event Bag #6',
-        img: require('../../assets/image/boss/drop-icons/event_bag.png'),
-        description: 'Special event reward. Right click to open',
-      },
+      name: 'Event Bag #6',
+      img: require('../../assets/image/boss/drop-icons/event_bag.png'),
+      description: 'Special event reward. Right click to open',
     },
   },
   {
@@ -361,17 +359,15 @@ export const DROP = [
   },
 
   {
-    id: 2,
+    id: 43,
     drops: {
-      id: '43',
       name: 'Mini Secreta',
       img: require('../../assets/image/boss/drop-icons/mini_secreta.png'),
       description: 'Pet from Treasure Chest (Secreta)',
     },
   },
-
   {
-    id: '44',
+    id: 44,
     drops: {
       name: 'Mini Seraphim (30d)',
       img: require('../../assets/image/boss/drop-icons/mini_seraphim.png'),
@@ -380,7 +376,7 @@ export const DROP = [
     },
   },
   {
-    id: '45',
+    id: 45,
     drops: {
       name: 'Morpho Menelaus',
       img: require('../../assets/image/boss/drop-icons/wings_morph.png'),
@@ -464,8 +460,9 @@ export const DROP = [
       description: ' Open this chest to get extra loot',
     },
   },
+
   {
-    id: '55',
+    id: 55,
     drops: {
       name: 'Treasure Chest (Secreta)',
       img: require('../../assets/image/boss/drop-icons/boss_chest.png'),
@@ -473,7 +470,7 @@ export const DROP = [
     },
   },
   {
-    id: '56',
+    id: 56,
     drops: {
       name: 'Wings of Mairon',
       img: require('../../assets/image/boss/drop-icons/wings_marion.png'),
@@ -523,7 +520,59 @@ export const DROP = [
       name: 'Mini Assaultron (30d)',
       img: require('../../assets/image/boss/drop-icons/mini_assaultron.png'),
       description:
-        'Title granted to those who killed Assaultron.<br><Robot Conqueror>',
+        'Title granted to those who killed Assaultron. Robot Conqueror',
+    },
+  },
+  {
+    id: 62,
+    drops: {
+      name: 'Mini Mobile Siege (30d)',
+      img: require('../../assets/image/boss/drop-icons/mini_mobile_siege.png'),
+      description:
+        'Title granted to those who killed Mobile Siege. Backseat Driver',
+    },
+  },
+  {
+    id: 63,
+    drops: {
+      name: 'Assaultron 9000 (30d)',
+      img: require('../../assets/image/boss/drop-icons/mount.png'),
+      description: 'The boss Assaultron in mount form, lasting 30 days ',
+    },
+  },
+  {
+    id: 64,
+    drops: {
+      name: 'Mobile Siege Mech (30d)',
+      img: require('../../assets/image/boss/drop-icons/mount.png'),
+      description: 'The boss Assaultron in mount form, lasting 30 days ',
+    },
+  },
+  {
+    id: 65,
+    drops: {
+      name: 'Luminous Chest',
+      img: require('../../assets/image/boss/drop-icons/boss_chest.png'),
+      description:
+        'A beautiful chest made of light. You can get luminous Armors, Boots, Gauntlets, Helmets, Pants ',
+    },
+  },
+  {
+    id: 66,
+    drops: {
+      name: 'Mini Brigand (30d)',
+      img: require('../../assets/image/boss/drop-icons/mini_brigand.png'),
+      description:
+        'Title granted to those who killed Luminous Brigand. The Persistent',
+    },
+  },
+  {
+    id: 67,
+    drops: {
+      name: 'Mini Opalus (30d)',
+      img: require('../../assets/image/boss/drop-icons/mini_opalus.png'),
+      description:
+        "Title granted to those who killed Opalus.<br><Canyon's Lord>",
     },
   },
 ];

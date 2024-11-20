@@ -33,13 +33,14 @@
           :expand-separator="true"
           :label="'PVP Zone: ' + pvpZone"
         >
-          <q-item-label
+          <q-expansion-item
             v-for="(group, respawnMap) in respawnMaps"
             :key="respawnMap"
+            :expand-separator="true"
+            :label="respawnMap"
             style="margin-left: 20px; font-weight: bold"
             class="blue-grey"
           >
-            {{ respawnMap }}
             <q-list>
               <q-item
                 v-for="boss in group"
@@ -56,7 +57,7 @@
                 </q-item-section>
               </q-item>
             </q-list>
-          </q-item-label>
+          </q-expansion-item>
         </q-expansion-item>
       </q-list>
     </q-drawer>
@@ -141,38 +142,45 @@ export default {
   },
   computed: {
     groupedItems() {
-      return this.items.reduce((groups, item) => {
-        if (!groups[item.pvpZone]) {
-          groups[item.pvpZone] = {};
+      // Agrupar os bosses por zona de PvP e, em seguida, por mapa de respawn
+      return this.items.reduce((group, boss) => {
+        // Verifica se a zona de PvP já existe no agrupamento
+        if (!group[boss.pvpZone]) {
+          group[boss.pvpZone] = {};
         }
-        if (!groups[item.pvpZone][item.respawnMap]) {
-          groups[item.pvpZone][item.respawnMap] = [];
+
+        // Verifica se o mapa de respawn já existe dentro da zona de PvP
+        if (!group[boss.pvpZone][boss.respawnMap]) {
+          group[boss.pvpZone][boss.respawnMap] = [];
         }
-        groups[item.pvpZone][item.respawnMap].push(item);
-        return groups;
+
+        // Adiciona o boss ao grupo correspondente
+        group[boss.pvpZone][boss.respawnMap].push(boss);
+
+        return group;
       }, {});
     },
+
     filteredGroupedItems() {
-      const lowerCaseSearch = this.search.toLowerCase();
-      return Object.keys(this.groupedItems).reduce(
-        (filteredLevels, pvpZone) => {
-          const filteredRespawnMaps = Object.keys(
-            this.groupedItems[pvpZone]
-          ).reduce((filteredRespawn, respawnMap) => {
-            const filteredItems = this.groupedItems[pvpZone][respawnMap].filter(
-              (item) => item.title.toLowerCase().includes(lowerCaseSearch)
+      // Filtrar os bosses com base na pesquisa do usuário
+      const searchLower = this.search.toLowerCase();
+      return Object.fromEntries(
+        Object.entries(this.groupedItems)
+          .map(([pvpZone, respawnMaps]) => {
+            const filteredMaps = Object.fromEntries(
+              Object.entries(respawnMaps)
+                .map(([respawnMap, bosses]) => [
+                  respawnMap,
+                  bosses.filter((boss) =>
+                    boss.title.toLowerCase().includes(searchLower)
+                  ),
+                ])
+                .filter(([, bosses]) => bosses.length > 0) // Remove mapas vazios após a filtragem
             );
-            if (filteredItems.length) {
-              filteredRespawn[respawnMap] = filteredItems;
-            }
-            return filteredRespawn;
-          }, {});
-          if (Object.keys(filteredRespawnMaps).length) {
-            filteredLevels[pvpZone] = filteredRespawnMaps;
-          }
-          return filteredLevels;
-        },
-        {}
+
+            return [pvpZone, filteredMaps];
+          })
+          .filter(([, respawnMaps]) => Object.keys(respawnMaps).length > 0) // Remove zonas de PvP vazias
       );
     },
   },
