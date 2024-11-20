@@ -324,4 +324,11 @@ export default {
   left: 0;
   z-index: -1;
 }
+.logo-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
 </style>

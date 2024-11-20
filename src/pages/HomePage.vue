@@ -31,8 +31,7 @@ OpenBook;
   /* background-image: url('../assets/image/class/background/cima.jpg'); */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat;
-  background-size: cover; /* Faz a imagem preencher o fundo */
-
+  /* background-size: cover; */
   /* Define a altura mínima da div */
   min-height: 100vh; /* Ajusta para o tamanho da tela */
 }
@@ -46,7 +45,7 @@ OpenBook;
   /* background-image: url('../assets/image/class/background/sq_forum_bg.jpg'); */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat;
-  background-size: cover; /* Faz a imagem preencher o fundo */
+  background-size: cover;
 
   /* Define a altura mínima da div */
   min-height: 100vh; /* Ajusta para o tamanho da tela */
@@ -59,5 +58,12 @@ OpenBook;
   width: 70%;
   margin: 0 auto;
   padding: 16px;
+}
+.logo-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 </style>
