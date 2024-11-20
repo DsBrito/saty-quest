@@ -1,0 +1,36 @@
+- Move to Battlefield function will now have a 10 second delay before teleporting you. This action will be canceled if you perform any actions or if you are attacked.
+
+- Some bosses will now announce when being attacked and killed.
+
+ Bosses will now spawn between 1 and 2 suicidal mobs instead of 1-3. Also, the time between spawn has been increased and should not interfere with the summon player skill.,
+
+ The Mists is a new level 80 pvp map that we will use for Boss Hunt events.
+This map will open every Wednesday at 18hs and every Sunday at 19hs (just after GRB) for 2 hours. To enter, use the portal in your main city.
+Map drops will be a merge between GRB and CoG drops. You can check our map drops list for more information.
+Inside The Mists you will find some bosses and a few mobs to farm. Have fun!
+
+
+Summer Break Event!
+A portal has appeared in your main cities that will send you to the Forgotten Resort. Once a place of beauty and rest, now an isolated island full of lizards.
+Feel free to visit this place and enjoy the sun and the beach but watch out for the evil that wants to own the place!
+
+Two new daily quest:
+- Help the Worried Sealakel get rid of those who want to destroy the peace.
+- Help the Talking Mice solve the mystery of the plague roaming the isle.
+
+
+boss call
+- New player command /call to send an announcement to your faction when calling for bosses.
+-- Target the boss and type /call to send it. This command is only available while in union party to leaders and sub leaders.
+Bosses are now invulnerable until called 3 times. If you miss on hit, means you have to keep calling until you stop missing. Or let the boss reset and call again.
+
+- Christmas Patch is now active until 10th January.
+- All relics have been transformed into Christmas Trees and if you are really lucky, they will drop you a Tiny Christmas Tree Pet.
+- Elusive Christmas Goat will spawn (x2) at Theodores and Pantanasa in random spots. If you are lucky enough to see one, kindly invite others to kill it with you.
+
+bot
+- Important: A new popup will appear on you while farming to make sure you are paying attention. Failing this validation will create a record and having multiple records might end up with your account suspended.
+
+
+
+Once again, the Realms of Winter open up to see if they can accomplish their plans of conquering the continent. Its up to our heroes to stop them! Help the guards control this imminent threat and have another chance at completing all those quest you might have not finished last year.

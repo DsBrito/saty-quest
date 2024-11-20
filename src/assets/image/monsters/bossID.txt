@@ -1,0 +1,105 @@
+Moblong    909
+Yutu    835
+Mad Hatter    854
+Crazy Hatter    854
+Evil Hatter    854
+Mad Pumpkin    780
+Crazy Pumpkin    780
+Evil Pumpkin    780
+Kalayavan, The Undying    442
+Gaia    654
+Captain Steadler    540
+First-mate Mather    330
+Quartermaster Uzrac    485
+Cabin-boy Derew    342
+Graveyard Teroro    837
+Dark Lord    701
+Kalayavan, The Undying    442
+Tarkas Aul'quru    576
+Sewer's Guardian    28
+Sewer's Guardian    29
+Tarkas Aul'quru    34
+Firestorm Warden Pyralis    944
+Tempest Guardian Terravane    947
+Pestilent Tyrant Nidhogg    943
+Abyssal Eclipser Umbraxis    948
+Eternity's Vanquisher Stygion    945
+Cloron Dragon    151
+Fantasma Dragon    150
+Tainted Goddess of Fury    973
+Tainted Goddess of Light    972
+Gloomclaw    836
+Greendieta Seraphim    350
+Fire Guardian    892
+Earth Guardian    893
+Wind Guardian    894
+Water Guardian    895
+Fire Guardian    892
+Earth Guardian    893
+Wind Guardian    894
+Water Guardian    895
+Rock Golem    818
+Guardian of the Egg    818
+Hermosa Hueva    887
+Descended Light Goddess    148
+Descended Fury Goddess    146
+Light Goddess Guardian    492
+Fury Goddess Guardian    494
+Dios Exiel    506
+Mad Pumpkin    48
+Mad Pumpkin Princess    584
+Mad Pumpkin Queen    584
+The Most Ugly Pumpkin    780
+Ales    489
+Secreta    487
+Dentatus    486
+Lumen    488
+Cryptic Peri Queen    487
+Cryptic Bulldozer    620
+Fierce Nantarios    470
+Dlizabeth Eathory    333
+Cannibal Hydra    628
+Cryptic Elite Assassins    636
+Cryptic Back    474
+Cryptic the Immortal    360
+Cryptic the Last    619
+Fury Kirihiross    473
+Cryptic the Last    635
+Gate Guardian    808
+Gate Guardian    213
+Gate Guardian    815
+Pirate Courier    482
+Pirate Quartermaster    485
+Monkey King    794
+Keeper of the Fire    619
+Leader of the Cult    699
+Princess Rirumu    272
+Opalus    652
+Raptor Slayer    800
+Raptor Hunter    801
+Boreas    813
+Morozko    813
+The Grinch    844
+Commander Opal Hammer    739
+Donner    807
+Blitzen    807
+Luminous Brigand    523
+Luminous Brigand    523
+Not a Bot    753
+Guardian AI    737
+Strategist AI    736
+Mobile Siege Mech    741
+Assaultron 9000    760
+Molten Demon Rerzannar    474
+Lava Guardian Gazothun    142
+Demon Lord Vaglumath    470
+Quthayss, the Firestarter    909
+Parrdalis    462
+Blizabeth Eathory    333
+Deinos The Dream    471
+Nantarios    470
+Alcarian The Flame    142
+Abyssal Ripper    931
+Hellforge Behemoth    932
+Vorakron 9000    933
+Suppy Dropship    741
