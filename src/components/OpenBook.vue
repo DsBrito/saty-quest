@@ -3,7 +3,7 @@
   <div class="class-book-wrapper">
     <div class="image-row">
       <img
-        src="../assets/image/goddes/light/light.png"
+        src="../assets/image/icons/nvshen-guang.png"
         alt="Goddes Light"
         class="small-image"
       />
@@ -33,7 +33,7 @@
 
     <div class="image-row">
       <img
-        src="../assets/image/goddes/fury/furyblack.png"
+        src="../assets/image/icons/nvshen-fennu.png"
         alt="Goddes Fury"
         class="align-image"
       />
@@ -251,12 +251,12 @@ export default {
 }
 
 .align-image {
-  width: 600px; /* Ajuste o valor conforme desejado */
+  width: 100%;
   height: auto; /* Mantém a proporção */
 }
 
 .small-image {
-  width: 550px; /* Ajuste o valor conforme necessário */
+  width: 100%;
   height: auto -1px; /* Mantém a proporção */
 }
 </style>
