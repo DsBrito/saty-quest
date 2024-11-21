@@ -1,0 +1,3 @@
+mostrar npcs
+explicar como funciona
+explicar a mais usadas de cada classe e o porque disso

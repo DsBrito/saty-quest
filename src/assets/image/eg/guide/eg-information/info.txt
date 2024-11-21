@@ -1,0 +1,138 @@
+EG Shaiya EP8+ Server Information
+EG Shaiya is an exclusive and fully updated Episode 8 Shaiya Server.
+
+We count with the tools to keep updating the server and making the changes that the players suggest.
+
+
+So you are interested in our server? Glad to hear that and tell you a little bit more about it!
+
+
+First of all we have pancakes! Wait nevermind sadly we don’t but we do have:
+
+- First stable Episode 8+ private server
+
+- XP Rate x50 (Boosted to double of that on the weekends)
+
+- Balanced PVP/PVE content
+
+- Services that will give you free Rewards (Vote, Recruit, Refer, Etc)
+
+- Access to all items in game: by drop, quests, events. There will be no AP-only items that will affect gameplay.
+
+- Dedicated staff team
+
+
+What do i hear? Standard sales pitch you say, ok look at this!
+
+Here is a list of the things we have been doing so far, but there are much more to discover!
+
+- Several fixes to prevent exploits/cheats
+- Several bugs have been fixed (for example damage exploit, resetting grb instances, horizon lapis etc.)
+- Multiclient block
+- NPC’s in the Auction House selling basic linking supplies
+- NPC’s in the Auction House selling basic consumables
+- Lower level PvP gear dropping in the specific zones
+- Basic Gold/Linking supplies drop in all PvP maps
+- Debuff lapis easily obtainable in farming maps
+- Updated End game gear quests with special loot boxes to get the parts you need
+- Tradable costumes/pets (temporal ones only)
+- Added more item stacking for cleaner inventories
+- Custom tooltips to display correct information straight from the server database
+- PvP debuffs not showing in Party for cleaner interface
+- Item and equipment drop upon dead disabled server side
+- Character resurrection rune requirement disabled server side
+- Reduced cooldowns on various movement runes
+- Lapis creation kits added to combine for higher levels
+- Perfect Armor/Weapon Lapisia farmable in game
+- Move to battlefield will not teleport you while in combat
+- Automatic announcements when bosses are getting killed
+- Custom Boss AI to prevent killing bosses with small groups (boss has to be called with custom command that gives an announcement to your faction)
+- Custom gatekeeper in Kanos Ilium to ambush the opposing faction
+- Custom FFA map were you can play totally anonymous with all names/looks hidden
+- Custom settings to hide the game User Interface and Player Names
+- Small changes to skills and Buffs to balance PvP
+- Custom Costumes/mounts/pets/wings added to personalize your character
+- Small change in chat colors to make different chats more clear
+- Cross faction whisper
+- Cross faction trade in the Auction House
+- Transformation only protects you from debuffs, and no longer gives you damage immunity
+- Warehouse and Inventory sort function added for cleaner item management
+- Custom raid command for ease of leading raids
+- Party summon will show you the map you are being summoned to
+- Target resurrection rune cast time increased to avoid massive use during PvP
+- Trade message timer to prevent spamming
+- Custom settings to hide Pets / Wings / Effects / Guildtags / Costumes / Models / Capes / animations / monsters / characters / titles
+- Warmodes added to allow you to use one character in multiple level based zones
+- Custom 3v3/4v4/5v5/7v7 Matchmaking NPC’s added
+- Shift click to remove active buffs
+- Boss summon stones added for Guild Ranking Battle rewards
+- Death counter removed to avoid ratio playing
+- Potion values set to heal percental hp
+- Custom Guild Ranking Battle drops to incentivize playing with your guild
+- Custom Boss AI’s on several bosses for new types of boss fights
+- Range bonus buffs now also apply on monsters
+- Small map changes to improve Frames Per Second
+- Custom Boss Loot system to ensure random loot between players
+- Guild Ranking Battle player requirement set to 3 players to prevent farming guilds
+- Login check to prevent faction hopping
+- Increased inventory space
+- Automatic Bot prevention
+- Safe zones and pushback barriers added to all PvP maps to avoid spawn killing
+- Added cooldown on screenshots and emotes to avoid spamming
+- 150 slot raids
+- Level 15 bosses added to incentivize PvP in the zone
+- Level 30 bosses added to incentivize PvP in the zone
+- Client side fixes to reduce file sizes and improve game rendering
+- Raid target mark function added to make Focussing Fire easier for newer players
+- New settings added for easier graphic settings
+- Player bars will blink for healers when debuffs are applied for easier cross tab dispels
+- Minimap dots differentiate friendlies/enemies
+- Dye remove option added to return items to their default color’s
+- Potions will auto refill when using the Z/X slots
+- Visual update to show linked elements on items on hotbars and inventory
+- Reduced blessing of the goddess duration to 2 minutes
+- New show taskbar option added to graphics menu
+- Blessing of the Goddess changed to be equal for both factions
+- Infinite Sanctuary moved to PvE to avoid newer players being stuck
+- Emotes can now be targeted to players
+- Third hotbar added to the game for optional use
+- Mixed party pvp added
+- Sitter function added with custom sit/play commands for raid leaders to teleport players from/to safe zones
+- User Interface element positions saving added to avoid resetting upon login
+- Attack player emote added to avoid targeting monsters during PvP
+- Raid dismantle function disabled to avoid raid leaders rage quitting
+- Recreation rune window will show current reroll for better ease of use
+- (Guild) Warehouse page size increase for easier item management
+- Permanent debuff potions added to the game for cleaner inventories
+- Improved client encryption
+- Away From Keyboard debuff to prevent gaining kills when afk, also shows you are afk in raids
+- New chat filter options (damage etc.)
+- Raid window’s will show when players are not in the same map
+- Account size increased allowing you 1 more character
+- Item Reroll/Linking/Enchanting transfer function added to the game
+- Improved ranking system on the website to compare daily kills and personal kills
+- Guild ranking officers of level 3 have access to the guild warehouse
+- Improved cashing of assets to prevent freezes of the game client
+- Whisper now shows from and to tags to clear up chat windows
+- Click on name to whisper added
+- Increased slots on R bar to 10 for more chains
+- Chat history changed to 500 for easier checks
+- Client notifications upon messages/requests
+- New Resurrect raid member rule allowing resurrection at the assigned player’s position.
+- Automatically reduced status points on costumes/pets when entering lower level zones.
+- Recreation rune creation ease of use update consuming up to whole stacks at once.
+- Party fixer role added to raids for more ease on raid leaders spreading the responsibilities.
+- New chat filter options.
+- Vsync option.
+- Fully custom key binding system.
+- Health bars rendering under player names.
+- NPC Guards now stun & kill you if you are too close.
+- Added Weapon & Shield Skin Slots.
+- Moveable and resizable Buffs / Debuff "Bars"
+
+That's what i thought, plenty of additions to make this an amazing experience for everyone!
+
+Feel free to join our discord server and poke any of our staff members if u have any more questions.
+
+
+We keep updating the server every day so there might be some new things to discover!

@@ -1,0 +1,4 @@
+Spin our wheel of fortune to get a free random item.
+You get 1 free spin every 6 hours so don't miss your chance.
+
+Note: There is a limit of 3 spins by IP Address.

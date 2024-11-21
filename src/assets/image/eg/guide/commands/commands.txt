@@ -1,0 +1,8 @@
+/all on
+/pets on
+/wings on
+/effects on
+/guild tags on
+
+mostrar video da diferença
+mostrar print do log no chat
