@@ -339,7 +339,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import showGuilde from 'components/eg/ShowGuilde.vue';
+import showGuilde from 'components/eg/guide/ShowGuilde.vue';
 
 const selectedButton = ref('');
 
@@ -403,7 +403,7 @@ const handleButtonClick = (buttonLabel: string) => {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 28%;
+  top: 250px;
   left: 10%;
   gap: 10px;
   width: 130px;
@@ -412,7 +412,7 @@ const handleButtonClick = (buttonLabel: string) => {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 28%;
+  top: 250px;
   left: 20%;
   gap: 10px;
   width: 130px;
@@ -421,7 +421,7 @@ const handleButtonClick = (buttonLabel: string) => {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 28%;
+  top: 250px;
   right: 10%;
   gap: 10px;
   width: 130px;
@@ -430,7 +430,7 @@ const handleButtonClick = (buttonLabel: string) => {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 28%;
+  top: 250px;
   right: 20%;
   gap: 10px;
   width: 130px;
