@@ -17,7 +17,11 @@
           />
           <div class="text">
             <span class="name">Dissipadora Infinita 7d</span>
-            <p class="description">Uma poção que dissipa efeitos negativos.</p>
+            <p class="description">
+              Permanent version of the following elixirs: <br />
+              Dispel Elixir, Abolishing Elixir,Blessing Elixir, Cure Elixir,
+              Holy Elixir.
+            </p>
           </div>
         </div>
       </div>
@@ -51,8 +55,13 @@
               src="../../../assets/image/eg/guide/30_days_packet/red_phonix_30d.png"
             />
             <div class="text">
-              <span class="name">Fênix Vermelha</span>
-              <p class="description">Uma majestosa montaria por 30 dias.</p>
+              <span class="name">Red Phoenix Charm </span>
+              <p class="description">
+                After activating the Phoenix Charm prevents EXP loss from dying,
+                increases EXP gained by 20 percent, increases gold dropped from
+                mobs by 50 percent, gives 4 possible Recorded Points, and
+                doubles the warehouse size. Lasts for 30 days.
+              </p>
             </div>
           </div>
 
@@ -62,8 +71,13 @@
               src="../../../assets/image/eg/guide/30_days_packet/incrase_gold_30d.png"
             />
             <div class="text">
-              <span class="name">Aumento de Gold</span>
-              <p class="description">(não vale a pena)</p>
+              <span class="name">Large Increase Gold Drop</span>
+              <p class="description">
+                Increases Gold dropped from mobs by 100 percent for 30 days.
+                Restricted to characters currently in use. It only works for the
+                gold that drops when killing the mob and not on the coin lv1-5
+                drop
+              </p>
             </div>
           </div>
 
@@ -73,8 +87,11 @@
               src="../../../assets/image/eg/guide/30_days_packet/endurace_30d.png"
             />
             <div class="text">
-              <span class="name">Martelo de Endurecimento</span>
-              <p class="description">Ferramenta para melhorias especiais.</p>
+              <span class="name">Large Eternal Endurance </span>
+              <p class="description">
+                Retains eternal endurance for 30 days. Effect remains even after
+                dying. Restricted to characters currently in use.
+              </p>
             </div>
           </div>
         </div>
@@ -84,21 +101,96 @@
     <!-- Seção do Pet -->
     <div class="pet-section">
       <h6 class="pet-title">
-        Além dos itens comprados, no jogo há uma quest escondida/esquecida que
-        dá um pet:
+        In addition to purchased items, there is a hidden/forgotten quest in the
+        game that gives you a pet:
       </h6>
-      <div class="pet-item">
-        <q-img
-          class="itens-img"
-          src="../../../assets/image/eg/guide/30_days_packet/30d_npc_bg.png"
-        />
-        <div class="text">
-          <span class="name">Pet Misterioso</span>
-          <p class="description">
-            Complete a quest secreta para obter este pet especial.
-          </p>
+
+      <div class="img-map-colun">
+        <div class="img-item">
+          <span class="text-center">AOL</span>
+          <q-img
+            src="../../../assets/image/eg/guide/30_days_packet/light_pet_quest.png"
+          />
+        </div>
+
+        <div class="img-item">
+          <span class="text-center">UOF</span>
+          <q-img
+            src="../../../assets/image/eg/guide/30_days_packet/dark_pet_quest.png"
+          />
         </div>
       </div>
+      <h6 class="pet-title">
+        In the maps above, you need to kill a mob to get the quest item and
+        continue the mission.
+      </h6>
+
+      <div class="img-map-colun">
+        <div class="img-item">
+          <span class="text-center"> Vueltas Scout (AOL)</span>
+
+          <q-img
+            src="../../../assets/image/eg/guide/30_days_packet/vueltas_scout.png"
+          />
+        </div>
+
+        <div class="img-item">
+          <span class="text-center"> Dwarf Bandit (UOF)</span>
+          <q-img
+            src="../../../assets/image/eg/guide/30_days_packet/dwarf_bandit.png"
+          />
+        </div>
+      </div>
+
+      <h6 class="pet-title">
+        The drop is a secret document with a order to execute
+        <strong> machine </strong>.
+      </h6>
+      <div class="dispel-potion">
+        <div class="item">
+          <q-img
+            class="dispel-potion-img"
+            src="../../../assets/image/eg/guide/30_days_packet/secret_document.png"
+          />
+          <div class="text">
+            <span class="name">Secret Document</span>
+            <p class="description">
+              Begins Quest<br />Right-Click the mouse button to start the quest.
+            </p>
+            <p class="description">
+              <strong>Quest<br /></strong>
+              [Danger] Execute Drekslur the Watcher.
+            </p>
+          </div>
+          <q-img
+            class="dispel-potion-img"
+            src="../../../assets/image/eg/guide/30_days_packet/pet_secret_quest.png"
+          />
+        </div>
+      </div>
+
+      <h6 class="pet-title">
+        The quest gives the order to execute Drekslur the Watcher, which is a
+        machine with a cannon and missiles, very similar
+        <strong>Commander Opal Hammer</strong>
+
+        (Maybe this is a member of his family lmao)
+      </h6>
+      <q-img
+        class=""
+        src="../../../assets/image/eg/guide/30_days_packet/drekslur_the_watcher.png"
+      />
+
+      <h6 class="pet-title">
+        After completing the quest, you will be rewarded with a 15-day pet
+        called
+        <strong>MK-01 +5 (15d)</strong>
+        which is a robotic partner ready for the greatest adventures.
+      </h6>
+      <q-img
+        class=""
+        src="../../../assets/image/eg/guide/30_days_packet/pet.png"
+      />
     </div>
   </div>
 </template>
@@ -110,6 +202,20 @@ export default {
 </script>
 
 <style scoped>
+.img-map-colun {
+  display: flex;
+  gap: 20px;
+}
+
+.img-title {
+  align-items: center;
+}
+.img-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .container {
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -219,7 +325,7 @@ export default {
 }
 
 .pet-title {
-  text-align: center;
+  text-align: justify;
   margin-bottom: 20px;
   font-size: 1.2em;
   color: #333;
