@@ -1,18 +1,20 @@
 <template>
   <div class="container">
+    {{ props.guide }}
     <q-img src="../../../assets/image/icons/next.png" class="image-style" />
 
     <div v-if="props.guide === '30 Days Pack'">
-      <!-- {{ props.guide }} -->
-
       <DaysPack> </DaysPack>
+    </div>
+    <div v-if="props.guide === 'accessories'">
+      <Accessories> </Accessories>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import DaysPack from 'components/eg/guide/30_Days_Pack.vue';
-
+import Accessories from 'components/eg/guide/PvPAccessories.vue';
 const props = defineProps<{
   guide: string;
 }>();
