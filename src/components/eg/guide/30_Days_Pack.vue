@@ -4,7 +4,7 @@
     <h6 class="subtitle text-center">NPC: <strong>Mysterious Woman</strong></h6>
     <q-img
       class="npc-image"
-      src="../../../assets/image/eg/guide/30_days_packet/30d_npc_bg.png"
+      src="../../../assets/image/eg/guide/30_days_packet/npc/30d_npc_bg.png"
     />
 
     <div class="itens-wrapper">
@@ -13,7 +13,7 @@
         <div class="item">
           <q-img
             class="itens-img img-icon"
-            src="../../../assets/image/eg/guide/30_days_packet/dispel_potion.png"
+            src="../../../assets/image/eg/guide/30_days_packet/itens/dispel_potion.png"
           />
           <div class="text">
             <span class="name">Infinite Potions 7d</span>
@@ -32,7 +32,7 @@
           <div class="special-item">
             <q-img
               class="itens-img"
-              src="../../../assets/image/eg/guide/30_days_packet/mount_30d.png"
+              src="../../../assets/image/eg/guide/30_days_packet/itens/mount_30d.png"
             />
             <div class="text">
               <span class="name">Surfboard Mount 30D</span>
@@ -40,7 +40,7 @@
             </div>
             <q-img
               class="board-image"
-              src="../../../assets/image/eg/guide/30_days_packet/1.png"
+              src="../../../assets/image/eg/guide/30_days_packet/itens/surf_mount.png"
             />
           </div>
         </div>
@@ -50,7 +50,7 @@
           <div class="item">
             <q-img
               class="itens-img"
-              src="../../../assets/image/eg/guide/30_days_packet/red_phonix_30d.png"
+              src="../../../assets/image/eg/guide/30_days_packet/itens/red_phonix_30d.png"
             />
             <div class="text">
               <span class="name">Red Phoenix Charm </span>
@@ -66,7 +66,7 @@
           <div class="item">
             <q-img
               class="itens-img"
-              src="../../../assets/image/eg/guide/30_days_packet/incrase_gold_30d.png"
+              src="../../../assets/image/eg/guide/30_days_packet/itens/incrase_gold_30d.png"
             />
             <div class="text">
               <span class="name">Large Increase Gold Drop</span>
@@ -82,7 +82,7 @@
           <div class="item">
             <q-img
               class="itens-img"
-              src="../../../assets/image/eg/guide/30_days_packet/endurace_30d.png"
+              src="../../../assets/image/eg/guide/30_days_packet/itens/endurace_30d.png"
             />
             <div class="text">
               <span class="name">Large Eternal Endurance </span>
@@ -107,14 +107,14 @@
         <div class="img-item">
           <span class="text-center">AOL</span>
           <q-img
-            src="../../../assets/image/eg/guide/30_days_packet/light_pet_quest.png"
+            src="../../../assets/image/eg/guide/30_days_packet/maps/light_pet_quest.png"
           />
         </div>
 
         <div class="img-item">
           <span class="text-center">UOF</span>
           <q-img
-            src="../../../assets/image/eg/guide/30_days_packet/dark_pet_quest.png"
+            src="../../../assets/image/eg/guide/30_days_packet/maps/dark_pet_quest.png"
           />
         </div>
       </div>
@@ -128,7 +128,7 @@
 
         <q-img
           class="quest-mob"
-          src="../../../assets/image/eg/guide/30_days_packet/vueltas_scout_group.png"
+          src="../../../assets/image/eg/guide/30_days_packet/pet/vueltas_scout_group.png"
         />
       </div>
 
@@ -140,7 +140,7 @@
         <div class="pet-item">
           <q-img
             class="img-drop"
-            src="../../../assets/image/eg/guide/30_days_packet/secret_document.png"
+            src="../../../assets/image/eg/guide/30_days_packet/pet/secret_document.png"
           />
           <div>
             <strong>Secret Document</strong>
@@ -154,7 +154,7 @@
           </div>
           <q-img
             class="img-icon"
-            src="../../../assets/image/eg/guide/30_days_packet/pet_secret_quest.png"
+            src="../../../assets/image/eg/guide/30_days_packet/pet/pet_secret_quest.png"
           />
         </div>
       </div>
@@ -166,9 +166,13 @@
 
         (Maybe this is a member of his family lmao)
       </h6>
-      <q-img
-        src="../../../assets/image/eg/guide/30_days_packet/drekslur_the_watcher.png"
-      />
+
+      <div class="img-colun img-item">
+        <q-img
+          class="quest-mob"
+          src="../../../assets/image/eg/guide/30_days_packet/pet/drekslur_the_watcher.png"
+        />
+      </div>
 
       <h6 class="pet-title">
         After completing the quest, you will be rewarded with a 1 day pet
@@ -177,10 +181,12 @@
         which is a robotic partner ready for the greatest adventures.
       </h6>
 
-      <q-img
-        class=""
-        src="../../../assets/image/eg/guide/30_days_packet/robots_reward.png"
-      />
+      <div class="img-colun img-item">
+        <q-img
+          class="quest-mob"
+          src="../../../assets/image/eg/guide/30_days_packet/pet/robots_reward.png"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -305,5 +311,12 @@ export default {
 .description {
   font-size: 0.9em;
   color: #555;
+}
+
+.img-robots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
 </style>
