@@ -128,9 +128,261 @@
         completing the quest, you will be rewarded with a 1 day pet
       </h6>
       <!-- MAP -->
+      <div class="img-mobs">
+        <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/frost-breath-succubus.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/leopardess-adventurer.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/mountain-ridge-brown-bear.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/vagabond-big-brown-bear.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/viper-demonworshipper.png"
+        />
+      </div>
+      <!-- Description -->
+      <h6>
+        After completing the quest, you will be rewarded with a 1 day pet After
+        completing the quest, you will be rewarded with a 1 day pet After
+        completing the quest, you will be rewarded with a 1 day pet
+      </h6>
+      <!-- MAP -->
+      <div class="img-mobs">
+        <h1>COLOCAR MOBS ROBÔS AQUI (TODOS JUNTOS)</h1>
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/frost-breath-succubus.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/leopardess-adventurer.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/mountain-ridge-brown-bear.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/vagabond-big-brown-bear.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/15/viper-demonworshipper.png"
+        />
+      </div>
+    </div>
+    <div v-if="selectedTitle === 'PvP 30'" class="pvp-zone">
+      <h3 class="text-center no-margin">{{ selectedTitle }}</h3>
+      <!-- <p>Content for {{ selectedTitle }} PvP.</p> -->
+
+      <!-- Description -->
+      <h6>
+        Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30
+      </h6>
+      <!-- TELEPORT -->
+      <q-img
+        class="img-teleport"
+        src="../../../assets/image/eg/guide/accessories/maps/30/teleport30.png"
+      />
+      <!-- Description -->
+      <h6>
+        Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30
+      </h6>
+      <!-- MAP -->
       <q-img
         class="img-map"
-        src="../../../assets/image/eg/guide/accessories/maps/15/map15.png"
+        src="../../../assets/image/eg/guide/accessories/maps/30/map30.png"
+      />
+      <!-- MOBS -->
+      <!-- Description -->
+      <h6>
+        Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30
+      </h6>
+      <!-- MAP -->
+      <div class="img-mobs">
+        <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
+        />
+      </div>
+      <!-- Description -->
+      <h6>
+        Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+        30Texto pvp 30Texto pvp 30
+      </h6>
+      <!-- MAP -->
+      <div class="img-mobs">
+        <h1>COLOCAR MOBS ROBÔS AQUI (TODOS JUNTOS)</h1>
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
+        />
+        <q-img
+          src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div v-if="selectedTitle === 'PvP 60'" class="pvp-zone">
+    <h3 class="text-center no-margin">{{ selectedTitle }}</h3>
+    <!-- <p>Content for {{ selectedTitle }} PvP.</p> -->
+
+    <!-- Description -->
+    <h6>
+      Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp
+      60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60
+    </h6>
+    <!-- TELEPORT -->
+    <q-img
+      class="img-teleport"
+      src="../../../assets/image/eg/guide/accessories/maps/60/teleport60.png"
+    />
+    <!-- Description -->
+    <h6>
+      Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp
+      60 Texto pvp 60 Texto pvp 60 Texto pvp 60
+    </h6>
+    <!-- MAP -->
+    <q-img
+      class="img-map"
+      src="../../../assets/image/eg/guide/accessories/maps/60/map60.png"
+    />
+    <!-- MOBS -->
+    <!-- Description -->
+    <h6>
+      Texto pvp 60 v Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto
+      pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60 Texto pvp 60
+      Texto pvp 60 s
+    </h6>
+    <!-- MAP -->
+    <div class="img-mobs">
+      <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
+      />
+    </div>
+    <!-- Description -->
+    <h6>
+      Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+      30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+      30Texto pvp 30Texto pvp 30
+    </h6>
+    <!-- MAP -->
+    <div class="img-mobs">
+      <h1>COLOCAR Mini BOSSS AQUI (TODOS JUNTOS)</h1>
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
+      />
+    </div>
+  </div>
+  <div v-if="selectedTitle === 'PvP 80'" class="pvp-zone">
+    <h3 class="text-center no-margin">{{ selectedTitle }}</h3>
+    <!-- <p>Content for {{ selectedTitle }} PvP.</p> -->
+
+    <!-- Description -->
+    <h6>
+      Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp
+      80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto
+      pvp 80 Texto pvp 80
+    </h6>
+    <!-- TELEPORT -->
+    <q-img
+      class="img-teleport"
+      src="../../../assets/image/eg/guide/accessories/maps/80/teleport80.png"
+    />
+    <!-- Description -->
+    <h6>
+      Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp
+      80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto
+      pvp 80 Texto pvp 80 Texto pvp 80
+    </h6>
+    <!-- MAP -->
+    <q-img
+      class="img-map"
+      src="../../../assets/image/eg/guide/accessories/maps/60/map60.png"
+    />
+    <!-- MOBS -->
+    <!-- Description -->
+    <h6>
+      Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp
+      80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80
+    </h6>
+    <!-- MAP -->
+    <div class="img-mobs">
+      <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
+      />
+    </div>
+    <!-- Description -->
+    <h6>
+      Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+      30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
+      30Texto pvp 30Texto pvp 30
+    </h6>
+    <!-- MAP -->
+    <div class="img-mobs">
+      <h1>COLOCAR Mini BOSSS AQUI (TODOS JUNTOS)</h1>
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
+      />
+      <q-img
+        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
       />
     </div>
   </div>
@@ -143,6 +395,7 @@ const selectedTitle = ref<string | null>(null);
 
 // Função para selecionar o título
 const selectTitle = (title) => {
+  console.log(title);
   selectedTitle.value = title;
 };
 </script>
@@ -204,6 +457,10 @@ const selectTitle = (title) => {
   width: 20%;
 }
 .img-map {
-  width: 50%;
+  width: 30%;
+}
+.img-mobs {
+  width: 100%;
+  display: flex; /* Coloca os itens em uma linha */
 }
 </style>
