@@ -321,69 +321,73 @@
 
     <!-- Description -->
     <h6>
-      Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp
-      80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto
-      pvp 80 Texto pvp 80
+      EEE CONSEGUIDO ATRAVÉS DEEE ........... EEE CONSEGUIDO ATRAVÉS DEEE
+      ............. EEE CONSEGUIDO ATRAVÉS DEEE ....... EEE CONSEGUIDO ATRAVÉS
+      DEEE ...APULUNE/IRES INMAGEM
     </h6>
-    <!-- TELEPORT -->
+    <!-- Seção do Pet -->
+    <div>
+      <h6 class="pet-title">
+        In addition to purchased items, there is a hidden/forgotten quest in the
+        game that gives you a pet:
+      </h6>
+
+      <div class="img-colun">
+        <div class="img-item">
+          <span class="text-center">AOL</span>
+          <q-img
+            src="../../../assets/image/eg/guide/accessories/maps/80/apulune-accs-quest.png"
+          />
+        </div>
+
+        <div class="img-item">
+          <span class="text-center">UOF</span>
+          <q-img
+            src="../../../assets/image/eg/guide/accessories/maps/80/iris-accs-quest.png"
+          />
+        </div>
+      </div>
+    </div>
+    <h6>
+      NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC....Texto pvp 80
+      Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto
+      pvNPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...NPC...p
+      80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto
+      pvp 80 Texto pvp 80 Texto pvp 80
+    </h6>
     <q-img
-      class="img-teleport"
-      src="../../../assets/image/eg/guide/accessories/maps/80/teleport80.png"
+      class="npc-quest"
+      src="../../../assets/image/eg/guide/accessories/npcs/npcs-acc-quest.png"
     />
-    <!-- Description -->
     <h6>
       Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp
       80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto
       pvp 80 Texto pvp 80 Texto pvp 80
     </h6>
-    <!-- MAP -->
-    <q-img
-      class="img-map"
-      src="../../../assets/image/eg/guide/accessories/maps/60/map60.png"
-    />
-    <!-- MOBS -->
-    <!-- Description -->
-    <h6>
-      Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp
-      80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80 Texto pvp 80
-    </h6>
-    <!-- MAP -->
-    <div class="img-mobs">
-      <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
-      />
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
-      />
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
-      />
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
-      />
-    </div>
-    <!-- Description -->
-    <h6>
-      Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
-      30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp 30Texto pvp
-      30Texto pvp 30Texto pvp 30
-    </h6>
-    <!-- MAP -->
-    <div class="img-mobs">
-      <h1>COLOCAR Mini BOSSS AQUI (TODOS JUNTOS)</h1>
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
-      />
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
-      />
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
-      />
-      <q-img
-        src="../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
-      />
+    <div>
+      <q-carousel
+        v-model="slide"
+        swipeable
+        animated
+        control-color="amber"
+        navigation
+        padding
+        arrows
+      >
+        <q-carousel-slide :name="1" class="no-padding">
+          <h6 class="no-margin">Text/Explain1</h6>
+          <q-img
+            src="../../../assets/image/eg/guide/accessories/npcs/anyquest.png"
+          />
+        </q-carousel-slide>
+        <!-- <q-carousel-slide :name="2" class="no-padding">
+        <h6 class="no-margin">Text/Explain2</h6>
+        <q-img
+          class=""
+          src="../../../assets/image/eg/guide/accessories/npcs/anyquest.png"
+        />
+      </q-carousel-slide> -->
+      </q-carousel>
     </div>
   </div>
 </template>
@@ -392,9 +396,10 @@ import { ref } from 'vue';
 
 // Armazena o título selecionado como um ref (reativo)
 const selectedTitle = ref<string | null>(null);
+const slide = ref(1);
 
 // Função para selecionar o título
-const selectTitle = (title) => {
+const selectTitle = (title: string | null) => {
   console.log(title);
   selectedTitle.value = title;
 };
@@ -411,6 +416,22 @@ const selectTitle = (title) => {
   transform: rotate(90deg);
 }
 
+.img-colun {
+  display: flex;
+  gap: 20px;
+}
+
+.img-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.npc-quest {
+  width: 30%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 .title {
   font-size: 2em;
   text-align: center;
