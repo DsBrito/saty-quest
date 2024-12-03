@@ -35,7 +35,7 @@
       src="../../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
     />
     <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+      src="../../../../assets/image/eg/guide/accessories/mobs/30/demon-stone-troll-guardian.png"
     />
     <q-img
       src="../../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
@@ -57,7 +57,7 @@
       src="../../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
     />
     <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/30/demonStone_troll_guardian.png"
+      src="../../../../assets/image/eg/guide/accessories/mobs/30/demon-stone-troll-guardian.png"
     />
     <q-img
       src="../../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
