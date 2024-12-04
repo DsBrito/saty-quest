@@ -13,8 +13,8 @@
 </template>
 
 <script setup lang="ts">
-import DaysPack from 'components/eg/guide/30-days-pack/30_Days_Pack.vue';
-import Accessories from 'components/eg/guide/pvp-accessories/PvPAccessories.vue';
+import DaysPack from 'components/eg/guide/days-pack/DaysGuide.vue';
+import Accessories from 'components/eg/guide/pvp-accessories/AcessoriesGuide.vue';
 const props = defineProps<{
   guide: string;
 }>();
