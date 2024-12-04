@@ -9,12 +9,16 @@
     <div v-if="props.guide === 'accessories'">
       <Accessories> </Accessories>
     </div>
+    <div v-if="props.guide === 'Enchant'">
+      <Enchant> </Enchant>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import DaysPack from 'components/eg/guide/days-pack/DaysGuide.vue';
-import Accessories from 'components/eg/guide/pvp-accessories/AcessoriesGuide.vue';
+import DaysPack from './days-pack/DaysGuide.vue';
+import Accessories from './pvp-accessories/AcessoriesGuide.vue';
+import Enchant from './enchant/EnchantGuide.vue';
 const props = defineProps<{
   guide: string;
 }>();
