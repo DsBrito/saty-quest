@@ -59,6 +59,17 @@
         />
       </div>
     </div>
+
+    <h3 class="text-center no-margin">{{ selectedTitle }}</h3>
+    <div v-if="selectedTitle === '1~10'" class="enchant-zone">
+      <BasicEnchant></BasicEnchant>
+    </div>
+    <div v-if="selectedTitle === '10~15'" class="enchant-zone">
+      <HardEnchant></HardEnchant>
+    </div>
+    <div v-if="selectedTitle === '15~20'" class="enchant-zone">
+      <UltimateEnchant></UltimateEnchant>
+    </div>
     <h6>
       Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
       temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
@@ -108,6 +119,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import BasicEnchant from './BasicEnchant.vue';
+import HardEnchant from './HardEnchant.vue';
+import UltimateEnchant from './UltimateEnchant.vue';
 
 // Armazena o título selecionado como um ref (reativo)
 const selectedTitle = ref<string | null>(null);
