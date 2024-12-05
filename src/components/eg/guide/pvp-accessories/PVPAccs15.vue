@@ -31,21 +31,8 @@
   </h6>
   <!-- MAP -->
   <div class="img-mobs">
-    <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
     <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/frost-breath-succubus.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/leopardess-adventurer.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/mountain-ridge-brown-bear.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/vagabond-big-brown-bear.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/viper-demonworshipper.png"
+      src="../../../../assets/image/eg/guide/accessories/mobs/15/pvp15-all-mobs.png"
     />
   </div>
   <!-- Description -->
@@ -55,22 +42,10 @@
     the quest, you will be rewarded with a 1 day pet
   </h6>
   <!-- MAP -->
+
   <div class="img-mobs">
-    <h1>COLOCAR MOBS ROBÔS AQUI (TODOS JUNTOS)</h1>
     <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/frost-breath-succubus.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/leopardess-adventurer.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/mountain-ridge-brown-bear.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/vagabond-big-brown-bear.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/15/viper-demonworshipper.png"
+      src="../../../../assets/image/eg/guide/accessories/mobs/15/pvp15-all-robots.png"
     />
   </div>
 </template>

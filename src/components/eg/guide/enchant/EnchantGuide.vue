@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <h6>
+      Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
+      temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
+      qui doloribus aliquam eum temporibus velit.
+    </h6>
     <h1 class="title">ENCHANT</h1>
 
     <div class="itens-wrapper items-center text-center">
@@ -54,6 +59,50 @@
         />
       </div>
     </div>
+    <h6>
+      Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
+      temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
+      qui doloribus aliquam eum temporibus velit.
+    </h6>
+    <div>
+      <h2 class="group-title">Perfect Lapis Cube</h2>
+
+      <q-img
+        class="img-enchant"
+        src="../../../../assets/image/eg/guide/enchant/item/perfect_lapis_cube.png"
+      />
+      <q-img
+        class="img-guide"
+        src="../../../../assets/image/eg/guide/enchant/guide/enchant_guide.png"
+      />
+    </div>
+    <h6>
+      Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
+      temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
+      qui doloribus aliquam eum temporibus velit.
+    </h6>
+    <q-img
+      class="img-guide"
+      src="../../../../assets/image/eg/guide/enchant/guide/enchant_guide.png"
+    />
+
+    <h6>
+      Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
+      temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
+      qui doloribus aliquam eum temporibus velit.
+    </h6>
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/TaGO5cd4QZU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
   </div>
 </template>
 
@@ -97,7 +146,9 @@ const selectTitle = (title: string | null) => {
   gap: 20px;
   overflow-x: auto;
 }
-
+.img-guide {
+  width: 50%;
+}
 .item {
   display: flex;
   align-items: center;
@@ -110,19 +161,19 @@ const selectTitle = (title: string | null) => {
 }
 
 .enchant-level {
-  /* background: #1e1622; */
+  background: #1e1622;
   padding: 10px;
   border-radius: 15px;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 .enchant-level.selected {
-  border: 7px solid #007bff; /* Destaca o item selecionado */
+  border: 7px solid #007bff;
 }
 
 .group-title {
   font-size: 1.5em;
-  /* color: #fff; */
+  color: #fff;
   margin-bottom: 10px;
   text-align: center;
 }

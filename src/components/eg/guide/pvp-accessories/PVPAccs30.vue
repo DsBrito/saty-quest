@@ -33,18 +33,8 @@
   </h6>
   <!-- MAP -->
   <div class="img-mobs">
-    <h1>COLOCAR MOBS NORMAIS AQUI (TODOS JUNTOS)</h1>
     <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/30/burning-stone-dwarf-digger.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/30/demon-stone-troll-guardian.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/30/drago-evil -spirit.png"
-    />
-    <q-img
-      src="../../../../assets/image/eg/guide/accessories/mobs/30/drago-eye-medic.png"
+      src="../../../../assets/image/eg/guide/accessories/mobs/30/pvp30-all-mobs.png"
     />
   </div>
   <!-- Description -->
