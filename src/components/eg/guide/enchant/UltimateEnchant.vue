@@ -108,6 +108,22 @@
       />
     </div>
   </div>
+  <h6>
+    Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
+    temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
+    qui doloribus aliquam eum temporibus velit.
+  </h6>
+  <div class="row justify-center q-gutter-lg text-center">
+    <q-img
+      class="img-lapisia"
+      src="../../../../assets/image/eg/guide/enchant/item/special_armor_lapisia_lv3.png"
+    />
+
+    <q-img
+      class="img-lapisia"
+      src="../../../../assets/image/eg/guide/enchant/item/special_weap_lapisia_lv3.png"
+    />
+  </div>
 </template>
 
 <script></script>

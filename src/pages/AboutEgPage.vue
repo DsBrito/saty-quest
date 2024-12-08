@@ -56,7 +56,7 @@
           outline
           style="color: goldenrod"
           size="15px"
-          @click="handleButtonClick('Rec Elements')"
+          @click="handleButtonClick('Elements')"
         />
         <q-btn
           label="Microchip 64k"
