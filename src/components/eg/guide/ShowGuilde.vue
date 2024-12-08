@@ -15,6 +15,12 @@
     <div v-if="props.guide === 'Elements'">
       <Element> </Element>
     </div>
+    <div v-if="props.guide === 'Microchip 64k'">
+      <Microchip> </Microchip>
+    </div>
+    <div v-if="props.guide === 'Events'">
+      <Event> </Event>
+    </div>
   </div>
 </template>
 
@@ -23,6 +29,9 @@ import DaysPack from './days-pack/DaysGuide.vue';
 import Accessories from './pvp-accessories/AcessoriesGuide.vue';
 import Enchant from './enchant/EnchantGuide.vue';
 import Element from './elements/ElementGuide.vue';
+import Microchip from './64k-lapis/MicrochipGuide.vue';
+import Event from './event/EventGuide.vue';
+
 const props = defineProps<{
   guide: string;
 }>();
