@@ -21,6 +21,9 @@
     <div v-if="props.guide === 'Events'">
       <Event> </Event>
     </div>
+    <div v-if="props.guide === 'Class'">
+      <Class> </Class>
+    </div>
   </div>
 </template>
 
@@ -31,6 +34,7 @@ import Enchant from './enchant/EnchantGuide.vue';
 import Element from './elements/ElementGuide.vue';
 import Microchip from './64k-lapis/MicrochipGuide.vue';
 import Event from './event/EventGuide.vue';
+import Class from './class/ClassGuide.vue';
 
 const props = defineProps<{
   guide: string;
