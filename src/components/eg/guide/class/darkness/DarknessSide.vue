@@ -8,7 +8,9 @@
     <div class="my-card">
       <q-card
         class="q-mb-xl"
-        :class="{ selected: selectedTitle === 'Fighter' }"
+        :class="{
+          selected: selectedTitle === 'Fighter' || selectedTitle === 'Warrior',
+        }"
         @click="selectTitle('Fighter')"
       >
         <q-img
@@ -77,44 +79,60 @@
     </div>
   </div>
 
-  <!-- Renderização  -->
   <q-img src="../../../../../assets/image/icons/next.png" class="image-style" />
 
   <h3 class="text-center no-margin">{{ selectedTitle }}</h3>
+
   <div v-if="selectedTitle === 'Fighter'" class="pvp-zone">
-    <!-- <Accs15></Accs15> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
   <div v-if="selectedTitle === 'Defender'" class="pvp-zone">
-    <!-- <Accs30></Accs30> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
   <div v-if="selectedTitle === 'Priest'" class="pvp-zone">
-    <!-- <Accs60></Accs60> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
   <div v-if="selectedTitle === 'Archer'" class="pvp-zone">
-    <!-- <Accs80></Accs80> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
   <div v-if="selectedTitle === 'Ranger'" class="pvp-zone">
-    <!-- <Accs80></Accs80> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
   <div v-if="selectedTitle === 'Mage'" class="pvp-zone">
-    <!-- <Accs80></Accs80> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
   <div v-if="selectedTitle === 'Druid'" class="pvp-zone">
-    <!-- <Accs80></Accs80> -->
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { CHARACTER } from '../../../../../model/class/character';
 
 // Armazena o título selecionado como um ref (reativo)
 const selectedTitle = ref<string | null>(null);
-
 // Função para selecionar o título
 const selectTitle = (title: string | null) => {
   console.log(title);
+
   selectedTitle.value = title;
 };
+const currentCharacter = computed(() => {
+  console.log('essa eh a classe: ', selectedTitle.value);
+
+  return (
+    CHARACTER.find((character) => character.class === selectedTitle.value) ||
+    null
+  );
+});
 </script>
 
 <style scoped>

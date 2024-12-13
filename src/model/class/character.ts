@@ -4,6 +4,7 @@ import { COMBO } from './characterCombo';
 import { SKILLS } from './characterSkills';
 import { DESCRIPTION } from './characterDescription';
 import { VIDEO } from './characterVideo';
+import { GUIDE } from './classGuide';
 
 export const getHistoryById = (id: number) => {
   const historyItem = HISTORY.find((item) => item?.id == id);
@@ -35,6 +36,11 @@ export const getVideoById = (id: number) => {
   return videoItem ? videoItem : 'videoItem not found';
 };
 
+export const getGuideById = (id: number) => {
+  const guideItem = GUIDE.find((item) => item?.id == id);
+  return guideItem ? guideItem : 'guideItem not found';
+};
+
 export const CHARACTER = [
   {
     //1
@@ -44,7 +50,7 @@ export const CHARACTER = [
     role: 'DPS (Damage Per Second), melee combat.',
     icon: require('../../assets/image/class/human/fight/icon/fighter_icon.png'),
     // classUrl: require('../../assets/image/class/human/defender/defenderslide.png'),
-
+    guide: getGuideById(1),
     history: getHistoryById(111),
     description: getDescriptionById(1),
     skills: getSkillById(1),
@@ -70,6 +76,7 @@ export const CHARACTER = [
     role: 'Tank, defense.',
     icon: require('../../assets/image/class/human/defender/icon/defender_icon.png'),
     videos: getVideoById(4),
+    guide: getGuideById(2),
 
     history: getHistoryById(111),
     description: getDescriptionById(2),
@@ -95,6 +102,7 @@ export const CHARACTER = [
     role: 'Support, healing',
     history: getHistoryById(111),
     videos: getVideoById(4),
+    guide: getGuideById(3),
 
     description: getDescriptionById(3),
     // classUrl: require('../../assets/image/class/priest.png'),
@@ -124,6 +132,8 @@ export const CHARACTER = [
     description: getDescriptionById(4),
     skills: getSkillById(4),
     videos: getVideoById(4),
+    guide: getGuideById(4),
+
     combos: {
       combo_1: getComboById(4),
       combo_2: getComboById(44),
@@ -143,6 +153,7 @@ export const CHARACTER = [
     class: 'Archer',
     role: 'Ranged DPS, Precision.',
     icon: require('../../assets/image/class/elf/archer/icon/archer_icon.png'),
+    guide: getGuideById(5),
 
     history: getHistoryById(222),
     videos: getVideoById(4),
@@ -173,6 +184,8 @@ export const CHARACTER = [
     history: getHistoryById(222),
     description: getDescriptionById(6),
     skills: getSkillById(6),
+    guide: getGuideById(6),
+
     combos: {
       combo_1: getComboById(6),
       combo_2: getComboById(66),
@@ -195,6 +208,7 @@ export const CHARACTER = [
     history: getHistoryById(5),
     description: getDescriptionById(7),
     videos: getVideoById(4),
+    guide: getGuideById(7),
 
     skills: getSkillById(7),
     combos: {
@@ -217,6 +231,7 @@ export const CHARACTER = [
     history: getHistoryById(333),
     description: getDescriptionById(8),
     videos: getVideoById(1),
+    guide: getGuideById(8),
 
     skills: getSkillById(8),
     combos: {
@@ -241,6 +256,8 @@ export const CHARACTER = [
     icon: require('../../assets/image/class/nordein/guardian/icon/guardian_icon.png'),
     history: getHistoryById(333),
     description: getDescriptionById(9),
+    guide: getGuideById(9),
+
     skills: getSkillById(9),
     combos: {
       combo_1: getComboById(2),
@@ -267,6 +284,8 @@ export const CHARACTER = [
     icon: require('../../assets/image/class/nordein/oracle/icon/oracle_icon.png'),
     history: getHistoryById(333),
     description: getDescriptionById(10),
+    guide: getGuideById(10),
+
     skills: getSkillById(10),
     links: [
       {
@@ -288,6 +307,8 @@ export const CHARACTER = [
     history: getHistoryById(444),
     description: getDescriptionById(11),
     skills: getSkillById(11),
+    guide: getGuideById(11),
+
     combos: {
       combo_1: getComboById(4),
       combo_2: getComboById(44),
@@ -308,6 +329,8 @@ export const CHARACTER = [
     role: 'Ranged DPS, Precision.',
     history: getHistoryById(444),
     description: getDescriptionById(12),
+    guide: getGuideById(12),
+
     videos: getVideoById(4),
 
     skills: getSkillById(12),
@@ -336,6 +359,8 @@ export const CHARACTER = [
     history: getHistoryById(444),
     description: getDescriptionById(13),
     skills: getSkillById(13),
+    guide: getGuideById(13),
+
     combos: {
       combo_1: getComboById(6),
       combo_2: getComboById(66),
@@ -356,6 +381,7 @@ export const CHARACTER = [
     class: 'Druid',
     role: 'Ranged DPS, Crowd control.',
     icon: require('../../assets/image/class/spirity/druid/icon/druid_icon.png'),
+    guide: getGuideById(14),
 
     history: getHistoryById(6),
     description: getDescriptionById(14),
