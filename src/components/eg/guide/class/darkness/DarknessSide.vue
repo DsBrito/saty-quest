@@ -1,4 +1,5 @@
 <template>
+  {{ props }}
   <h6>
     Lorem ipsum dolor sit amet. Sit enim nesciunt est iusto dolorem et earum
     temporibus sit repellat exercitationem! Qui error ipsam quo rerum nostrum
@@ -11,12 +12,14 @@
         :class="{
           selected: selectedTitle === 'Fighter' || selectedTitle === 'Warrior',
         }"
-        @click="selectTitle('Fighter')"
+        @click="selectTitle(props.faction == 'Light' ? 'Fighter' : 'Warrior')"
       >
         <q-img
           src="../../../../../assets/image/class/human/fight/icon/fighter_icon.png"
         >
-          <div class="absolute-bottom text-subtitle2 text-center">Fighter</div>
+          <div class="absolute-bottom text-subtitle2 text-center">
+            {{ props.faction === 'Light' ? 'Fighter' : 'Warrior' }}
+          </div>
         </q-img>
       </q-card>
       <q-card
@@ -114,9 +117,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, defineProps } from 'vue';
 import { CHARACTER } from '../../../../../model/class/character';
 
+const props = defineProps<{ faction: string }>();
 // Armazena o título selecionado como um ref (reativo)
 const selectedTitle = ref<string | null>(null);
 // Função para selecionar o título
