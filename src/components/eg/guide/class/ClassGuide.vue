@@ -12,13 +12,21 @@
       src="../../../../assets/image/icons/both-sides.webp"
     >
     </q-img>
-
-    <Darkness></Darkness>
+    <div>
+      <q-btn class="faction" @click="selectFaction('Light')"> Saty</q-btn>
+      <q-btn @click="selectFaction('Dark')"> Saty</q-btn>
+    </div>
+    <Darkness :faction="selectedFaction"></Darkness>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import Darkness from './darkness/DarknessSide.vue';
+const selectedFaction = ref<string | null>(null);
+const selectFaction = (faction: string | null) => {
+  selectedFaction.value = faction;
+};
 </script>
 
 <style scoped>
@@ -27,7 +35,10 @@ import Darkness from './darkness/DarknessSide.vue';
   max-width: 80%;
   margin: auto;
 }
-
+.faction {
+  width: 50%;
+  background-color: #007bff;
+}
 .img-choose-faction {
   width: 50%;
 }
