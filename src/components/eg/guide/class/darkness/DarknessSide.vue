@@ -114,21 +114,26 @@
     <h6>{{ currentCharacter.class }}</h6>
     <p>{{ currentCharacter.description }}</p>
   </div>
+  <div v-if="selectedTitle === 'Warrior'" class="pvp-zone">
+    <h6>{{ currentCharacter.class }}</h6>
+    <p>{{ currentCharacter.description }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, defineProps } from 'vue';
+import { ref, defineProps, computed, watch } from 'vue';
 import { CHARACTER } from '../../../../../model/class/character';
 
-const props = defineProps<{ faction: string }>();
-// Armazena o título selecionado como um ref (reativo)
-const selectedTitle = ref<string | null>(null);
-// Função para selecionar o título
-const selectTitle = (title: string | null) => {
-  console.log(title);
+// const props = defineProps<{ faction: string; classByFaction: string[] }>();
 
-  selectedTitle.value = title;
-};
+// // Armazena o título selecionado como um ref (reativo)
+// const selectedTitle = ref<string | null>(null);
+// // Função para selecionar o título
+// const selectTitle = (title: string | null) => {
+//   console.log(title);
+
+//   selectedTitle.value = title;
+// };
 const currentCharacter = computed(() => {
   console.log('essa eh a classe: ', selectedTitle.value);
 
@@ -137,6 +142,26 @@ const currentCharacter = computed(() => {
     null
   );
 });
+
+const props = defineProps<{
+  faction: string; // 'Light' or 'Dark'
+}>();
+
+const selectedTitle = ref<string>('');
+
+// Atualiza `selectedTitle` quando a facção muda
+watch(
+  () => props.faction,
+  (newFaction) => {
+    selectedTitle.value = newFaction === 'Light' ? 'Fighter' : 'Warrior';
+  },
+  { immediate: true } // Executa no carregamento inicial
+);
+
+// Função para alterar manualmente o título ao clicar
+const selectTitle = (title: string) => {
+  selectedTitle.value = title;
+};
 </script>
 
 <style scoped>

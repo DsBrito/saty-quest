@@ -13,20 +13,39 @@
     >
     </q-img>
     <div>
-      <q-btn class="faction" @click="selectFaction('Light')"> Saty</q-btn>
-      <q-btn @click="selectFaction('Dark')"> Saty</q-btn>
+      <q-btn class="faction" @click="selectFaction('Light')"> Light</q-btn>
+      <q-btn @click="selectFaction('Dark')"> Dark</q-btn>
     </div>
+
+    <!-- <Darkness :faction="selectedFaction" :character="classByFaction"></Darkness> -->
     <Darkness :faction="selectedFaction"></Darkness>
+
+    <div>
+      <h3>Titles for {{ selectedFaction }}</h3>
+      <ul>
+        <li v-for="title in classByFaction" :key="title">{{ title }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import Darkness from './darkness/DarknessSide.vue';
+
+// const props = defineProps<{ faction: string; class: string }>();
+
 const selectedFaction = ref<string | null>(null);
 const selectFaction = (faction: string | null) => {
   selectedFaction.value = faction;
 };
+
+// Computed to return an array of strings based on the selected faction
+const classByFaction = computed(() => {
+  return selectedFaction.value === 'Light'
+    ? ['Fighter', 'Archer', 'Mage', 'Priest', 'Ranger', 'Druid']
+    : ['Warrior', 'Hunter', 'Sorcerer', 'Oracle', 'Assassin', 'Shaman'];
+});
 </script>
 
 <style scoped>
