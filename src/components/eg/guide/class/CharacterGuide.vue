@@ -6,15 +6,50 @@
       qui doloribus aliquam eum temporibus velit.
     </h6>
     <h1 class="title">CLASS</h1>
+
     <q-img
       class="img-choose-faction"
       src="../../../../assets/image/icons/both-sides.webp"
     >
     </q-img>
+    <div>
+      <q-btn class="faction" @click="selectFaction('Light')"> Light</q-btn>
+      <q-btn @click="selectFaction('Dark')"> Dark</q-btn>
+    </div>
+
+    <!-- <Darkness :faction="selectedFaction" :character="classByFaction"></Darkness> -->
+    <ClassGuide
+      :faction="selectedFaction"
+      :classByFaction="classByFaction"
+    ></ClassGuide>
+
+    <div>
+      <h3>Titles for {{ selectedFaction }}</h3>
+      <ul>
+        <li v-for="title in classByFaction" :key="title">{{ title }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed, ref } from 'vue';
+import ClassGuide from './ClassGuide.vue';
+
+// const props = defineProps<{ faction: string; class: string }>();
+
+const selectedFaction = ref<string | null>(null);
+const selectFaction = (faction: string | null) => {
+  selectedFaction.value = faction;
+};
+
+// Computed to return an array of strings based on the selected faction
+const classByFaction = computed(() => {
+  return selectedFaction.value === 'Light'
+    ? ['Fighter', 'Defender', 'Priest', 'Mage', 'Ranger', 'Archer', 'Monkey']
+    : ['Warrior', 'Guardian', 'Oracle', 'Pagan', 'Assassin', 'Hunter', 'Druid'];
+});
+</script>
 
 <style scoped>
 .container {
@@ -22,7 +57,10 @@
   max-width: 80%;
   margin: auto;
 }
-
+.faction {
+  width: 50%;
+  background-color: #007bff;
+}
 .img-choose-faction {
   width: 50%;
 }

@@ -2,7 +2,7 @@ export const GUIDE = [
   {
     id: 1,
     customization: {
-      hight: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
+      hight: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
       hair: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
       face: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
     },
@@ -40,15 +40,15 @@ export const GUIDE = [
   {
     id: 3,
     customization: {
-      hight: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
-      hair: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
-      face: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
+      hight: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
+      hair: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
+      face: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
     },
-    weapons: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
-    stats: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
+    weapons: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
+    stats: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
     sex: {
-      male: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
-      female: require('../../assets/image/class/human/defender/skills/Defender_Single.png'),
+      male: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
+      female: require('../../assets/image/class/human/priest/skills/Priest_Basic.png'),
     },
     video: {
       name: 'Stadium',

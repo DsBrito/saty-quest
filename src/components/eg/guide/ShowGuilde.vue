@@ -34,7 +34,7 @@ import Enchant from './enchant/EnchantGuide.vue';
 import Element from './elements/ElementGuide.vue';
 import Microchip from './64k-lapis/MicrochipGuide.vue';
 import Event from './event/EventGuide.vue';
-import Class from './class/ClassGuide.vue';
+import Class from './class/CharacterGuide.vue';
 
 const props = defineProps<{
   guide: string;
