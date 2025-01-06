@@ -18,24 +18,46 @@
     </q-img>
 
     <FirstDonation></FirstDonation>
-    <div>
-      <q-img
-        src="../../../../../assets/image/guide/site/aps/tornado-card-logo.png"
-        style="width: 300px"
-      ></q-img>
-      <span> Tornado</span>
+    <h6>
+      Explicar oque é o tornad, pra que é usado, como ter um cartão tornado ..
+      etc.., porque é interessante comprar
+    </h6>
+    <!-- <div class="q-pa-md row q-gutter-md flex items-center justify-center"> -->
+
+    <div
+      class="itens-wrapper q-pa-md row q-gutter-md flex items-center justify-center"
+    >
+      <div class="second-row">
+        <div class="first-column">
+          <div>
+            <q-img
+              src="../../../../../assets/image/guide/site/aps/tornado-card-logo.png"
+              style="width: 250px"
+            >
+            </q-img>
+          </div>
+        </div>
+
+        <div class="second-column">
+          <div>
+            <q-img
+              src="../../../../../assets/image/guide/site/aps/tornado-card.png"
+              style="width: 500px"
+            >
+            </q-img>
+          </div>
+
+          <div>
+            <q-img
+              src="../../../../../assets/image/guide/site/aps/tornado-card.png"
+              style="width: 500px"
+            >
+            </q-img>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="q-pa-md row q-gutter-md flex items-center justify-center">
-      <q-img
-        src="../../../../../assets/image/guide/site/aps/tornado-card.png"
-        style="width: 500px"
-      ></q-img>
-      <q-img
-        src="../../../../../assets/image/guide/site/aps/cupom-card.png"
-        style="width: 500px"
-      ></q-img>
-    </div>
     <ul class="notes">
       <strong
         >To donate in our server you will need to have a TornadoCard Number, and
@@ -53,7 +75,7 @@
     <h6>These are the current values and rewards:</h6>
     <q-img
       src="../../../../../assets/image/guide/site/aps/coins-rewards.png"
-      style="width: 500px"
+      style="width: 100%"
     ></q-img>
     <span>Have fun and make @UZC Rich!! lmao</span>
     <q-avatar>
@@ -138,5 +160,22 @@ import FirstDonation from './FirstDonation.vue';
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+}
+
+.itens-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.second-row {
+  display: flex;
+  gap: 20px;
+}
+
+.second-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 </style>
