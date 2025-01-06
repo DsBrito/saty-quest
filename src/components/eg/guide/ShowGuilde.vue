@@ -24,6 +24,14 @@
     <div v-if="props.guide === 'Class'">
       <Class> </Class>
     </div>
+
+    <!-- SITE -->
+    <div v-if="props.guide === 'PVP rewards'">
+      <PVPReward> </PVPReward>
+    </div>
+    <div v-if="props.guide === 'Recrut friends'">
+      <RecrutFriend> </RecrutFriend>
+    </div>
   </div>
 </template>
 
@@ -35,6 +43,8 @@ import Element from './elements/ElementGuide.vue';
 import Microchip from './64k-lapis/MicrochipGuide.vue';
 import Event from './event/EventGuide.vue';
 import Class from './class/CharacterGuide.vue';
+import PVPReward from './site/pvp-reward/TiredPVPReward.vue';
+import RecrutFriend from './site/recrute-a-friend/RecruteAFriend.vue';
 
 const props = defineProps<{
   guide: string;
