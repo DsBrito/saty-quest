@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="title">Pets</h1>
     <q-img
-      src="src/assets/image/eg/guide/site/pets/full-pet.png"
+      src="../../../../../assets/image/eg/guide/site/pets/full-pet.png"
       style="width: 250px"
     >
     </q-img>
@@ -19,18 +19,22 @@
       <div class="img-map">
         <span class="text-center">[Normal]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/pets/Falkor.png"
+        />
       </div>
       <div class="img-map">
         <span class="text-center">[Critical]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/pets/Falkor.png"
+        />
       </div>
 
       <div class="img-map">
         <span class="text-center">[Status]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Minna.png" />
+        <q-img src="../../../../../assets/image/eg/guide/site/pets/Minna.png" />
       </div>
     </div>
 
@@ -43,7 +47,7 @@
 
     <q-img
       class="img-map"
-      src="src/assets/image/eg/guide/site/pets/buy-pet.png"
+      src="../../../../../assets/image/eg/guide/site/pets/buy-pet.png"
     ></q-img>
     <h6>
       Game? Normal e altar Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -55,12 +59,16 @@
       <div class="img-map">
         <span class="text-center">[Normal]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/pets/Falkor.png"
+        />
       </div>
       <div class="img-map">
         <span class="text-center">[Altar]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/pets/Falkor.png"
+        />
       </div>
     </div>
 
@@ -72,7 +80,7 @@
     </h6>
     <div>
       <q-img
-        src="src/assets/image/eg/guide/site/pets/using-pet.png"
+        src="../../../../../assets/image/eg/guide/site/pets/using-pet.png"
         style="width: 250px"
       >
       </q-img>
