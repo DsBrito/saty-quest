@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="title">Pets</h1>
+    <h1 class="title">Costumes</h1>
     <q-img
-      src="src/assets/image/eg/guide/site/pets/full-pet.png"
+      src="../../../../../assets/image/eg/guide/site/costumes/costumer.png"
       style="width: 250px"
     >
     </q-img>
@@ -17,20 +17,26 @@
 
     <div class="row justify-center q-gutter-lg text-center">
       <div class="img-map">
-        <span class="text-center">[Normal]</span>
+        <span class="text-center">[World Club]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/costumes/wordclub-costume.png"
+        />
       </div>
       <div class="img-map">
-        <span class="text-center">[Critical]</span>
+        <span class="text-center">[General]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/costumes/costume-ss.png"
+        />
       </div>
 
       <div class="img-map">
-        <span class="text-center">[Status]</span>
+        <span class="text-center">[Event]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Minna.png" />
+        <q-img
+          src="../../../../../assets/image/eg/guide/site/costumes/event-costume.png"
+        />
       </div>
     </div>
 
@@ -43,7 +49,7 @@
 
     <q-img
       class="img-map"
-      src="src/assets/image/eg/guide/site/pets/buy-pet.png"
+      src="../../../../../assets/image/eg/guide/site/costumes/event-costume.png"
     ></q-img>
     <h6>
       Game? Normal e altar Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -53,14 +59,20 @@
     </h6>
     <div class="row justify-center q-gutter-lg text-center">
       <div class="img-map">
-        <span class="text-center">[Normal]</span>
+        <span class="text-center">[Boss]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          class="img-map"
+          src="../../../../../assets/image/eg/guide/site/costumes/event-costume.png"
+        ></q-img>
       </div>
       <div class="img-map">
-        <span class="text-center">[Altar]</span>
+        <span class="text-center">[Quest Events]</span>
 
-        <q-img src="src/assets/image/eg/guide/site/pets/Falkor.png" />
+        <q-img
+          class="img-map"
+          src="../../../../../assets/image/eg/guide/site/costumes/event-costume.png"
+        ></q-img>
       </div>
     </div>
 
@@ -72,7 +84,7 @@
     </h6>
     <div>
       <q-img
-        src="src/assets/image/eg/guide/site/pets/using-pet.png"
+        src="../../../../../assets/image/eg/guide/site/costumes/event-costume.png"
         style="width: 250px"
       >
       </q-img>
@@ -83,7 +95,9 @@
       <strong>Notes:</strong>
       <li>Cuidados ao comprar do site??</li>
       <li>Cuidados ao comprar de jogadores??</li>
+
       <li>Cuidado com prazos de utilidade??</li>
+      <li>Vá caçar os bosses e tente a sua sorte!</li>
     </ul>
   </div>
 </template>
