@@ -37,6 +37,9 @@
     <div v-if="props.guide === 'APs'">
       <APs> </APs>
     </div>
+    <div v-if="props.guide === 'Roulet'">
+      <Roulet> </Roulet>
+    </div>
   </div>
 </template>
 
@@ -52,6 +55,7 @@ import PVPReward from './site/pvp-reward/TiredPVPRewardGuide.vue';
 import RecrutFriend from './site/recrute-a-friend/RecruteAFriendGuide.vue';
 import Pets from './site/pets/PetsGuide.vue';
 import APs from './site/aps/APsGuide.vue';
+import Roulet from './site/roulet/SpinToWinGuilde.vue';
 
 const props = defineProps<{
   guide: string;
