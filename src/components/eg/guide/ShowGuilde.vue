@@ -43,6 +43,12 @@
     <div v-if="props.guide === 'Custumer'">
       <Costumes> </Costumes>
     </div>
+    <div v-if="props.guide === 'Share opinions'">
+      <ShareServer> </ShareServer>
+    </div>
+    <div v-if="props.guide === 'Bosses'">
+      <Boss> </Boss>
+    </div>
   </div>
 </template>
 
@@ -60,6 +66,7 @@ import Pets from './site/pets/PetsGuide.vue';
 import APs from './site/aps/APsGuide.vue';
 import Roulet from './site/roulet/SpinToWinGuilde.vue';
 import Costumes from './site/costumes/CostumesGuide.vue';
+import ShareServer from './site/refer-our-server/ReferOurServer.vue';
 
 const props = defineProps<{
   guide: string;
