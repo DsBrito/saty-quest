@@ -67,6 +67,7 @@ import APs from './site/aps/APsGuide.vue';
 import Roulet from './site/roulet/SpinToWinGuilde.vue';
 import Costumes from './site/costumes/CostumesGuide.vue';
 import ShareServer from './site/refer-our-server/ReferOurServer.vue';
+import Boss from './site/boss/BossGuide.vue';
 
 const props = defineProps<{
   guide: string;
