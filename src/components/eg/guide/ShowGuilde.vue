@@ -49,6 +49,9 @@
     <div v-if="props.guide === 'Bosses'">
       <Boss> </Boss>
     </div>
+    <div v-if="props.guide === 'Game Discord'">
+      <Discord> </Discord>
+    </div>
   </div>
 </template>
 
@@ -68,6 +71,7 @@ import Roulet from './site/roulet/SpinToWinGuilde.vue';
 import Costumes from './site/costumes/CostumesGuide.vue';
 import ShareServer from './site/refer-our-server/ReferOurServer.vue';
 import Boss from './site/boss/BossGuide.vue';
+import Discord from './site/discord/DiscordGuide.vue';
 
 const props = defineProps<{
   guide: string;
