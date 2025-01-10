@@ -55,6 +55,9 @@
     <div v-if="props.guide === 'Rules'">
       <Rules> </Rules>
     </div>
+    <div v-if="props.guide === 'Download'">
+      <Download> </Download>
+    </div>
   </div>
 </template>
 
@@ -76,6 +79,7 @@ import ShareServer from './site/refer-our-server/ReferOurServer.vue';
 import Boss from './site/boss/BossGuide.vue';
 import Discord from './site/discord/DiscordGuide.vue';
 import Rules from './site/rules/RulesGuide.vue';
+import Download from './site/download/DownloadGuide.vue';
 
 const props = defineProps<{
   guide: string;
