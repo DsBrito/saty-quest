@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="title">Recruit a Friend</h1>
     <q-img
-      src="../../../../../assets/image/guide/site/recrut-a-friend/recrut-a-friend.png"
+      src="../../../../../assets/image/eg/guide/site/recrut-a-friend/recrut-a-friend.png"
       style="width: 250px"
     >
     </q-img>

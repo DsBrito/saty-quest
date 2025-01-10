@@ -31,27 +31,27 @@
     <div class="row items-start q-gutter-x-sm">
       <q-img
         class="img-guide rounded-borders"
-        src="../../../../../assets/image/guide/site/pvp-reward/tier1.png"
+        src="../../../../../assets/image/eg/guide/site/pvp-reward/tier1.png"
         style="width: 250px"
       />
       <q-img
         class="img-guide rounded-borders"
-        src="../../../../../assets/image/guide/site/pvp-reward/tier2.png"
+        src="../../../../../assets/image/eg/guide/site/pvp-reward/tier2.png"
         style="width: 250px"
       />
       <q-img
         class="img-guide rounded-borders"
-        src="../../../../../assets/image/guide/site/pvp-reward/tier3.png"
+        src="../../../../../assets/image/eg/guide/site/pvp-reward/tier3.png"
         style="width: 250px"
       />
       <q-img
         class="img-guide rounded-borders"
-        src="../../../../../assets/image/guide/site/pvp-reward/tier4.png"
+        src="../../../../../assets/image/eg/guide/site/pvp-reward/tier4.png"
         style="width: 250px"
       />
       <q-img
         class="img-guide rounded-borders"
-        src="../../../../../assets/image/guide/site/pvp-reward/tier5.png"
+        src="../../../../../assets/image/eg/guide/site/pvp-reward/tier5.png"
         style="width: 245px"
       />
     </div>

@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="title">Get More Coins (APs)</h1>
     <q-img
-      src="../../../../../assets/image/guide/site/aps/check-ap-shop.png"
+      src="../../../../../assets/image/eg/guide/site/aps/check-ap-shop.png"
       style="width: 250px"
     >
     </q-img>
@@ -12,7 +12,7 @@
     </h6>
 
     <q-img
-      src="../../../../../assets/image/guide/site/aps/first-time-spender.jpg"
+      src="../../../../../assets/image/eg/guide/site/aps/first-time-spender.jpg"
       style="width: 700px"
     >
     </q-img>
@@ -31,7 +31,7 @@
         <div class="first-column">
           <div>
             <q-img
-              src="../../../../../assets/image/guide/site/aps/tornado-card-logo.png"
+              src="../../../../../assets/image/eg/guide/site/aps/tornado-card-logo.png"
               style="width: 250px"
             >
             </q-img>
@@ -41,7 +41,7 @@
         <div class="second-column">
           <div>
             <q-img
-              src="../../../../../assets/image/guide/site/aps/tornado-card.png"
+              src="../../../../../assets/image/eg/guide/site/aps/tornado-card.png"
               style="width: 500px"
             >
             </q-img>
@@ -49,7 +49,7 @@
 
           <div>
             <q-img
-              src="../../../../../assets/image/guide/site/aps/tornado-card.png"
+              src="../../../../../assets/image/eg/guide/site/aps/tornado-card.png"
               style="width: 500px"
             >
             </q-img>
@@ -74,13 +74,13 @@
 
     <h6>These are the current values and rewards:</h6>
     <q-img
-      src="../../../../../assets/image/guide/site/aps/coins-rewards.png"
+      src="../../../../../assets/image/eg/guide/site/aps/coins-rewards.png"
       style="width: 100%"
     ></q-img>
     <span>Have fun and make @UZC Rich!! lmao</span>
     <q-avatar>
       <img
-        src="../../../../../assets/image/guide/site/aps/uzc.png"
+        src="../../../../../assets/image/eg/guide/site/aps/uzc.png"
         alt="Filter Icon"
       />
     </q-avatar>
