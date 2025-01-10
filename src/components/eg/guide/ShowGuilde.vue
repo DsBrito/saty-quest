@@ -52,6 +52,9 @@
     <div v-if="props.guide === 'Game Discord'">
       <Discord> </Discord>
     </div>
+    <div v-if="props.guide === 'Rules'">
+      <Rules> </Rules>
+    </div>
   </div>
 </template>
 
@@ -72,6 +75,7 @@ import Costumes from './site/costumes/CostumesGuide.vue';
 import ShareServer from './site/refer-our-server/ReferOurServer.vue';
 import Boss from './site/boss/BossGuide.vue';
 import Discord from './site/discord/DiscordGuide.vue';
+import Rules from './site/rules/RulesGuide.vue';
 
 const props = defineProps<{
   guide: string;
