@@ -61,6 +61,9 @@
     <div v-if="props.guide === 'services'">
       <Services> </Services>
     </div>
+    <div v-if="props.guide === 'Vote'">
+      <Vote> </Vote>
+    </div>
   </div>
 </template>
 
@@ -84,6 +87,8 @@ import Discord from './site/discord/DiscordGuide.vue';
 import Rules from './site/rules/RulesGuide.vue';
 import Download from './site/download/DownloadGuide.vue';
 import Services from './site/services/ServicesGuide.vue';
+import Vote from './site/vote/VoteGuide.vue';
+
 const props = defineProps<{
   guide: string;
 }>();
