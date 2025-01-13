@@ -58,6 +58,9 @@
     <div v-if="props.guide === 'Download'">
       <Download> </Download>
     </div>
+    <div v-if="props.guide === 'services'">
+      <Services> </Services>
+    </div>
   </div>
 </template>
 
@@ -80,7 +83,7 @@ import Boss from './site/boss/BossGuide.vue';
 import Discord from './site/discord/DiscordGuide.vue';
 import Rules from './site/rules/RulesGuide.vue';
 import Download from './site/download/DownloadGuide.vue';
-
+import Services from './site/services/ServicesGuide.vue';
 const props = defineProps<{
   guide: string;
 }>();
