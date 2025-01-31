@@ -67,6 +67,9 @@
     <div v-if="props.guide === 'Drop List'">
       <MobItemFinder> </MobItemFinder>
     </div>
+    <div v-if="props.guide === 'Events Calendar'">
+      <EventCalendar> </EventCalendar>
+    </div>
   </div>
 </template>
 
@@ -92,6 +95,7 @@ import Download from './site/download/DownloadGuide.vue';
 import Services from './site/services/ServicesGuide.vue';
 import Vote from './site/vote/VoteGuide.vue';
 import MobItemFinder from './site/drop-item-finder/MobItemFinderGuide.vue';
+import EventCalendar from './site/events-calendar/EventCalendarGuide.vue';
 
 const props = defineProps<{
   guide: string;
