@@ -73,6 +73,9 @@
     <div v-if="props.guide === 'New Shop Items'">
       <NewShopItems> </NewShopItems>
     </div>
+    <div v-if="props.guide === 'EG Information'">
+      <EGServerInformation> </EGServerInformation>
+    </div>
   </div>
 </template>
 
@@ -100,6 +103,7 @@ import Vote from './site/vote/VoteGuide.vue';
 import MobItemFinder from './site/drop-item-finder/MobItemFinderGuide.vue';
 import EventCalendar from './site/events-calendar/EventCalendarGuide.vue';
 import NewShopItems from './site/new-shop-items/NewShopItemsGuide.vue';
+import EGServerInformation from './site/eg-server-information/EGServerInformationGuide.vue';
 
 const props = defineProps<{
   guide: string;
