@@ -79,6 +79,9 @@
     <div v-if="props.guide === 'itens with discount'">
       <ItensOfTheDay> </ItensOfTheDay>
     </div>
+    <div v-if="props.guide === 'Mounts'">
+      <Mounts> </Mounts>
+    </div>
   </div>
 </template>
 
@@ -108,6 +111,7 @@ import EventCalendar from './site/events-calendar/EventCalendarGuide.vue';
 import NewShopItems from './site/new-shop-items/NewShopItemsGuide.vue';
 import EGServerInformation from './site/eg-server-information/EGServerInformationGuide.vue';
 import ItensOfTheDay from './site/items-of-the-day/ItensOfTheDayGuide.vue';
+import Mounts from './site/mounts/MountGuide.vue';
 
 const props = defineProps<{
   guide: string;
