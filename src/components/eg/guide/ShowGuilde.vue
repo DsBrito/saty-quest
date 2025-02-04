@@ -70,6 +70,9 @@
     <div v-if="props.guide === 'Events Calendar'">
       <EventCalendar> </EventCalendar>
     </div>
+    <div v-if="props.guide === 'New Shop Items'">
+      <NewShopItems> </NewShopItems>
+    </div>
   </div>
 </template>
 
@@ -96,6 +99,7 @@ import Services from './site/services/ServicesGuide.vue';
 import Vote from './site/vote/VoteGuide.vue';
 import MobItemFinder from './site/drop-item-finder/MobItemFinderGuide.vue';
 import EventCalendar from './site/events-calendar/EventCalendarGuide.vue';
+import NewShopItems from './site/new-shop-items/NewShopItemsGuide.vue';
 
 const props = defineProps<{
   guide: string;
